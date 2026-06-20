@@ -1,0 +1,6 @@
+node_modules/
+*.log
+
+# Raw HTML cache too large for git (~146MB)
+# Re-download with: node batch-download-heroes.mjs
+夢幻模擬戰/raw/

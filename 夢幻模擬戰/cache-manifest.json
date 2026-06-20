@@ -1,0 +1,928 @@
+{
+  "heroes": {
+    "阿布沙伊特": {
+      "url": "https://wiki.biligame.com/langrisser/阿布沙伊特",
+      "downloadedAt": "2026-06-20T09:27:35.564Z",
+      "fileSize": 480914,
+      "filePath": "raw/heroes/阿布沙伊特.html"
+    },
+    "阿尔法": {
+      "url": "https://wiki.biligame.com/langrisser/阿尔法",
+      "downloadedAt": "2026-06-20T09:27:40.511Z",
+      "fileSize": 563478,
+      "filePath": "raw/heroes/阿尔法.html"
+    },
+    "阿尔弗雷德": {
+      "url": "https://wiki.biligame.com/langrisser/阿尔弗雷德",
+      "downloadedAt": "2026-06-20T09:27:46.024Z",
+      "fileSize": 555259,
+      "filePath": "raw/heroes/阿尔弗雷德.html"
+    },
+    "阿卡菲尔": {
+      "url": "https://wiki.biligame.com/langrisser/阿卡菲尔",
+      "downloadedAt": "2026-06-20T09:27:50.377Z",
+      "fileSize": 458302,
+      "filePath": "raw/heroes/阿卡菲尔.html"
+    },
+    "阿卡娅": {
+      "url": "https://wiki.biligame.com/langrisser/阿卡娅",
+      "downloadedAt": "2026-06-20T09:27:56.090Z",
+      "fileSize": 578794,
+      "filePath": "raw/heroes/阿卡娅.html"
+    },
+    "阿雷斯": {
+      "url": "https://wiki.biligame.com/langrisser/阿雷斯",
+      "downloadedAt": "2026-06-20T09:29:45.195Z",
+      "fileSize": 570684,
+      "filePath": "raw/heroes/阿雷斯.html"
+    },
+    "阿莉娅": {
+      "url": "https://wiki.biligame.com/langrisser/阿莉娅",
+      "downloadedAt": "2026-06-20T09:36:31.326Z",
+      "fileSize": 579536,
+      "filePath": "raw/heroes/阿莉娅.html"
+    },
+    "埃尔维斯": {
+      "url": "https://wiki.biligame.com/langrisser/埃尔维斯",
+      "downloadedAt": "2026-06-20T09:36:41.611Z",
+      "fileSize": 500412,
+      "filePath": "raw/heroes/埃尔维斯.html"
+    },
+    "艾梅达": {
+      "url": "https://wiki.biligame.com/langrisser/艾梅达",
+      "downloadedAt": "2026-06-20T09:36:51.945Z",
+      "fileSize": 745526,
+      "filePath": "raw/heroes/艾梅达.html"
+    },
+    "艾米莉亚": {
+      "url": "https://wiki.biligame.com/langrisser/艾米莉亚",
+      "downloadedAt": "2026-06-20T09:37:02.953Z",
+      "fileSize": 599065,
+      "filePath": "raw/heroes/艾米莉亚.html"
+    },
+    "艾尔文": {
+      "url": "https://wiki.biligame.com/langrisser/艾尔文",
+      "downloadedAt": "2026-06-20T09:37:12.749Z",
+      "fileSize": 754302,
+      "filePath": "raw/heroes/艾尔文.html"
+    },
+    "艾马林克": {
+      "url": "https://wiki.biligame.com/langrisser/艾马林克",
+      "downloadedAt": "2026-06-20T09:37:45.140Z",
+      "fileSize": 587197,
+      "filePath": "raw/heroes/艾马林克.html"
+    },
+    "艾露莎": {
+      "url": "https://wiki.biligame.com/langrisser/艾露莎",
+      "downloadedAt": "2026-06-20T09:37:55.393Z",
+      "fileSize": 504597,
+      "filePath": "raw/heroes/艾露莎.html"
+    },
+    "阿瑞安赫德": {
+      "url": "https://wiki.biligame.com/langrisser/阿瑞安赫德",
+      "downloadedAt": "2026-06-20T09:38:05.581Z",
+      "fileSize": 550611,
+      "filePath": "raw/heroes/阿瑞安赫德.html"
+    },
+    "埃格贝尔特": {
+      "url": "https://wiki.biligame.com/langrisser/埃格贝尔特",
+      "downloadedAt": "2026-06-20T09:38:18.390Z",
+      "fileSize": 566652,
+      "filePath": "raw/heroes/埃格贝尔特.html"
+    },
+    "阿玛迪斯": {
+      "url": "https://wiki.biligame.com/langrisser/阿玛迪斯",
+      "downloadedAt": "2026-06-20T09:38:29.316Z",
+      "fileSize": 532445,
+      "filePath": "raw/heroes/阿玛迪斯.html"
+    },
+    "胧": {
+      "url": "https://wiki.biligame.com/langrisser/胧",
+      "downloadedAt": "2026-06-20T09:50:17.790Z",
+      "fileSize": 568168,
+      "filePath": "raw/heroes/胧.html"
+    },
+    "壳中少女": {
+      "url": "https://wiki.biligame.com/langrisser/壳中少女",
+      "downloadedAt": "2026-06-20T09:50:26.839Z",
+      "fileSize": 587094,
+      "filePath": "raw/heroes/壳中少女.html"
+    },
+    "杰克船长": {
+      "url": "https://wiki.biligame.com/langrisser/杰克船长",
+      "downloadedAt": "2026-06-20T09:50:34.261Z",
+      "fileSize": 537283,
+      "filePath": "raw/heroes/杰克船长.html"
+    },
+    "玛莉·萝丝": {
+      "url": "https://wiki.biligame.com/langrisser/玛莉·萝丝",
+      "downloadedAt": "2026-06-20T09:50:42.477Z",
+      "fileSize": 647170,
+      "filePath": "raw/heroes/玛莉·萝丝.html"
+    },
+    "维拉玖": {
+      "url": "https://wiki.biligame.com/langrisser/维拉玖",
+      "downloadedAt": "2026-06-20T09:50:50.840Z",
+      "fileSize": 568919,
+      "filePath": "raw/heroes/维拉玖.html"
+    },
+    "梅雅": {
+      "url": "https://wiki.biligame.com/langrisser/梅雅",
+      "downloadedAt": "2026-06-20T09:51:33.285Z",
+      "fileSize": 573907,
+      "filePath": "raw/heroes/梅雅.html"
+    },
+    "红月之王": {
+      "url": "https://wiki.biligame.com/langrisser/红月之王",
+      "downloadedAt": "2026-06-20T09:51:44.585Z",
+      "fileSize": 549282,
+      "filePath": "raw/heroes/红月之王.html"
+    },
+    "爱丽丝": {
+      "url": "https://wiki.biligame.com/langrisser/爱丽丝",
+      "downloadedAt": "2026-06-20T09:51:52.813Z",
+      "fileSize": 527834,
+      "filePath": "raw/heroes/爱丽丝.html"
+    },
+    "光影剑魄": {
+      "url": "https://wiki.biligame.com/langrisser/光影剑魄",
+      "downloadedAt": "2026-06-20T09:52:01.574Z",
+      "fileSize": 653521,
+      "filePath": "raw/heroes/光影剑魄.html"
+    },
+    "深町晶": {
+      "url": "https://wiki.biligame.com/langrisser/深町晶",
+      "downloadedAt": "2026-06-20T09:52:12.082Z",
+      "fileSize": 489147,
+      "filePath": "raw/heroes/深町晶.html"
+    },
+    "艾蕾因": {
+      "url": "https://wiki.biligame.com/langrisser/艾蕾因",
+      "downloadedAt": "2026-06-20T09:52:42.590Z",
+      "fileSize": 550671,
+      "filePath": "raw/heroes/艾蕾因.html"
+    },
+    "路因": {
+      "url": "https://wiki.biligame.com/langrisser/路因",
+      "downloadedAt": "2026-06-20T09:52:51.482Z",
+      "fileSize": 633391,
+      "filePath": "raw/heroes/路因.html"
+    },
+    "阿伦": {
+      "url": "https://wiki.biligame.com/langrisser/阿伦",
+      "downloadedAt": "2026-06-20T09:53:02.986Z",
+      "fileSize": 469877,
+      "filePath": "raw/heroes/阿伦.html"
+    },
+    "相羽美雪": {
+      "url": "https://wiki.biligame.com/langrisser/相羽美雪",
+      "downloadedAt": "2026-06-20T09:53:12.230Z",
+      "fileSize": 463354,
+      "filePath": "raw/heroes/相羽美雪.html"
+    },
+    "帕特里夏": {
+      "url": "https://wiki.biligame.com/langrisser/帕特里夏",
+      "downloadedAt": "2026-06-20T09:53:22.816Z",
+      "fileSize": 557195,
+      "filePath": "raw/heroes/帕特里夏.html"
+    },
+    "桑妮雅": {
+      "url": "https://wiki.biligame.com/langrisser/桑妮雅",
+      "downloadedAt": "2026-06-20T09:53:48.177Z",
+      "fileSize": 533264,
+      "filePath": "raw/heroes/桑妮雅.html"
+    },
+    "凯尔蒂斯": {
+      "url": "https://wiki.biligame.com/langrisser/凯尔蒂斯",
+      "downloadedAt": "2026-06-20T09:53:59.016Z",
+      "fileSize": 600559,
+      "filePath": "raw/heroes/凯尔蒂斯.html"
+    },
+    "范恩": {
+      "url": "https://wiki.biligame.com/langrisser/范恩",
+      "downloadedAt": "2026-06-20T09:54:08.387Z",
+      "fileSize": 501844,
+      "filePath": "raw/heroes/范恩.html"
+    },
+    "利亚特": {
+      "url": "https://wiki.biligame.com/langrisser/利亚特",
+      "downloadedAt": "2026-06-20T09:54:19.851Z",
+      "fileSize": 292650,
+      "filePath": "raw/heroes/利亚特.html"
+    },
+    "安杰丽卡": {
+      "url": "https://wiki.biligame.com/langrisser/安杰丽卡",
+      "downloadedAt": "2026-06-20T09:54:29.464Z",
+      "fileSize": 580551,
+      "filePath": "raw/heroes/安杰丽卡.html"
+    },
+    "安德里奥": {
+      "url": "https://wiki.biligame.com/langrisser/安德里奥",
+      "downloadedAt": "2026-06-20T09:55:04.227Z",
+      "fileSize": 598754,
+      "filePath": "raw/heroes/安德里奥.html"
+    },
+    "迦游罗": {
+      "url": "https://wiki.biligame.com/langrisser/迦游罗",
+      "downloadedAt": "2026-06-20T09:55:13.860Z",
+      "fileSize": 552494,
+      "filePath": "raw/heroes/迦游罗.html"
+    },
+    "蕾雅": {
+      "url": "https://wiki.biligame.com/langrisser/蕾雅",
+      "downloadedAt": "2026-06-20T09:55:23.997Z",
+      "fileSize": 575108,
+      "filePath": "raw/heroes/蕾雅.html"
+    },
+    "弗洛朗蒂娅": {
+      "url": "https://wiki.biligame.com/langrisser/弗洛朗蒂娅",
+      "downloadedAt": "2026-06-20T09:55:33.230Z",
+      "fileSize": 566672,
+      "filePath": "raw/heroes/弗洛朗蒂娅.html"
+    },
+    "浦饭幽助": {
+      "url": "https://wiki.biligame.com/langrisser/浦饭幽助",
+      "downloadedAt": "2026-06-20T09:55:44.161Z",
+      "fileSize": 525907,
+      "filePath": "raw/heroes/浦饭幽助.html"
+    },
+    "皮耶鲁": {
+      "url": "https://wiki.biligame.com/langrisser/皮耶鲁",
+      "downloadedAt": "2026-06-20T09:56:20.226Z",
+      "fileSize": 504190,
+      "filePath": "raw/heroes/皮耶鲁.html"
+    },
+    "琼&康娜": {
+      "url": "https://wiki.biligame.com/langrisser/琼&康娜",
+      "downloadedAt": "2026-06-20T09:56:27.573Z",
+      "fileSize": 555869,
+      "filePath": "raw/heroes/琼&康娜.html"
+    },
+    "玛丽安蒂尔": {
+      "url": "https://wiki.biligame.com/langrisser/玛丽安蒂尔",
+      "downloadedAt": "2026-06-20T09:56:38.024Z",
+      "fileSize": 618948,
+      "filePath": "raw/heroes/玛丽安蒂尔.html"
+    },
+    "纳兹": {
+      "url": "https://wiki.biligame.com/langrisser/纳兹",
+      "downloadedAt": "2026-06-20T09:56:48.050Z",
+      "fileSize": 442925,
+      "filePath": "raw/heroes/纳兹.html"
+    },
+    "科洛蒂娅·巴兰茨": {
+      "url": "https://wiki.biligame.com/langrisser/科洛蒂娅·巴兰茨",
+      "downloadedAt": "2026-06-20T09:56:58.790Z",
+      "fileSize": 290392,
+      "filePath": "raw/heroes/科洛蒂娅·巴兰茨.html"
+    },
+    "莉亚娜": {
+      "url": "https://wiki.biligame.com/langrisser/莉亚娜",
+      "downloadedAt": "2026-06-20T09:57:24.197Z",
+      "fileSize": 567589,
+      "filePath": "raw/heroes/莉亚娜.html"
+    },
+    "弗拉基亚": {
+      "url": "https://wiki.biligame.com/langrisser/弗拉基亚",
+      "downloadedAt": "2026-06-20T09:57:32.934Z",
+      "fileSize": 583868,
+      "filePath": "raw/heroes/弗拉基亚.html"
+    },
+    "塞拉菲娜": {
+      "url": "https://wiki.biligame.com/langrisser/塞拉菲娜",
+      "downloadedAt": "2026-06-20T09:57:43.103Z",
+      "fileSize": 630437,
+      "filePath": "raw/heroes/塞拉菲娜.html"
+    },
+    "利斯塔": {
+      "url": "https://wiki.biligame.com/langrisser/利斯塔",
+      "downloadedAt": "2026-06-20T09:57:50.803Z",
+      "fileSize": 506797,
+      "filePath": "raw/heroes/利斯塔.html"
+    },
+    "奈米娅": {
+      "url": "https://wiki.biligame.com/langrisser/奈米娅",
+      "downloadedAt": "2026-06-20T09:57:59.008Z",
+      "fileSize": 579359,
+      "filePath": "raw/heroes/奈米娅.html"
+    },
+    "茉": {
+      "url": "https://wiki.biligame.com/langrisser/茉",
+      "downloadedAt": "2026-06-20T10:00:03.796Z",
+      "fileSize": 558773,
+      "filePath": "raw/heroes/茉.html"
+    },
+    "神崎堇": {
+      "url": "https://wiki.biligame.com/langrisser/神崎堇",
+      "downloadedAt": "2026-06-20T10:00:14.235Z",
+      "fileSize": 545153,
+      "filePath": "raw/heroes/神崎堇.html"
+    },
+    "托米尔克": {
+      "url": "https://wiki.biligame.com/langrisser/托米尔克",
+      "downloadedAt": "2026-06-20T10:00:25.038Z",
+      "fileSize": 560492,
+      "filePath": "raw/heroes/托米尔克.html"
+    },
+    "莱莎琳·斯托特": {
+      "url": "https://wiki.biligame.com/langrisser/莱莎琳·斯托特",
+      "downloadedAt": "2026-06-20T10:00:34.503Z",
+      "fileSize": 568711,
+      "filePath": "raw/heroes/莱莎琳·斯托特.html"
+    },
+    "克洛泰尔": {
+      "url": "https://wiki.biligame.com/langrisser/克洛泰尔",
+      "downloadedAt": "2026-06-20T10:00:45.171Z",
+      "fileSize": 605600,
+      "filePath": "raw/heroes/克洛泰尔.html"
+    },
+    "普蕾茜娅": {
+      "url": "https://wiki.biligame.com/langrisser/普蕾茜娅",
+      "downloadedAt": "2026-06-20T10:01:15.373Z",
+      "fileSize": 543682,
+      "filePath": "raw/heroes/普蕾茜娅.html"
+    },
+    "海伦娜": {
+      "url": "https://wiki.biligame.com/langrisser/海伦娜",
+      "downloadedAt": "2026-06-20T10:01:24.720Z",
+      "fileSize": 610542,
+      "filePath": "raw/heroes/海伦娜.html"
+    },
+    "比萝蒂丝": {
+      "url": "https://wiki.biligame.com/langrisser/比萝蒂丝",
+      "downloadedAt": "2026-06-20T10:01:33.193Z",
+      "fileSize": 537039,
+      "filePath": "raw/heroes/比萝蒂丝.html"
+    },
+    "诺埃米": {
+      "url": "https://wiki.biligame.com/langrisser/诺埃米",
+      "downloadedAt": "2026-06-20T10:01:43.104Z",
+      "fileSize": 569007,
+      "filePath": "raw/heroes/诺埃米.html"
+    },
+    "席昂": {
+      "url": "https://wiki.biligame.com/langrisser/席昂",
+      "downloadedAt": "2026-06-20T10:01:50.923Z",
+      "fileSize": 384376,
+      "filePath": "raw/heroes/席昂.html"
+    },
+    "雷丁": {
+      "url": "https://wiki.biligame.com/langrisser/雷丁",
+      "downloadedAt": "2026-06-20T10:02:27.264Z",
+      "fileSize": 756104,
+      "filePath": "raw/heroes/雷丁.html"
+    },
+    "辉耀圣召使": {
+      "url": "https://wiki.biligame.com/langrisser/辉耀圣召使",
+      "downloadedAt": "2026-06-20T10:02:38.522Z",
+      "fileSize": 653196,
+      "filePath": "raw/heroes/辉耀圣召使.html"
+    },
+    "兰斯": {
+      "url": "https://wiki.biligame.com/langrisser/兰斯",
+      "downloadedAt": "2026-06-20T10:02:50.296Z",
+      "fileSize": 588274,
+      "filePath": "raw/heroes/兰斯.html"
+    },
+    "相羽新也": {
+      "url": "https://wiki.biligame.com/langrisser/相羽新也",
+      "downloadedAt": "2026-06-20T10:02:58.534Z",
+      "fileSize": 496373,
+      "filePath": "raw/heroes/相羽新也.html"
+    },
+    "古恩": {
+      "url": "https://wiki.biligame.com/langrisser/古恩",
+      "downloadedAt": "2026-06-20T10:03:09.656Z",
+      "fileSize": 533184,
+      "filePath": "raw/heroes/古恩.html"
+    },
+    "断翼鸟": {
+      "url": "https://wiki.biligame.com/langrisser/断翼鸟",
+      "downloadedAt": "2026-06-20T10:03:36.046Z",
+      "fileSize": 580936,
+      "filePath": "raw/heroes/断翼鸟.html"
+    },
+    "萨芙琳": {
+      "url": "https://wiki.biligame.com/langrisser/萨芙琳",
+      "downloadedAt": "2026-06-20T10:03:43.813Z",
+      "fileSize": 620613,
+      "filePath": "raw/heroes/萨芙琳.html"
+    },
+    "布琳达": {
+      "url": "https://wiki.biligame.com/langrisser/布琳达",
+      "downloadedAt": "2026-06-20T10:03:54.047Z",
+      "fileSize": 591866,
+      "filePath": "raw/heroes/布琳达.html"
+    },
+    "格尼尔": {
+      "url": "https://wiki.biligame.com/langrisser/格尼尔",
+      "downloadedAt": "2026-06-20T10:04:04.407Z",
+      "fileSize": 747854,
+      "filePath": "raw/heroes/格尼尔.html"
+    },
+    "剑部武一郎": {
+      "url": "https://wiki.biligame.com/langrisser/剑部武一郎",
+      "downloadedAt": "2026-06-20T10:04:14.345Z",
+      "fileSize": 534475,
+      "filePath": "raw/heroes/剑部武一郎.html"
+    },
+    "莱恩哈特": {
+      "url": "https://wiki.biligame.com/langrisser/莱恩哈特",
+      "downloadedAt": "2026-06-20T10:04:43.247Z",
+      "fileSize": 536497,
+      "filePath": "raw/heroes/莱恩哈特.html"
+    },
+    "帕恩": {
+      "url": "https://wiki.biligame.com/langrisser/帕恩",
+      "downloadedAt": "2026-06-20T10:04:52.661Z",
+      "fileSize": 549865,
+      "filePath": "raw/heroes/帕恩.html"
+    },
+    "宁芙": {
+      "url": "https://wiki.biligame.com/langrisser/宁芙",
+      "downloadedAt": "2026-06-20T10:05:02.388Z",
+      "fileSize": 464244,
+      "filePath": "raw/heroes/宁芙.html"
+    },
+    "梅露帕妮": {
+      "url": "https://wiki.biligame.com/langrisser/梅露帕妮",
+      "downloadedAt": "2026-06-20T10:05:15.212Z",
+      "fileSize": 541721,
+      "filePath": "raw/heroes/梅露帕妮.html"
+    },
+    "女天狗": {
+      "url": "https://wiki.biligame.com/langrisser/女天狗",
+      "downloadedAt": "2026-06-20T10:05:25.427Z",
+      "fileSize": 522441,
+      "filePath": "raw/heroes/女天狗.html"
+    },
+    "女神化身": {
+      "url": "https://wiki.biligame.com/langrisser/女神化身",
+      "downloadedAt": "2026-06-20T10:11:12.449Z",
+      "fileSize": 591936,
+      "filePath": "raw/heroes/女神化身.html"
+    },
+    "诺诺琳": {
+      "url": "https://wiki.biligame.com/langrisser/诺诺琳",
+      "downloadedAt": "2026-06-20T10:11:21.814Z",
+      "fileSize": 584452,
+      "filePath": "raw/heroes/诺诺琳.html"
+    },
+    "帕希尔": {
+      "url": "https://wiki.biligame.com/langrisser/帕希尔",
+      "downloadedAt": "2026-06-20T10:11:32.321Z",
+      "fileSize": 575599,
+      "filePath": "raw/heroes/帕希尔.html"
+    },
+    "莉法妮": {
+      "url": "https://wiki.biligame.com/langrisser/莉法妮",
+      "downloadedAt": "2026-06-20T10:11:42.425Z",
+      "fileSize": 596805,
+      "filePath": "raw/heroes/莉法妮.html"
+    },
+    "亚妮艾丝": {
+      "url": "https://wiki.biligame.com/langrisser/亚妮艾丝",
+      "downloadedAt": "2026-06-20T10:11:52.536Z",
+      "fileSize": 355275,
+      "filePath": "raw/heroes/亚妮艾丝.html"
+    },
+    "树之贤者": {
+      "url": "https://wiki.biligame.com/langrisser/树之贤者",
+      "downloadedAt": "2026-06-20T10:12:16.802Z",
+      "fileSize": 528974,
+      "filePath": "raw/heroes/树之贤者.html"
+    },
+    "露西": {
+      "url": "https://wiki.biligame.com/langrisser/露西",
+      "downloadedAt": "2026-06-20T10:12:26.086Z",
+      "fileSize": 488815,
+      "filePath": "raw/heroes/露西.html"
+    },
+    "亚尔缇娜": {
+      "url": "https://wiki.biligame.com/langrisser/亚尔缇娜",
+      "downloadedAt": "2026-06-20T10:12:36.159Z",
+      "fileSize": 545618,
+      "filePath": "raw/heroes/亚尔缇娜.html"
+    },
+    "光佑使徒": {
+      "url": "https://wiki.biligame.com/langrisser/光佑使徒",
+      "downloadedAt": "2026-06-20T10:12:43.608Z",
+      "fileSize": 608366,
+      "filePath": "raw/heroes/光佑使徒.html"
+    },
+    "卷岛颚人": {
+      "url": "https://wiki.biligame.com/langrisser/卷岛颚人",
+      "downloadedAt": "2026-06-20T10:12:53.022Z",
+      "fileSize": 277929,
+      "filePath": "raw/heroes/卷岛颚人.html"
+    },
+    "铁血总帅": {
+      "url": "https://wiki.biligame.com/langrisser/铁血总帅",
+      "downloadedAt": "2026-06-20T10:29:46.147Z",
+      "fileSize": 560667,
+      "filePath": "raw/heroes/铁血总帅.html"
+    },
+    "塔布莉丝": {
+      "url": "https://wiki.biligame.com/langrisser/塔布莉丝",
+      "downloadedAt": "2026-06-20T10:29:57.493Z",
+      "fileSize": 567518,
+      "filePath": "raw/heroes/塔布莉丝.html"
+    },
+    "雪莉": {
+      "url": "https://wiki.biligame.com/langrisser/雪莉",
+      "downloadedAt": "2026-06-20T10:30:07.372Z",
+      "fileSize": 801955,
+      "filePath": "raw/heroes/雪莉.html"
+    },
+    "漂逐斗客": {
+      "url": "https://wiki.biligame.com/langrisser/漂逐斗客",
+      "downloadedAt": "2026-06-20T10:30:17.439Z",
+      "fileSize": 568502,
+      "filePath": "raw/heroes/漂逐斗客.html"
+    },
+    "醒觉者": {
+      "url": "https://wiki.biligame.com/langrisser/醒觉者",
+      "downloadedAt": "2026-06-20T10:30:26.230Z",
+      "fileSize": 611443,
+      "filePath": "raw/heroes/醒觉者.html"
+    },
+    "拉姆达": {
+      "url": "https://wiki.biligame.com/langrisser/拉姆达",
+      "downloadedAt": "2026-06-20T10:30:59.706Z",
+      "fileSize": 599882,
+      "filePath": "raw/heroes/拉姆达.html"
+    },
+    "超越之人": {
+      "url": "https://wiki.biligame.com/langrisser/超越之人",
+      "downloadedAt": "2026-06-20T10:31:10.167Z",
+      "fileSize": 572605,
+      "filePath": "raw/heroes/超越之人.html"
+    },
+    "拉娜": {
+      "url": "https://wiki.biligame.com/langrisser/拉娜",
+      "downloadedAt": "2026-06-20T10:31:19.303Z",
+      "fileSize": 777962,
+      "filePath": "raw/heroes/拉娜.html"
+    },
+    "飞影": {
+      "url": "https://wiki.biligame.com/langrisser/飞影",
+      "downloadedAt": "2026-06-20T10:31:27.778Z",
+      "fileSize": 546402,
+      "filePath": "raw/heroes/飞影.html"
+    },
+    "里奇": {
+      "url": "https://wiki.biligame.com/langrisser/里奇",
+      "downloadedAt": "2026-06-20T10:31:38.492Z",
+      "fileSize": 577997,
+      "filePath": "raw/heroes/里奇.html"
+    },
+    "沃尔纳": {
+      "url": "https://wiki.biligame.com/langrisser/沃尔纳",
+      "downloadedAt": "2026-06-20T14:26:28.579Z",
+      "fileSize": 556344,
+      "filePath": "raw/heroes/沃尔纳.html"
+    },
+    "法娜": {
+      "url": "https://wiki.biligame.com/langrisser/法娜",
+      "downloadedAt": "2026-06-20T14:26:37.134Z",
+      "fileSize": 566578,
+      "filePath": "raw/heroes/法娜.html"
+    },
+    "莉拉·德西亚斯": {
+      "url": "https://wiki.biligame.com/langrisser/莉拉·德西亚斯",
+      "downloadedAt": "2026-06-20T14:28:07.401Z",
+      "fileSize": 513182,
+      "filePath": "raw/heroes/莉拉·德西亚斯.html"
+    },
+    "玛卡艾拉": {
+      "url": "https://wiki.biligame.com/langrisser/玛卡艾拉",
+      "downloadedAt": "2026-06-20T14:28:55.644Z",
+      "fileSize": 584935,
+      "filePath": "raw/heroes/玛卡艾拉.html"
+    },
+    "蕾蒂西亚": {
+      "url": "https://wiki.biligame.com/langrisser/蕾蒂西亚",
+      "downloadedAt": "2026-06-20T14:29:03.902Z",
+      "fileSize": 493399,
+      "filePath": "raw/heroes/蕾蒂西亚.html"
+    },
+    "辉夜": {
+      "url": "https://wiki.biligame.com/langrisser/辉夜",
+      "downloadedAt": "2026-06-20T14:29:22.691Z",
+      "fileSize": 655903,
+      "filePath": "raw/heroes/辉夜.html"
+    },
+    "卡洛莉安": {
+      "url": "https://wiki.biligame.com/langrisser/卡洛莉安",
+      "downloadedAt": "2026-06-20T14:29:39.586Z",
+      "fileSize": 526462,
+      "filePath": "raw/heroes/卡洛莉安.html"
+    },
+    "突击队长&天才婴儿": {
+      "url": "https://wiki.biligame.com/langrisser/突击队长&天才婴儿",
+      "downloadedAt": "2026-06-20T14:29:57.866Z",
+      "fileSize": 554397,
+      "filePath": "raw/heroes/突击队长&天才婴儿.html"
+    },
+    "克拉蕾特": {
+      "url": "https://wiki.biligame.com/langrisser/克拉蕾特",
+      "downloadedAt": "2026-06-20T14:30:06.371Z",
+      "fileSize": 570697,
+      "filePath": "raw/heroes/克拉蕾特.html"
+    },
+    "莉娜": {
+      "url": "https://wiki.biligame.com/langrisser/莉娜",
+      "downloadedAt": "2026-06-20T14:30:15.288Z",
+      "fileSize": 601382,
+      "filePath": "raw/heroes/莉娜.html"
+    },
+    "波赞鲁": {
+      "url": "https://wiki.biligame.com/langrisser/波赞鲁",
+      "downloadedAt": "2026-06-20T14:30:25.202Z",
+      "fileSize": 663098,
+      "filePath": "raw/heroes/波赞鲁.html"
+    },
+    "克里斯蒂安妮": {
+      "url": "https://wiki.biligame.com/langrisser/克里斯蒂安妮",
+      "downloadedAt": "2026-06-20T14:31:03.194Z",
+      "fileSize": 659451,
+      "filePath": "raw/heroes/克里斯蒂安妮.html"
+    },
+    "海恩": {
+      "url": "https://wiki.biligame.com/langrisser/海恩",
+      "downloadedAt": "2026-06-20T14:31:17.990Z",
+      "fileSize": 704953,
+      "filePath": "raw/heroes/海恩.html"
+    },
+    "罗莎莉娅": {
+      "url": "https://wiki.biligame.com/langrisser/罗莎莉娅",
+      "downloadedAt": "2026-06-20T14:31:29.022Z",
+      "fileSize": 613571,
+      "filePath": "raw/heroes/罗莎莉娅.html"
+    },
+    "索菲亚": {
+      "url": "https://wiki.biligame.com/langrisser/索菲亚",
+      "downloadedAt": "2026-06-20T14:31:43.839Z",
+      "fileSize": 552440,
+      "filePath": "raw/heroes/索菲亚.html"
+    },
+    "雾香": {
+      "url": "https://wiki.biligame.com/langrisser/雾香",
+      "downloadedAt": "2026-06-20T14:32:03.158Z",
+      "fileSize": 591475,
+      "filePath": "raw/heroes/雾香.html"
+    },
+    "席尔娜": {
+      "url": "https://wiki.biligame.com/langrisser/席尔娜",
+      "downloadedAt": "2026-06-20T14:32:15.755Z",
+      "fileSize": 666353,
+      "filePath": "raw/heroes/席尔娜.html"
+    },
+    "桑原和真": {
+      "url": "https://wiki.biligame.com/langrisser/桑原和真",
+      "downloadedAt": "2026-06-20T14:32:32.187Z",
+      "fileSize": 567210,
+      "filePath": "raw/heroes/桑原和真.html"
+    },
+    "蒂亚莉丝": {
+      "url": "https://wiki.biligame.com/langrisser/蒂亚莉丝",
+      "downloadedAt": "2026-06-20T14:32:43.560Z",
+      "fileSize": 701871,
+      "filePath": "raw/heroes/蒂亚莉丝.html"
+    },
+    "里奥贝克": {
+      "url": "https://wiki.biligame.com/langrisser/里奥贝克",
+      "downloadedAt": "2026-06-20T14:33:18.569Z",
+      "fileSize": 572026,
+      "filePath": "raw/heroes/里奥贝克.html"
+    },
+    "杰斯": {
+      "url": "https://wiki.biligame.com/langrisser/杰斯",
+      "downloadedAt": "2026-06-20T14:34:52.067Z",
+      "fileSize": 545401,
+      "filePath": "raw/heroes/杰斯.html"
+    },
+    "贝蒂": {
+      "url": "https://wiki.biligame.com/langrisser/贝蒂",
+      "downloadedAt": "2026-06-20T14:35:08.379Z",
+      "fileSize": 365436,
+      "filePath": "raw/heroes/贝蒂.html"
+    },
+    "雷因法鲁斯": {
+      "url": "https://wiki.biligame.com/langrisser/雷因法鲁斯",
+      "downloadedAt": "2026-06-20T14:35:45.085Z",
+      "fileSize": 564498,
+      "filePath": "raw/heroes/雷因法鲁斯.html"
+    },
+    "夏提雅": {
+      "url": "https://wiki.biligame.com/langrisser/夏提雅",
+      "downloadedAt": "2026-06-20T14:36:03.806Z",
+      "fileSize": 562808,
+      "filePath": "raw/heroes/夏提雅.html"
+    },
+    "兰卡": {
+      "url": "https://wiki.biligame.com/langrisser/兰卡",
+      "downloadedAt": "2026-06-20T14:36:17.356Z",
+      "fileSize": 533134,
+      "filePath": "raw/heroes/兰卡.html"
+    },
+    "霍夫曼": {
+      "url": "https://wiki.biligame.com/langrisser/霍夫曼",
+      "downloadedAt": "2026-06-20T14:36:35.177Z",
+      "fileSize": 544474,
+      "filePath": "raw/heroes/霍夫曼.html"
+    },
+    "怀特·茜茜": {
+      "url": "https://wiki.biligame.com/langrisser/怀特·茜茜",
+      "downloadedAt": "2026-06-20T14:36:52.024Z",
+      "fileSize": 568997,
+      "filePath": "raw/heroes/怀特·茜茜.html"
+    },
+    "格伦希尔": {
+      "url": "https://wiki.biligame.com/langrisser/格伦希尔",
+      "downloadedAt": "2026-06-20T14:37:09.532Z",
+      "fileSize": 563717,
+      "filePath": "raw/heroes/格伦希尔.html"
+    },
+    "雅儿贝德": {
+      "url": "https://wiki.biligame.com/langrisser/雅儿贝德",
+      "downloadedAt": "2026-06-20T14:37:21.266Z",
+      "fileSize": 517777,
+      "filePath": "raw/heroes/雅儿贝德.html"
+    },
+    "鲁克曼": {
+      "url": "https://wiki.biligame.com/langrisser/鲁克曼",
+      "downloadedAt": "2026-06-20T14:37:30.740Z",
+      "fileSize": 523377,
+      "filePath": "raw/heroes/鲁克曼.html"
+    },
+    "谜之骑士": {
+      "url": "https://wiki.biligame.com/langrisser/谜之骑士",
+      "downloadedAt": "2026-06-20T14:38:31.266Z",
+      "fileSize": 580862,
+      "filePath": "raw/heroes/谜之骑士.html"
+    },
+    "洛维奈尔大帝": {
+      "url": "https://wiki.biligame.com/langrisser/洛维奈尔大帝",
+      "downloadedAt": "2026-06-20T14:38:46.248Z",
+      "fileSize": 589027,
+      "filePath": "raw/heroes/洛维奈尔大帝.html"
+    },
+    "基斯": {
+      "url": "https://wiki.biligame.com/langrisser/基斯",
+      "downloadedAt": "2026-06-20T14:39:02.562Z",
+      "fileSize": 484425,
+      "filePath": "raw/heroes/基斯.html"
+    },
+    "蝴姆巴巴": {
+      "url": "https://wiki.biligame.com/langrisser/蝴姆巴巴",
+      "downloadedAt": "2026-06-20T14:39:18.578Z",
+      "fileSize": 541604,
+      "filePath": "raw/heroes/蝴姆巴巴.html"
+    },
+    "科洛丝": {
+      "url": "https://wiki.biligame.com/langrisser/科洛丝",
+      "downloadedAt": "2026-06-20T14:39:29.875Z",
+      "fileSize": 547394,
+      "filePath": "raw/heroes/科洛丝.html"
+    },
+    "塞蕾娜": {
+      "url": "https://wiki.biligame.com/langrisser/塞蕾娜",
+      "downloadedAt": "2026-06-20T14:39:45.665Z",
+      "fileSize": 550418,
+      "filePath": "raw/heroes/塞蕾娜.html"
+    },
+    "修杰特": {
+      "url": "https://wiki.biligame.com/langrisser/修杰特",
+      "downloadedAt": "2026-06-20T14:39:59.989Z",
+      "fileSize": 554559,
+      "filePath": "raw/heroes/修杰特.html"
+    },
+    "兰迪乌斯": {
+      "url": "https://wiki.biligame.com/langrisser/兰迪乌斯",
+      "downloadedAt": "2026-06-20T14:40:37.753Z",
+      "fileSize": 748690,
+      "filePath": "raw/heroes/兰迪乌斯.html"
+    },
+    "雅希": {
+      "url": "https://wiki.biligame.com/langrisser/雅希",
+      "downloadedAt": "2026-06-20T14:40:49.141Z",
+      "fileSize": 512398,
+      "filePath": "raw/heroes/雅希.html"
+    },
+    "波莉阿鲁": {
+      "url": "https://wiki.biligame.com/langrisser/波莉阿鲁",
+      "downloadedAt": "2026-06-20T14:41:07.508Z",
+      "fileSize": 369263,
+      "filePath": "raw/heroes/波莉阿鲁.html"
+    },
+    "迪哈尔特": {
+      "url": "https://wiki.biligame.com/langrisser/迪哈尔特",
+      "downloadedAt": "2026-06-20T14:41:18.675Z",
+      "fileSize": 491300,
+      "filePath": "raw/heroes/迪哈尔特.html"
+    },
+    "蕾娜塔": {
+      "url": "https://wiki.biligame.com/langrisser/蕾娜塔",
+      "downloadedAt": "2026-06-20T14:41:29.418Z",
+      "fileSize": 563325,
+      "filePath": "raw/heroes/蕾娜塔.html"
+    },
+    "雪露法妮尔": {
+      "url": "https://wiki.biligame.com/langrisser/雪露法妮尔",
+      "downloadedAt": "2026-06-20T14:41:43.826Z",
+      "fileSize": 612371,
+      "filePath": "raw/heroes/雪露法妮尔.html"
+    },
+    "骁浪驭虹使": {
+      "url": "https://wiki.biligame.com/langrisser/骁浪驭虹使",
+      "downloadedAt": "2026-06-20T14:41:56.061Z",
+      "fileSize": 587127,
+      "filePath": "raw/heroes/骁浪驭虹使.html"
+    },
+    "西布莉": {
+      "url": "https://wiki.biligame.com/langrisser/西布莉",
+      "downloadedAt": "2026-06-20T14:42:09.938Z",
+      "fileSize": 543651,
+      "filePath": "raw/heroes/西布莉.html"
+    },
+    "席恩": {
+      "url": "https://wiki.biligame.com/langrisser/席恩",
+      "downloadedAt": "2026-06-20T14:43:00.732Z",
+      "fileSize": 361108,
+      "filePath": "raw/heroes/席恩.html"
+    },
+    "阿云": {
+      "url": "https://wiki.biligame.com/langrisser/阿云",
+      "downloadedAt": "2026-06-20T14:43:09.269Z",
+      "fileSize": 531194,
+      "filePath": "raw/heroes/阿云.html"
+    },
+    "塞贝莉雅": {
+      "url": "https://wiki.biligame.com/langrisser/塞贝莉雅",
+      "downloadedAt": "2026-06-20T14:45:30.538Z",
+      "fileSize": 352989,
+      "filePath": "raw/heroes/塞贝莉雅.html"
+    },
+    "托娃": {
+      "url": "https://wiki.biligame.com/langrisser/托娃",
+      "downloadedAt": "2026-06-20T14:45:40.538Z",
+      "fileSize": 597164,
+      "filePath": "raw/heroes/托娃.html"
+    },
+    "斯科特": {
+      "url": "https://wiki.biligame.com/langrisser/斯科特",
+      "downloadedAt": "2026-06-20T14:45:56.419Z",
+      "fileSize": 487315,
+      "filePath": "raw/heroes/斯科特.html"
+    },
+    "安娜": {
+      "url": "https://wiki.biligame.com/langrisser/安娜",
+      "downloadedAt": "2026-06-20T14:46:08.413Z",
+      "fileSize": 477860,
+      "filePath": "raw/heroes/安娜.html"
+    },
+    "维坦": {
+      "url": "https://wiki.biligame.com/langrisser/维坦",
+      "downloadedAt": "2026-06-20T14:46:58.696Z",
+      "fileSize": 396873,
+      "filePath": "raw/heroes/维坦.html"
+    },
+    "蕾贝尔": {
+      "url": "https://wiki.biligame.com/langrisser/蕾贝尔",
+      "downloadedAt": "2026-06-20T14:47:13.562Z",
+      "fileSize": 529829,
+      "filePath": "raw/heroes/蕾贝尔.html"
+    },
+    "丽莎": {
+      "url": "https://wiki.biligame.com/langrisser/丽莎",
+      "downloadedAt": "2026-06-20T14:47:30.241Z",
+      "fileSize": 557861,
+      "filePath": "raw/heroes/丽莎.html"
+    },
+    "安兹·乌尔·恭": {
+      "url": "https://wiki.biligame.com/langrisser/安兹·乌尔·恭",
+      "downloadedAt": "2026-06-20T14:47:49.664Z",
+      "fileSize": 572007,
+      "filePath": "raw/heroes/安兹·乌尔·恭.html"
+    },
+    "薇莉娅": {
+      "url": "https://wiki.biligame.com/langrisser/薇莉娅",
+      "downloadedAt": "2026-06-20T14:48:35.255Z",
+      "fileSize": 575014,
+      "filePath": "raw/heroes/薇莉娅.html"
+    },
+    "罗泽希尔": {
+      "url": "https://wiki.biligame.com/langrisser/罗泽希尔",
+      "downloadedAt": "2026-06-20T14:48:51.893Z",
+      "fileSize": 566727,
+      "filePath": "raw/heroes/罗泽希尔.html"
+    },
+    "坂田银时": {
+      "url": "https://wiki.biligame.com/langrisser/坂田银时",
+      "downloadedAt": "2026-06-20T14:49:11.292Z",
+      "fileSize": 538722,
+      "filePath": "raw/heroes/坂田银时.html"
+    }
+  }
+}
