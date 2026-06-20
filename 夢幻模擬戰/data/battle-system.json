@@ -1,0 +1,89 @@
+{
+  "_meta": {
+    "description": "夢幻模擬戰戰鬥系統數據",
+    "sources": [
+      "反編譯客戶端 BattleFormula.cs (2018)",
+      "Wiki 傷害計算器"
+    ],
+    "updatedAt": "2026-06-20"
+  },
+
+  "armyTypes": [
+    { "id": 1, "code": "Spear", "name": "槍兵" },
+    { "id": 2, "code": "Walk", "name": "步兵" },
+    { "id": 3, "code": "Ride", "name": "騎兵" },
+    { "id": 4, "code": "Fly", "name": "飛兵" },
+    { "id": 5, "code": "Water", "name": "水兵" },
+    { "id": 6, "code": "Bow", "name": "弓兵" },
+    { "id": 7, "code": "Magic", "name": "法師" },
+    { "id": 8, "code": "Monk", "name": "僧侶" },
+    { "id": 9, "code": "Demon", "name": "魔物" },
+    { "id": 17, "code": "Assassin", "name": "刺客" }
+  ],
+
+  "armyAdvantage": {
+    "_note": "attacker → 克制 defender（攻防加成），具體係數由 ConfigDataArmyRelation 決定",
+    "triangle": [
+      { "attacker": "步兵", "defender": "槍兵" },
+      { "attacker": "槍兵", "defender": "騎兵" },
+      { "attacker": "騎兵", "defender": "步兵" }
+    ],
+    "special": [
+      { "attacker": "弓兵", "defender": "飛兵" },
+      { "attacker": "法師", "defender": "重甲（步/槍/騎）" },
+      { "attacker": "僧侶", "defender": "魔物" },
+      { "attacker": "刺客", "defender": "遠程（弓/法/僧）" }
+    ]
+  },
+
+  "terrain": [
+    { "name": "平地", "defenseBonus": 0 },
+    { "name": "礁石", "defenseBonus": 5 },
+    { "name": "石柱", "defenseBonus": 5 },
+    { "name": "山地", "defenseBonus": 10 },
+    { "name": "沙丘", "defenseBonus": 10 },
+    { "name": "貨物", "defenseBonus": 15 },
+    { "name": "樹林", "defenseBonus": 20 },
+    { "name": "基岩", "defenseBonus": 20 },
+    { "name": "城牆", "defenseBonus": 30 }
+  ],
+
+  "damageFormula": {
+    "_note": "所有 Mul 類參數基數 10000 = 100%",
+    "physical": {
+      "baseDamage": "(攻擊者.ATK × (1 + 兵種攻擊加成%)) - (防禦者.DEF × (1 - 忽視防禦%) × (1 + 地形防禦加成% + 兵種防禦加成%))",
+      "multipliers": [
+        "技能威力%",
+        "近戰懲罰%（遠程貼臉）",
+        "物理傷害倍數（攻方 buff）",
+        "物理受傷倍數（守方 debuff）",
+        "暴擊傷害（觸發時）",
+        "超級物理受傷倍數（獨立疊算）",
+        "技能傷害倍數（主動技能）",
+        "遠程受傷倍數（遠程技能）"
+      ],
+      "minimumDamage": 1
+    },
+    "magical": {
+      "baseDamage": "(攻擊者.INT × (1 + 兵種魔法加成%)) - (防禦者.MDEF × (1 - 忽視防禦%) × (1 + 地形防禦加成% + 兵種魔防加成%))",
+      "_note": "結構與物理傷害相同，攻擊值改用智力，防禦值改用魔防"
+    },
+    "healing": {
+      "percentBased": "目標.MaxHP × 技能威力%",
+      "magicBased": "施放者.INT × (1 + 技能威力%)",
+      "finalMultiplier": "(1 + 施放者.治療倍數/萬 + 目標.受治療倍數/萬)"
+    }
+  },
+
+  "criticalSystem": {
+    "heroRate": "技巧 × 10 + buff加成（上限 10000 = 100%）",
+    "soldierRate": "設定值 + buff加成（上限 10000）",
+    "effectiveRate": "攻擊者.暴擊率 + 防禦者.受暴率加成",
+    "damageMultiplier": "基礎暴傷 + buff加成（乘在最終傷害上）"
+  },
+
+  "propertyFormula": {
+    "hero": "(職業基礎 + 職業成長 × 0.1 × (等級-1)) × (1 + 星級倍數/萬) × (1 + 自身倍數/萬) + 自身加值 → × (1 + 成長倍數/萬) + 成長加值 → × (1 + buff倍數/萬) + buff加值",
+    "soldier": "(士兵基礎 + 士兵成長 × 0.1 × (英雄等級-1)) → 成長修正 → buff修正 → + 英雄指揮加成"
+  }
+}
