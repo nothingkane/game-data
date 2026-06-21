@@ -24,7 +24,7 @@ const PAGES = [
   { category: 'skills', name: '鑄紋技能', url: 'https://wiki.biligame.com/langrisser/%E9%93%B8%E7%BA%B9%E6%8A%80%E8%83%BD', dir: 'skills' },
   // 士兵
   { category: 'soldiers', name: '士兵圖鑑', url: 'https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5%E5%9B%BE%E9%89%B4', dir: 'soldiers' },
-  { category: 'soldiers', name: '兵種數據', url: 'https://wiki.biligame.com/langrisser/%E5%85%B5%E7%A7%8D%E6%95%B0%E6%8D%AE', dir: 'soldiers' },
+  { category: 'soldiers', name: '兵種數據表', url: 'https://wiki.biligame.com/langrisser/%E5%85%B5%E7%A7%8D%E6%95%B0%E6%8D%AE%E8%A1%A8', dir: 'soldiers' },
 ];
 
 function randomDelay() {
