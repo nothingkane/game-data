@@ -7,7 +7,7 @@
  *   node fetch-data-pages.mjs --only 裝備     # 只抓裝備
  */
 import { chromium } from 'playwright';
-import { writeFileSync, mkdirSync, existsSync } from 'fs';
+import { writeFileSync, mkdirSync, existsSync, statSync } from 'fs';
 import { join } from 'path';
 
 const BASE_DIR = join(import.meta.dirname, '../../夢幻模擬戰/raw');
@@ -68,6 +68,16 @@ async function main() {
     const { name, url, dir } = targets[i];
     const outDir = join(BASE_DIR, dir);
     mkdirSync(outDir, { recursive: true });
+
+    // 跳過已下載的
+    const htmlPath = join(outDir, `${name}.html`);
+    if (existsSync(htmlPath) && !args.includes('--force')) {
+      const size = statSync(htmlPath).size;
+      if (size > 10000) {
+        console.log(`[${i + 1}/${targets.length}] ⏭ ${name} — 已存在 (${(size / 1024).toFixed(0)}KB)`);
+        continue;
+      }
+    }
 
     if (i > 0) await randomDelay();
 

@@ -1,0 +1,684 @@
+{
+  "_meta": {
+    "totalByType": {
+      "步兵": 21,
+      "槍兵": 19,
+      "騎兵": 21,
+      "飛兵": 16,
+      "水兵": 14,
+      "弓兵": 20,
+      "刺客": 14,
+      "僧侶": 15,
+      "魔物": 14,
+      "法師": 12
+    },
+    "totalByLevel": {
+      "I": 12,
+      "II": 27,
+      "III": 127,
+      "SP": 52
+    }
+  },
+  "soldiers": [
+    {
+      "name": "山罡救援隊",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%B1%B1%E7%BD%A1%E6%95%91%E6%8F%B4%E9%98%9F"
+    },
+    {
+      "name": "輝光聖者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%BE%89%E5%85%89%E5%9C%A3%E8%80%85"
+    },
+    {
+      "name": "風花頌唱者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%A3%8E%E8%8A%B1%E9%A2%82%E5%94%B1%E8%80%85"
+    },
+    {
+      "name": "聖衛術師",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%9C%A3%E5%8D%AB%E6%9C%AF%E5%B8%88"
+    },
+    {
+      "name": "靈宗鬥僧",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%81%B5%E5%AE%97%E6%96%97%E5%83%A7"
+    },
+    {
+      "name": "洗罪者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%B4%97%E7%BD%AA%E8%80%85"
+    },
+    {
+      "name": "僧兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%83%A7%E5%85%B5"
+    },
+    {
+      "name": "武僧",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%AD%A6%E5%83%A7"
+    },
+    {
+      "name": "傳教士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E4%BC%A0%E6%95%99%E5%A3%AB"
+    },
+    {
+      "name": "狂熱者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%8B%82%E7%83%AD%E8%80%85"
+    },
+    {
+      "name": "巫女",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%B7%AB%E5%A5%B3"
+    },
+    {
+      "name": "神官",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%A5%9E%E5%AE%98"
+    },
+    {
+      "name": "森林祭司",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%A3%AE%E6%9E%97%E7%A5%AD%E5%8F%B8"
+    },
+    {
+      "name": "驅魔師",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%A9%B1%E9%AD%94%E5%B8%88"
+    },
+    {
+      "name": "神官騎士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%A5%9E%E5%AE%98%E9%AA%91%E5%A3%AB"
+    },
+    {
+      "name": "深海復仇者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%B7%B1%E6%B5%B7%E5%A4%8D%E4%BB%87%E8%80%85"
+    },
+    {
+      "name": "暗翎之刺",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%9A%97%E7%BF%8E%E4%B9%8B%E5%88%BA"
+    },
+    {
+      "name": "亞人遊蕩者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E4%BA%9A%E4%BA%BA%E6%B8%B8%E8%8D%A1%E8%80%85"
+    },
+    {
+      "name": "方舟刺客",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%96%B9%E8%88%9F%E5%88%BA%E5%AE%A2"
+    },
+    {
+      "name": "密林夜精靈",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%AF%86%E6%9E%97%E5%A4%9C%E7%B2%BE%E7%81%B5"
+    },
+    {
+      "name": "無面者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%97%A0%E9%9D%A2%E8%80%85"
+    },
+    {
+      "name": "盜賊",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%9B%97%E8%B4%BC"
+    },
+    {
+      "name": "伏擊者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E4%BC%8F%E5%87%BB%E8%80%85"
+    },
+    {
+      "name": "女忍",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A5%B3%E5%BF%8D"
+    },
+    {
+      "name": "影侍",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%BD%B1%E4%BE%8D"
+    },
+    {
+      "name": "暗殺者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%9A%97%E6%9D%80%E8%80%85"
+    },
+    {
+      "name": "緋霧女侍",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%BB%AF%E9%9B%BE%E5%A5%B3%E4%BE%8D"
+    },
+    {
+      "name": "武士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%AD%A6%E5%A3%AB"
+    },
+    {
+      "name": "地精騎士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%9C%B0%E7%B2%BE%E9%AA%91%E5%A3%AB"
+    },
+    {
+      "name": "翠翼射手",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%BF%A0%E7%BF%BC%E5%B0%84%E6%89%8B"
+    },
+    {
+      "name": "獨翼之矢",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%8B%AC%E7%BF%BC%E4%B9%8B%E7%9F%A2"
+    },
+    {
+      "name": "荒野考察隊",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%8D%92%E9%87%8E%E8%80%83%E5%AF%9F%E9%98%9F"
+    },
+    {
+      "name": "甲板炮手",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%94%B2%E6%9D%BF%E7%82%AE%E6%89%8B"
+    },
+    {
+      "name": "破城巨弩",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%A0%B4%E5%9F%8E%E5%B7%A8%E5%BC%A9"
+    },
+    {
+      "name": "妖精弓騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A6%96%E7%B2%BE%E5%BC%93%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "弩騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%BC%A9%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "弓箭手",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%BC%93%E7%AE%AD%E6%89%8B"
+    },
+    {
+      "name": "暗精靈",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%9A%97%E7%B2%BE%E7%81%B5"
+    },
+    {
+      "name": "精靈",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%B2%BE%E7%81%B5"
+    },
+    {
+      "name": "弩車",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%BC%A9%E8%BD%A6"
+    },
+    {
+      "name": "精銳弩騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%B2%BE%E9%94%90%E5%BC%A9%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "暗精靈射手",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%9A%97%E7%B2%BE%E7%81%B5%E5%B0%84%E6%89%8B"
+    },
+    {
+      "name": "投石車",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%8A%95%E7%9F%B3%E8%BD%A6"
+    },
+    {
+      "name": "大精靈",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A4%A7%E7%B2%BE%E7%81%B5"
+    },
+    {
+      "name": "突襲弩騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%AA%81%E8%A2%AD%E5%BC%A9%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "火弩狙擊手",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%81%AB%E5%BC%A9%E7%8B%99%E5%87%BB%E6%89%8B"
+    },
+    {
+      "name": "旋風遊騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%97%8B%E9%A3%8E%E6%B8%B8%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "天空射手",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A4%A9%E7%A9%BA%E5%B0%84%E6%89%8B"
+    },
+    {
+      "name": "矮人冒險者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%9F%AE%E4%BA%BA%E5%86%92%E9%99%A9%E8%80%85"
+    },
+    {
+      "name": "山巒守望者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%B1%B1%E5%B3%A6%E5%AE%88%E6%9C%9B%E8%80%85"
+    },
+    {
+      "name": "喚潮者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%94%A4%E6%BD%AE%E8%80%85"
+    },
+    {
+      "name": "聖盾親衛",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%9C%A3%E7%9B%BE%E4%BA%B2%E5%8D%AB"
+    },
+    {
+      "name": "精靈擲矛手",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%B2%BE%E7%81%B5%E6%8E%B7%E7%9F%9B%E6%89%8B"
+    },
+    {
+      "name": "教國禁衛",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%95%99%E5%9B%BD%E7%A6%81%E5%8D%AB"
+    },
+    {
+      "name": "方陣列兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%96%B9%E9%98%B5%E5%88%97%E5%85%B5"
+    },
+    {
+      "name": "重戟百夫長",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%87%8D%E6%88%9F%E7%99%BE%E5%A4%AB%E9%95%BF"
+    },
+    {
+      "name": "姬武神",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A7%AC%E6%AD%A6%E7%A5%9E"
+    },
+    {
+      "name": "重灌槍兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%87%8D%E8%A3%85%E6%9E%AA%E5%85%B5"
+    },
+    {
+      "name": "槍兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%9E%AA%E5%85%B5"
+    },
+    {
+      "name": "岩石傀儡",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%B2%A9%E7%9F%B3%E5%82%80%E5%84%A1"
+    },
+    {
+      "name": "姬武者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A7%AC%E6%AD%A6%E8%80%85"
+    },
+    {
+      "name": "精銳槍兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%B2%BE%E9%94%90%E6%9E%AA%E5%85%B5"
+    },
+    {
+      "name": "岩石巨人",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%B2%A9%E7%9F%B3%E5%B7%A8%E4%BA%BA"
+    },
+    {
+      "name": "樹人守衛",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%A0%91%E4%BA%BA%E5%AE%88%E5%8D%AB"
+    },
+    {
+      "name": "水晶塑型者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%B0%B4%E6%99%B6%E5%A1%91%E5%9E%8B%E8%80%85"
+    },
+    {
+      "name": "近衛槍兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%BF%91%E5%8D%AB%E6%9E%AA%E5%85%B5"
+    },
+    {
+      "name": "暗影百夫長",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%9A%97%E5%BD%B1%E7%99%BE%E5%A4%AB%E9%95%BF"
+    },
+    {
+      "name": "熔岩巨人",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%86%94%E5%B2%A9%E5%B7%A8%E4%BA%BA"
+    },
+    {
+      "name": "荒蠻角鬥士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%8D%92%E8%9B%AE%E8%A7%92%E6%96%97%E5%A3%AB"
+    },
+    {
+      "name": "叢林鏈舞者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E4%B8%9B%E6%9E%97%E9%93%BE%E8%88%9E%E8%80%85"
+    },
+    {
+      "name": "獠牙衛隊",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%8D%A0%E7%89%99%E5%8D%AB%E9%98%9F"
+    },
+    {
+      "name": "華鎧決鬥者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%8D%8E%E9%93%A0%E5%86%B3%E6%96%97%E8%80%85"
+    },
+    {
+      "name": "沙海傭兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%B2%99%E6%B5%B7%E4%BD%A3%E5%85%B5"
+    },
+    {
+      "name": "蠻族勇士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%9B%AE%E6%97%8F%E5%8B%87%E5%A3%AB"
+    },
+    {
+      "name": "食人巨魔",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%A3%9F%E4%BA%BA%E5%B7%A8%E9%AD%94"
+    },
+    {
+      "name": "步兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%AD%A5%E5%85%B5"
+    },
+    {
+      "name": "女僕",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A5%B3%E4%BB%86"
+    },
+    {
+      "name": "鬥士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%96%97%E5%A3%AB"
+    },
+    {
+      "name": "獸人",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%85%BD%E4%BA%BA"
+    },
+    {
+      "name": "精銳步兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%B2%BE%E9%94%90%E6%AD%A5%E5%85%B5"
+    },
+    {
+      "name": "高地勇士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AB%98%E5%9C%B0%E5%8B%87%E5%A3%AB"
+    },
+    {
+      "name": "王女親衛",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%8E%8B%E5%A5%B3%E4%BA%B2%E5%8D%AB"
+    },
+    {
+      "name": "素體改造人",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%B4%A0%E4%BD%93%E6%94%B9%E9%80%A0%E4%BA%BA"
+    },
+    {
+      "name": "重灌步兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%87%8D%E8%A3%85%E6%AD%A5%E5%85%B5"
+    },
+    {
+      "name": "近衛步兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%BF%91%E5%8D%AB%E6%AD%A5%E5%85%B5"
+    },
+    {
+      "name": "狂戰士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%8B%82%E6%88%98%E5%A3%AB"
+    },
+    {
+      "name": "狂獸人",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%8B%82%E5%85%BD%E4%BA%BA"
+    },
+    {
+      "name": "假面女僕",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%81%87%E9%9D%A2%E5%A5%B3%E4%BB%86"
+    },
+    {
+      "name": "暗黑衛隊",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%9A%97%E9%BB%91%E5%8D%AB%E9%98%9F"
+    },
+    {
+      "name": "暗潮之鱗",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%9A%97%E6%BD%AE%E4%B9%8B%E9%B3%9E"
+    },
+    {
+      "name": "幽冥之觸",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%B9%BD%E5%86%A5%E4%B9%8B%E8%A7%A6"
+    },
+    {
+      "name": "群島特使",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%BE%A4%E5%B2%9B%E7%89%B9%E4%BD%BF"
+    },
+    {
+      "name": "海洋祭師",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%B5%B7%E6%B4%8B%E7%A5%AD%E5%B8%88"
+    },
+    {
+      "name": "冰川元素",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%86%B0%E5%B7%9D%E5%85%83%E7%B4%A0"
+    },
+    {
+      "name": "深洋海盜",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%B7%B1%E6%B4%8B%E6%B5%B7%E7%9B%97"
+    },
+    {
+      "name": "小人魚",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%B0%8F%E4%BA%BA%E9%B1%BC"
+    },
+    {
+      "name": "人魚鬥士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E4%BA%BA%E9%B1%BC%E6%96%97%E5%A3%AB"
+    },
+    {
+      "name": "龍蝦",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%BE%99%E8%99%BE"
+    },
+    {
+      "name": "人魚統領",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E4%BA%BA%E9%B1%BC%E7%BB%9F%E9%A2%86"
+    },
+    {
+      "name": "蜥蜴刀客",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%9C%A5%E8%9C%B4%E5%88%80%E5%AE%A2"
+    },
+    {
+      "name": "潮汐精靈",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%BD%AE%E6%B1%90%E7%B2%BE%E7%81%B5"
+    },
+    {
+      "name": "海怪",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%B5%B7%E6%80%AA"
+    },
+    {
+      "name": "龍蝦巨獸",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%BE%99%E8%99%BE%E5%B7%A8%E5%85%BD"
+    },
+    {
+      "name": "禁林通靈師",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%A6%81%E6%9E%97%E9%80%9A%E7%81%B5%E5%B8%88"
+    },
+    {
+      "name": "咒法術士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%92%92%E6%B3%95%E6%9C%AF%E5%A3%AB"
+    },
+    {
+      "name": "熔火巫徒",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%86%94%E7%81%AB%E5%B7%AB%E5%BE%92"
+    },
+    {
+      "name": "毒蝠術師",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%AF%92%E8%9D%A0%E6%9C%AF%E5%B8%88"
+    },
+    {
+      "name": "仙靈預言者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E4%BB%99%E7%81%B5%E9%A2%84%E8%A8%80%E8%80%85"
+    },
+    {
+      "name": "禁忌鍊金師",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%A6%81%E5%BF%8C%E7%82%BC%E9%87%91%E5%B8%88"
+    },
+    {
+      "name": "魔法學徒",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AD%94%E6%B3%95%E5%AD%A6%E5%BE%92"
+    },
+    {
+      "name": "資深學徒",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%B5%84%E6%B7%B1%E5%AD%A6%E5%BE%92"
+    },
+    {
+      "name": "女巫",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A5%B3%E5%B7%AB"
+    },
+    {
+      "name": "魔晶術士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AD%94%E6%99%B6%E6%9C%AF%E5%A3%AB"
+    },
+    {
+      "name": "男巫",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%94%B7%E5%B7%AB"
+    },
+    {
+      "name": "魔女",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AD%94%E5%A5%B3"
+    },
+    {
+      "name": "黑天馬騎士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%BB%91%E5%A4%A9%E9%A9%AC%E9%AA%91%E5%A3%AB"
+    },
+    {
+      "name": "黯晶龍騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%BB%AF%E6%99%B6%E9%BE%99%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "星虹天馬",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%98%9F%E8%99%B9%E5%A4%A9%E9%A9%AC"
+    },
+    {
+      "name": "陽冠戰隼",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%98%B3%E5%86%A0%E6%88%98%E9%9A%BC"
+    },
+    {
+      "name": "機械龍騎士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%9C%BA%E6%A2%B0%E9%BE%99%E9%AA%91%E5%A3%AB"
+    },
+    {
+      "name": "龍裔戰士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%BE%99%E8%A3%94%E6%88%98%E5%A3%AB"
+    },
+    {
+      "name": "飛鷹騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%A3%9E%E9%B9%B0%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "獅鷲騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%8B%AE%E9%B9%AB%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "小惡魔",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%B0%8F%E6%81%B6%E9%AD%94"
+    },
+    {
+      "name": "天馬",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A4%A9%E9%A9%AC"
+    },
+    {
+      "name": "聖天馬",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%9C%A3%E5%A4%A9%E9%A9%AC"
+    },
+    {
+      "name": "石像鬼",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%9F%B3%E5%83%8F%E9%AC%BC"
+    },
+    {
+      "name": "天使",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A4%A9%E4%BD%BF"
+    },
+    {
+      "name": "吸血蝙蝠",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%90%B8%E8%A1%80%E8%9D%99%E8%9D%A0"
+    },
+    {
+      "name": "鋼翼勇士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%92%A2%E7%BF%BC%E5%8B%87%E5%A3%AB"
+    },
+    {
+      "name": "皇家獅鷲",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%9A%87%E5%AE%B6%E7%8B%AE%E9%B9%AB"
+    },
+    {
+      "name": "密林半人馬",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%AF%86%E6%9E%97%E5%8D%8A%E4%BA%BA%E9%A9%AC"
+    },
+    {
+      "name": "獠牙懾服者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%8D%A0%E7%89%99%E6%85%91%E6%9C%8D%E8%80%85"
+    },
+    {
+      "name": "烈焰踐行者",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%83%88%E7%84%B0%E8%B7%B5%E8%A1%8C%E8%80%85"
+    },
+    {
+      "name": "巨蜥騎手",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%B7%A8%E8%9C%A5%E9%AA%91%E6%89%8B"
+    },
+    {
+      "name": "金騎士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%87%91%E9%AA%91%E5%A3%AB"
+    },
+    {
+      "name": "機械騎士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%9C%BA%E6%A2%B0%E9%AA%91%E5%A3%AB"
+    },
+    {
+      "name": "騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "骨獸",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AA%A8%E5%85%BD"
+    },
+    {
+      "name": "聖騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%9C%A3%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "精銳騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%B2%BE%E9%94%90%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "皇家騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%9A%87%E5%AE%B6%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "近衛騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%BF%91%E5%8D%AB%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "重灌騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%87%8D%E8%A3%85%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "天琴親衛",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A4%A9%E7%90%B4%E4%BA%B2%E5%8D%AB"
+    },
+    {
+      "name": "龍騎兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%BE%99%E9%AA%91%E5%85%B5"
+    },
+    {
+      "name": "聖殿騎士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%9C%A3%E6%AE%BF%E9%AA%91%E5%A3%AB"
+    },
+    {
+      "name": "骨犀",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AA%A8%E7%8A%80"
+    },
+    {
+      "name": "魔蠍",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AD%94%E8%9D%8E"
+    },
+    {
+      "name": "獨角獸",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%8B%AC%E8%A7%92%E5%85%BD"
+    },
+    {
+      "name": "地獄犬",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%9C%B0%E7%8B%B1%E7%8A%AC"
+    },
+    {
+      "name": "融晶魔靈",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%9E%8D%E6%99%B6%E9%AD%94%E7%81%B5"
+    },
+    {
+      "name": "魔蟲巨衛",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AD%94%E8%99%AB%E5%B7%A8%E5%8D%AB"
+    },
+    {
+      "name": "煉獄魔核",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%82%BC%E7%8B%B1%E9%AD%94%E6%A0%B8"
+    },
+    {
+      "name": "契約魔像",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%A5%91%E7%BA%A6%E9%AD%94%E5%83%8F"
+    },
+    {
+      "name": "迷霧幽魂",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%BF%B7%E9%9B%BE%E5%B9%BD%E9%AD%82"
+    },
+    {
+      "name": "巨型靈俑",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E5%B7%A8%E5%9E%8B%E7%81%B5%E4%BF%91"
+    },
+    {
+      "name": "鋼鬃狼人",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%92%A2%E9%AC%83%E7%8B%BC%E4%BA%BA"
+    },
+    {
+      "name": "骷髏兵",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AA%B7%E9%AB%85%E5%85%B5"
+    },
+    {
+      "name": "骷髏弓手",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AA%B7%E9%AB%85%E5%BC%93%E6%89%8B"
+    },
+    {
+      "name": "骷髏勇士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%AA%B7%E9%AB%85%E5%8B%87%E5%A3%AB"
+    },
+    {
+      "name": "重灌骷髏",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E9%87%8D%E8%A3%85%E9%AA%B7%E9%AB%85"
+    },
+    {
+      "name": "火焰骷髏弓手",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E7%81%AB%E7%84%B0%E9%AA%B7%E9%AB%85%E5%BC%93%E6%89%8B"
+    },
+    {
+      "name": "蛛魔精靈",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E8%9B%9B%E9%AD%94%E7%B2%BE%E7%81%B5"
+    },
+    {
+      "name": "死靈騎士",
+      "url": "https://wiki.biligame.com/langrisser/%E5%A3%AB%E5%85%B5/%E6%AD%BB%E7%81%B5%E9%AA%91%E5%A3%AB"
+    }
+  ]
+}
