@@ -1,0 +1,8 @@
+---
+title: game-data — 遊戲資料倉
+description: 查遊戲資料檔（串檔產出/設定資料）存放倉時讀
+type: project
+date: 2026-07-22
+keywords: [game-data, 遊戲資料, 串檔]
+---
+遊戲資料存放 repo（無 README——內容以串檔資料為主，詳查 repo 結構）。
