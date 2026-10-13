@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（re_40），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/re_40/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 0、粉紅 0）",
+      "4 星（四顆金、兩顆灰）",
+      "技能只有 1 顆",
+      "名字那一塊被世界聊天跑馬燈蓋到，名字本身看得到是白字",
+      "能力值評級是從縮小的疊圖讀的，字很小，可能讀錯"
+    ]
+  },
+  "name": "紅月之王",
+  "rarity": "SSR",
+  "stars": 4,
+  "level": "70/70",
+  "power": 4023,
+  "name_color": "白",
+  "unit_type": "步兵",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "光之起源",
+    "黑暗輪迴",
+    "超凡領域"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "A",
+      "base": 1441,
+      "bonus": 870
+    },
+    "攻擊": {
+      "grade": "D",
+      "base": 123,
+      "bonus": 166
+    },
+    "智力": {
+      "grade": "S",
+      "base": 219,
+      "bonus": 71
+    },
+    "防禦": {
+      "grade": "B",
+      "base": 119,
+      "bonus": 79
+    },
+    "魔防": {
+      "grade": "A",
+      "base": 111,
+      "bonus": 50
+    },
+    "技巧": {
+      "grade": "A",
+      "base": 44,
+      "bonus": 15
+    }
+  },
+  "talent": {
+    "name": "紅月散華",
+    "text": "範圍傷害提升8%。造成範圍傷害後，每命中1名敵軍，則恢復8%生命值，並額外對命中的所有目標及其相鄰1格所有敵軍造成1次[固定傷害]，傷害值為智力0.3倍。"
+  },
+  "skills": [
+    {
+      "name": "虹吸",
+      "cost": 2,
+      "category": "魔法傷害",
+      "cooldown": 2,
+      "range": "1格",
+      "area": "單體",
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害。戰鬥後，恢復傷害數值30%的生命。",
+      "equipped": true,
+      "from_lib": "L0277"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "兵種步兵、吃智力的範圍輸出。只有 1 顆技能、4 星、戰力 4023——還沒練。沒有超絕。名字是白的。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "魔法輸出(步兵)",
+      "範圍傷害",
+      "固定傷害",
+      "自回血",
+      "4星",
+      "養成度低"
+    ]
+  },
+  "exclusive_gear": {
+    "name": "月蝕鬥衣",
+    "slot": "護甲",
+    "skill": "赤月降臨",
+    "unlock": "強化至Lv.10啟動",
+    "text": "生命+2%。造成固定傷害與遭受治療效果提升20%。“月之暗面”指揮效果的範圍+1。",
+    "source": "exclusive_gear.json（2026-10-12 秘境商店，g064.png）；學長有沒有這件、有沒有強化到 Lv.10 沒有看"
+  },
+  "rune_skill": {
+    "status": "可獲得（學長還沒解鎖）",
+    "name": "散華血願",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）；text_wiki 來自 2026-06-20 爬的 Biligame Wiki，數字可能改過",
+    "text_wiki": "智力+5%，觸發血晶庇佑時，所有技能冷卻時間-3。"
+  }
+}

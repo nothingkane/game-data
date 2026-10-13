@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（re_14），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/re_14/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 0、粉紅 0）",
+      "5 星（五顆金、一顆灰）",
+      "技能只有 1 顆"
+    ]
+  },
+  "name": "愛克雪拉",
+  "rarity": "SSR",
+  "stars": 5,
+  "level": "70/70",
+  "power": 4167,
+  "name_color": "白",
+  "unit_type": "槍兵",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "帝國之輝",
+    "戰略大師",
+    "時空樞紐"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "A",
+      "base": 1806,
+      "bonus": 870
+    },
+    "攻擊": {
+      "grade": "A",
+      "base": 229,
+      "bonus": 166
+    },
+    "智力": {
+      "grade": "D",
+      "base": 121,
+      "bonus": 71
+    },
+    "防禦": {
+      "grade": "A",
+      "base": 131,
+      "bonus": 79
+    },
+    "魔防": {
+      "grade": "C",
+      "base": 86,
+      "bonus": 50
+    },
+    "技巧": {
+      "grade": "B",
+      "base": 46,
+      "bonus": 15
+    }
+  },
+  "talent": {
+    "name": "崩解壓抑",
+    "text": "與生命百分比不高於自身的部隊交戰時，攻防提升16%。行動結束時，自身有40%機率獲得[蓄力]:“下次主動攻擊時，英雄暴擊率提升100%，若本次攻擊使用技能造成傷害，該技能冷卻時間減少2回合”。"
+  },
+  "skills": [
+    {
+      "name": "穿甲",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 2,
+      "range": "1格",
+      "area": "單體",
+      "text": "[物理傷害]攻擊單個敵軍，造成1.5倍的戰鬥傷害。戰鬥後，降低敵軍防禦30%，持續2回合。",
+      "equipped": true,
+      "from_lib": "L0021"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "槍兵物理輸出，只有 1 顆技能（穿甲）、白字能力值很低（生命 1806）、戰力 4167、5 星——還沒練。沒有超絕。名字是白的。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "物理輸出",
+      "槍兵",
+      "暴擊(機率)",
+      "5星",
+      "養成度低"
+    ]
+  },
+  "rune_skill": {
+    "status": "可獲得（學長還沒解鎖）",
+    "name": "龍奏歌聲",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）；text_wiki 來自 2026-06-20 爬的 Biligame Wiki，數字可能改過",
+    "text_wiki": "攻擊+5%；釋放[遠古之歌]後，自身獲得[蓄力]，使用後可以再次攻擊（無法移動）。"
+  }
+}

@@ -1,0 +1,142 @@
+{
+ "name": "夜叉王凱",
+ "sources": [
+  "ingame"
+ ],
+ "_from": {
+  "rarity": "ingame 2026-10-12",
+  "unit_type": "ingame 2026-10-12",
+  "keywords": "ingame 2026-10-12",
+  "name_color": "ingame 2026-10-12",
+  "talent": "ingame 2026-10-12",
+  "skills": "ingame 2026-10-12",
+  "account": "ingame 2026-10-12",
+  "analysis": "ingame 2026-10-12（CanL 的判讀，不是遊戲寫的）"
+ },
+ "rarity": "SSR",
+ "unit_type": "步兵",
+ "keywords": [
+  "黑暗輪迴",
+  "時空樞紐",
+  "夢幻轉生"
+ ],
+ "name_color": "白",
+ "talent": {
+  "name": "疾風光流",
+  "text": "攻擊、防禦提升10%，回合開始時獲得可以抵擋英雄攻擊1.5倍的傷害的[護盾]，不可驅散。擁有[護盾]時免疫[固定傷害]且遭受範圍傷害降低50%。主動攻擊進入戰鬥時若自身本回合未受到過生命值傷害（包括[固定傷害]，主動進入戰鬥遭受傷害除外），本次攻擊傷害提升15%，且戰鬥後可再行動3格，強化效果回合數不會減少，可再次攻擊。(再行動效果每回合僅觸發1次)"
+ },
+ "skills": [
+  {
+   "name": "光流護體",
+   "cost": 1,
+   "category": "主動",
+   "cooldown": 4,
+   "range": "自身",
+   "area": "單體",
+   "equipped": true,
+   "text": "[主動]使用後獲得可以抵擋相當於部隊25%最大生命傷害的不可驅散的[護盾]，及“遭受傷害降低100%，被敵軍攻擊後對傷害來源施加1回合‘移動力-2且無法進行護衛’、‘無法使用主動技能’，並移除此效果”，不可驅散。使用後可以額外行動3格，可再次攻擊。（使用此技能後，身上攜帶的強化效果回合數不會減少）"
+  },
+  {
+   "name": "致命",
+   "cost": 1,
+   "category": "被動",
+   "cooldown": null,
+   "range": null,
+   "area": null,
+   "text": "[被動]主動攻擊進入戰鬥時，攻擊提升12%。",
+   "from_lib": "L0057",
+   "equipped": true
+  },
+  {
+   "name": "背水",
+   "cost": 1,
+   "category": "被動",
+   "cooldown": null,
+   "range": null,
+   "area": null,
+   "text": "[被動]部隊生命低於50%時，進入戰鬥時防禦、魔防提升10%。",
+   "from_lib": "L0060",
+   "equipped": true
+  },
+  {
+   "name": "斬陽",
+   "cost": 2,
+   "category": "物理傷害",
+   "cooldown": 2,
+   "range": "1格",
+   "area": "單體",
+   "text": "[物理傷害]攻擊單個敵軍，造成1.5倍傷害。戰鬥後，恢復傷害數值30%的生命。",
+   "from_lib": "L0095",
+   "equipped": false
+  }
+ ],
+ "account": {
+  "stars": 3,
+  "level": "70/70",
+  "power": 4128,
+  "stats": {
+   "生命": {
+    "grade": "S",
+    "base": 1762,
+    "bonus": 870
+   },
+   "攻擊": {
+    "grade": "S",
+    "base": 239,
+    "bonus": 166
+   },
+   "智力": {
+    "grade": "D",
+    "base": 97,
+    "bonus": 71
+   },
+   "防禦": {
+    "grade": "S",
+    "base": 128,
+    "bonus": 79
+   },
+   "魔防": {
+    "grade": "B",
+    "base": 107,
+    "bonus": 50
+   },
+   "技巧": {
+    "grade": "B",
+    "base": 35,
+    "bonus": 15
+   }
+  }
+ },
+ "analysis": {
+  "super_buff": [],
+  "role_guess": "步兵物理輸出：每回合開頭拿一層護盾，這回合沒掉血就能在主動攻擊後再行動（每回合 1 次）。只有 4 顆技能、3 星、戰力 4128——還沒練。沒有超絕。合作角色。從文字推的，沒在戰鬥裡驗過",
+  "tags": [
+   "物理輸出",
+   "護盾(每回合)",
+   "再行動(沒掉血時)",
+   "免疫固定傷害(有盾時)",
+   "範圍減傷",
+   "3星",
+   "養成度低"
+  ]
+ },
+ "ingame_meta": {
+  "captured": "2026-10-12",
+  "source": "hero_capture.py 實機拍（rf_32），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+  "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/rf_32/",
+  "not_viewed": [
+   "職業頁籤",
+   "士兵頁籤",
+   "裝備頁籤",
+   "覺醒頁籤",
+   "生平"
+  ],
+  "notes": [
+   "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+   "名字顏色是程式數像素判的（青 0、粉紅 0）",
+   "3 星（三顆金、三顆灰）",
+   "技能只有 4 顆",
+   "2026-10-12 晚上更正 COST：致命 2→1（程式數技能說明框的紅點；原本是 CanL 用眼睛抄的）"
+  ]
+ }
+}

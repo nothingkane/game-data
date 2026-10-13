@@ -5,7 +5,7 @@ import { chromium } from 'playwright';
 import { writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
-const RAW_DIR = join(import.meta.dirname, '../../夢幻模擬戰/raw/battle');
+const RAW_DIR = join(import.meta.dirname, '../../夢幻模擬戰/sources/wiki/raw/battle');
 
 const PAGES = [
   { name: '基礎數據分析', url: 'https://wiki.biligame.com/langrisser/%E6%A2%A6%E6%88%98%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90' },

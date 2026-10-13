@@ -1,0 +1,101 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（rf_31），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/rf_31/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 12、粉紅 0）",
+      "3 星（三顆金、三顆灰）",
+      "技能只有 1 顆"
+    ]
+  },
+  "name": "瓊&康娜",
+  "rarity": "SSR",
+  "stars": 3,
+  "level": "70/70",
+  "power": 4142,
+  "name_color": "白",
+  "unit_type": "弓兵",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "帝國之輝",
+    "戰略大師",
+    "夢幻轉生"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "B",
+      "base": 1205,
+      "bonus": 870
+    },
+    "攻擊": {
+      "grade": "A",
+      "base": 207,
+      "bonus": 166
+    },
+    "智力": {
+      "grade": "D",
+      "base": 106,
+      "bonus": 71
+    },
+    "防禦": {
+      "grade": "C",
+      "base": 96,
+      "bonus": 79
+    },
+    "魔防": {
+      "grade": "B",
+      "base": 111,
+      "bonus": 50
+    },
+    "技巧": {
+      "grade": "A",
+      "base": 49,
+      "bonus": 15
+    }
+  },
+  "talent": {
+    "name": "智械幻侶",
+    "text": "攻擊，暴擊率提升10%。每場戰鬥開始時，在自己身邊召喚一個[映射之影·瓊]，繼承康娜對應屬性的80%。"
+  },
+  "skills": [
+    {
+      "name": "代碼重構",
+      "cost": 1,
+      "category": "支援",
+      "cooldown": 2,
+      "range": "自身",
+      "area": "全場",
+      "equipped": true,
+      "text": "[支援]主動使用，使康娜和瓊獲得[增援]與“暴擊率提升20%”，持續2回合。"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "弓兵物理輸出，開場自動帶一隻召喚物（瓊）。只有 1 顆技能、3 星、戰力 4142——還沒練。沒有超絕。名字是白的。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "物理輸出",
+      "弓兵",
+      "召喚物(瓊)",
+      "暴擊",
+      "3星",
+      "養成度低"
+    ]
+  },
+  "exclusive_gear": {
+    "name": "Y型視覺終端",
+    "slot": "頭盔",
+    "skill": "映影同步",
+    "unlock": "強化至Lv.10啟動",
+    "text": "生命+2%。和瓊距離3格以內時，康娜暴擊傷害提升15%。瓊使用[通道干擾]可額外獲得：“[指揮]自身周圍2格範圍內的敵軍，受到康娜攻擊時，無法被護衛”，持續2回合。",
+    "source": "exclusive_gear.json（2026-10-12 秘境商店，g035.png）；學長有沒有這件、有沒有強化到 Lv.10 沒有看"
+  }
+}

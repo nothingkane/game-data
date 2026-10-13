@@ -1,0 +1,149 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（rf_07），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/rf_07/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 0、粉紅 0）",
+      "3 星（三顆金、三顆灰）",
+      "技能只有 5 顆",
+      "關鍵字只有 2 個"
+    ]
+  },
+  "name": "諾埃米",
+  "rarity": "SSR",
+  "stars": 3,
+  "level": "70/70",
+  "power": 4736,
+  "name_color": "白",
+  "unit_type": "法師",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "光輝軍團",
+    "夢幻轉生"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "B",
+      "base": 1863,
+      "bonus": 870
+    },
+    "攻擊": {
+      "grade": "C",
+      "base": 200,
+      "bonus": 166
+    },
+    "智力": {
+      "grade": "A",
+      "base": 319,
+      "bonus": 71
+    },
+    "防禦": {
+      "grade": "B",
+      "base": 150,
+      "bonus": 79
+    },
+    "魔防": {
+      "grade": "A",
+      "base": 182,
+      "bonus": 50
+    },
+    "技巧": {
+      "grade": "C",
+      "base": 79,
+      "bonus": 15
+    }
+  },
+  "talent": {
+    "name": "魔法裁縫",
+    "text": "本部隊有3個以下的弱化狀態時，智力提升5%。第1次行動結束時和英雄死亡時，為所有友軍部隊施加[魔法新衣]:“如果部隊生命值低於80%時，遭受的下一次傷害降低20%”（該效果無法被驅散）"
+  },
+  "skills": [
+    {
+      "name": "火球",
+      "cost": 1,
+      "category": "魔法傷害",
+      "cooldown": 1,
+      "range": "2格",
+      "area": "單體",
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害，對「步兵」有特效。",
+      "from_lib": "L0066",
+      "equipped": true
+    },
+    {
+      "name": "魔防威嚇",
+      "cost": 2,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]行動結束時，使得周圍3格以內所有敵軍部隊的\"魔防\"降低20%，持續1回合。",
+      "from_lib": "L0185",
+      "equipped": true
+    },
+    {
+      "name": "冰凍",
+      "cost": 1,
+      "category": "魔法傷害",
+      "cooldown": 1,
+      "range": "2格",
+      "area": "單體",
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害，對「槍兵」有特效。",
+      "from_lib": "L0003",
+      "equipped": true
+    },
+    {
+      "name": "魔力縫合",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "equipped": false,
+      "text": "[被動]行動結束時，對隨機1名在[危險範圍]內的敵軍部隊施加[魔痕]:“受到來自諾埃米的傷害增加5%”，持續3回合，最高可累積3個。且主動進入戰鬥攻擊擁有[魔痕]效果的敵軍，戰後恢復造成傷害的20%的生命值，並驅散1個[魔痕]效果。"
+    },
+    {
+      "name": "冰槍",
+      "cost": 2,
+      "category": "魔法傷害",
+      "cooldown": 1,
+      "range": "2格",
+      "area": "單體",
+      "equipped": false,
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害。對「槍兵」有特效。戰後令命中的格子獲得2回合的特殊效果[霜境]:“當敵軍單位移動至其上，在行動結束時獲得‘移動力-2’，持續1回合。”"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "法師輸出。只有 5 顆技能、3 星、戰力 4736。沒有超絕。只有兩個關鍵字。名字是白的。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "魔法輸出",
+      "全體減傷一次(魔法新衣)",
+      "特效(槍兵)",
+      "3星",
+      "養成度低"
+    ]
+  },
+  "exclusive_gear": {
+    "name": "妙想法帽",
+    "slot": "頭盔",
+    "skill": "穿針引線",
+    "unlock": "強化至Lv.10啟動",
+    "text": "生命+2%。所有擁有[魔法新衣]的部隊，行動結束時驅散自身1個弱化效果，並恢復5%生命。施放[弈能法衣]時，額外增加1次效果次數。",
+    "source": "exclusive_gear.json（2026-10-12 秘境商店，g075.png）；學長有沒有這件、有沒有強化到 Lv.10 沒有看"
+  },
+  "rune_skill": {
+    "status": "可獲得（學長還沒解鎖）",
+    "name": "織法弈能",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）；text_wiki 來自 2026-06-20 爬的 Biligame Wiki，數字可能改過",
+    "text_wiki": "智力+5%，弈能法衣狀態持續期間每次主動攻擊造成傷害時，使弈能法衣冷卻時間-2。"
+  }
+}

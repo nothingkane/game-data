@@ -1,0 +1,141 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（re_45），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/re_45/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 0、粉紅 0）",
+      "3 星（三顆金、三顆灰）",
+      "技能只有 5 顆"
+    ]
+  },
+  "name": "蕾恩",
+  "rarity": "SSR",
+  "stars": 3,
+  "level": "70/70",
+  "power": 5874,
+  "name_color": "白",
+  "unit_type": "魔物",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "黑暗輪迴",
+    "傳說彼端",
+    "時空樞紐"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "A",
+      "base": 2644,
+      "bonus": 870
+    },
+    "攻擊": {
+      "grade": "D",
+      "base": 214,
+      "bonus": 166
+    },
+    "智力": {
+      "grade": "S",
+      "base": 452,
+      "bonus": 71
+    },
+    "防禦": {
+      "grade": "B",
+      "base": 221,
+      "bonus": 79
+    },
+    "魔防": {
+      "grade": "S",
+      "base": 283,
+      "bonus": 50
+    },
+    "技巧": {
+      "grade": "C",
+      "base": 102,
+      "bonus": 15
+    }
+  },
+  "talent": {
+    "name": "殲滅天使",
+    "text": "與帶有“弱化效果”的敵軍交戰時，智力、防禦、魔防提升5%。對敵方部隊造成傷害後，為敵軍施加1個隨機的弱化效果。"
+  },
+  "skills": [
+    {
+      "name": "暗影之矛",
+      "cost": 1,
+      "category": "魔法傷害",
+      "cooldown": 1,
+      "range": "2格",
+      "area": "單體",
+      "equipped": true,
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害，對「僧侶」有特效。"
+    },
+    {
+      "name": "冰凍",
+      "cost": 1,
+      "category": "魔法傷害",
+      "cooldown": 1,
+      "range": "2格",
+      "area": "單體",
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害，對「槍兵」有特效。",
+      "from_lib": "L0003",
+      "equipped": false
+    },
+    {
+      "name": "暗物質",
+      "cost": 2,
+      "category": "魔法傷害",
+      "cooldown": 2,
+      "range": "2格",
+      "area": "單體",
+      "equipped": true,
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害。並使敵軍“治療效果降低100%”，持續2回合。（該效果無法被驅散）"
+    },
+    {
+      "name": "風刃",
+      "cost": 1,
+      "category": "魔法傷害",
+      "cooldown": 1,
+      "range": "2格",
+      "area": "單體",
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害，對「飛兵」有特效。",
+      "from_lib": "L0005",
+      "equipped": false
+    },
+    {
+      "name": "蕾恩·殲滅",
+      "cost": 2,
+      "category": "魔法傷害",
+      "cooldown": 2,
+      "range": "2格",
+      "area": "單體",
+      "equipped": true,
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.3倍傷害。如果敵軍身上有3個及以上的弱化狀態，則本次攻擊降低敵方100%的魔防，且敵軍無法反擊。"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "魔物法系單體輸出：打到人就上弱化；對手有 3 個以上弱化時蕾恩·殲滅無視全部魔防且對方無法反擊。只有 5 顆技能、3 星、戰力 5874。沒有超絕。合作角色。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "魔法輸出",
+      "弱化",
+      "禁療",
+      "無視魔防(條件)",
+      "無法反擊(條件)",
+      "特效(僧侶)",
+      "3星",
+      "養成度低"
+    ]
+  },
+  "rune_skill": {
+    "status": "暫未開放",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）"
+  }
+}

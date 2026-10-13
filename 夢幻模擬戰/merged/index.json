@@ -1,0 +1,2124 @@
+{
+ "_meta": {
+  "note": "build_merged.py 產生，不要手改",
+  "counts": {
+   "合計": 265,
+   "兩邊都有": 212,
+   "只有遊戲畫面": 2,
+   "只有 wiki": 32,
+   "wiki 加遊戲畫面的專屬裝備": 19
+  }
+ },
+ "only_ingame": [
+  "修羅王秋亞人",
+  "夜叉王凱"
+ ],
+ "exclusive_gear_owner_unmatched": [],
+ "heroes": [
+  {
+   "name": "D-Boy",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "迪波威"
+  },
+  {
+   "name": "亞修拉姆",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "亞德凱摩",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "亞莎梅爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "亞魯特繆拉",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "伊普西龍",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "伊索爾德",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "伊莉婭",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "伊莉絲",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "伊露希亞",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "修傑特",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "修杰特"
+  },
+  {
+   "name": "修羅王秋亞人",
+   "rarity": "SSR",
+   "sources": [
+    "ingame"
+   ]
+  },
+  {
+   "name": "傑克船長",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "傑利奧魯&蕾拉",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "光佑使徒",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "光影劍魄",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "克拉蕾特",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "克洛泰爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "克里斯蒂安妮",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "冰淵凌御者",
+   "rarity": "LLR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "凱爾蒂斯",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "初真澤瑞達",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "利亞特",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "利昂",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "卡洛莉安",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "卷島顎人",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "古巨拉",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "古恩",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "古斯塔夫",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "埃爾維斯",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "基扎洛夫",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "塔塔利亞",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "塔布莉絲",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "塞姆",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "塞拉菲娜",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "夏提雅",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "夜叉王凱",
+   "rarity": "SSR",
+   "sources": [
+    "ingame"
+   ]
+  },
+  {
+   "name": "奈米婭",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "奧托克拉托四世",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "奧托克拉託四世"
+  },
+  {
+   "name": "奧拉",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "女天狗",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "女神化身",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "妮絲蒂爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "娜姆",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "安德里奧",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "安潔麗娜",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "安茲·烏爾·恭",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "寧芙",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "小刀馬克&忍者Ginzu",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "尤彌爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "尤莉婭",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "尤利婭"
+  },
+  {
+   "name": "巴恩哈特",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "布琳達",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "希爾達",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "希琳卡",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "帕希爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "帕恩",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "帕特里夏",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "席恩",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "席昂",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "席爾娜",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "幽瞳幻惑使",
+   "rarity": "LLR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "弗洛朗蒂婭",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "忍部火美子",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "恩雅",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "愛克雪拉",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "懷特·茜茜",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "戰部渡",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "戶愚呂兄弟",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "托娃",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "託娃"
+  },
+  {
+   "name": "托米爾克",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "拉姆達",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "拉娜",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "文森特",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "斷翼鳥",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "方舟聖女",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "普蕾茜婭",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "曉浪馭虹使",
+   "rarity": "LLR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "驍浪馭虹使"
+  },
+  {
+   "name": "月之執政官",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "朧",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "朱利安",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "杰斯",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "傑斯"
+  },
+  {
+   "name": "格倫希爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "格尼爾",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "桑妮雅",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "桑格",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "梅雅",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "梓",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "樹之賢者",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "歐米伽",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "殼中少女",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "沃爾納",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "沙律",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "沙里克",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "沙裡克"
+  },
+  {
+   "name": "波莉阿魯",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "波贊魯",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "泰蘭提爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "洛斯塔姆",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "洛維奈爾大帝",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "浦飯幽助",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "海倫娜",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "海恩",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "深町晶",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "漂逐鬥客",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "澤瑞達",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "炎龍破滅者",
+   "rarity": "LLR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "燕",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "狺",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "琳",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "瑪卡艾拉",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "瑪莉·蘿絲",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "瑪麗埃爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "瑪麗安蒂爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "瓊&康娜",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "盧克蕾蒂婭",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "盧古耐爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "相羽新也",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "相羽美雪",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "真宮寺櫻",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "真田遼",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "神崎菫",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "神崎堇"
+  },
+  {
+   "name": "神降者",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "科洛蒂婭·巴蘭茨",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "穆寧",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "米歇爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "約書亞",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "約修亞"
+  },
+  {
+   "name": "紅月之王",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "納茲",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "維坦",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "維拉",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "威拉"
+  },
+  {
+   "name": "維拉玖",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "維爾納",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "緹雅娜",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "羅澤希爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "羅莎莉婭",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "羅蘭",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "艾希恩",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "艾拉斯卓",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "艾梅達",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "艾爾文",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "艾爾瑪",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "艾爾莎",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "艾露莎"
+  },
+  {
+   "name": "艾米莉亞",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "艾絲蒂爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "芙蕾雅",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "茉",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "莉亞娜",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "莉拉·德西亞斯",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "萊恩哈特",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "萊莎琳·斯托特",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蒂亞莉絲",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蒂德莉特",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蕾伽爾",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蕾娜塔",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蕾恩",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "玲"
+  },
+  {
+   "name": "蕾貝爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蕾雅",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "薇莉婭",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "薩格尼",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "薩芙琳",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "藏馬",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蘭卡",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蘭芳特",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蘭迪烏斯",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蘭黛爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蝴姆巴巴",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "西布莉",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "西格瑪",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "諾埃米",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "諾諾琳",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "謎之騎士",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "貝安卡",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "貝蒂",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "賽利卡",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "超越之人",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "路因",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "輝夜",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "輝耀聖召使",
+   "rarity": "LLR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "輝黯逆命者",
+   "rarity": "LLR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "迪哈爾特",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "達奇",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "邪神庫魯加",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "醒覺者",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "里奇",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "裡奇"
+  },
+  {
+   "name": "里奧貝克",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "鐵血總帥",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "阿卡婭",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "阿卡菲爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "阿布沙伊特",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "阿爾法",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "阿瑪迪斯",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "阿莉婭",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "阿雲",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "阿雷斯",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "降生之光",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "雅兒貝德",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "雅希",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "雅里安洛德",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ],
+   "wiki_name": "阿瑞安赫德"
+  },
+  {
+   "name": "雪莉",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "雪露法妮爾",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "雷丁",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "雷因法魯斯",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "霍夫曼",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "霞",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "霧香",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "露娜",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "露西",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "飛影",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "馬修",
+   "rarity": "SP",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "馬庫雷",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "魯克曼",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "麗可麗絲",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "黎加",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "黎恩",
+   "rarity": "SSR",
+   "sources": [
+    "ingame",
+    "wiki"
+   ]
+  },
+  {
+   "name": "亞妮艾絲",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "亞爾緹娜",
+   "rarity": "SR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "亞莉希雅",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "伊梅爾達",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "伊莎拉",
+   "rarity": "SR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "傑西卡",
+   "rarity": "R",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "傑路剛帝士",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "克麗絲",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "利斯塔",
+   "rarity": "R",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "劍部武一郎",
+   "rarity": "SR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "坂田銀時",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "埃格貝爾特",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "基斯",
+   "rarity": "R",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "賽蕾娜",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ],
+   "wiki_name": "塞蕾娜"
+  },
+  {
+   "name": "塞貝莉雅",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "奧利佛",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "奧利維爾",
+   "rarity": "SR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "安潔莉卡",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ],
+   "wiki_name": "安傑麗卡"
+  },
+  {
+   "name": "安娜",
+   "rarity": "R",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "巴爾加斯",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "弗拉基亞",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "志村新八",
+   "rarity": "SR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "愛麗絲",
+   "rarity": "SR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "斯科特",
+   "rarity": "R",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "桑原和真",
+   "rarity": "SR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "梅露帕妮",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "比蘿蒂絲",
+   "rarity": "SR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "法娜",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "洛加",
+   "rarity": "R",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "皮耶魯",
+   "rarity": "R",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "神樂",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "科洛絲",
+   "rarity": "SR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "突擊隊長&天才嬰兒",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "範恩",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "索妮婭",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ],
+   "wiki_name": "索尼婭"
+  },
+  {
+   "name": "索菲亞",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "羽柴當麻",
+   "rarity": "SR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "艾蕾因",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "艾馬林克",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "莉娜",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "莉法妮",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "蕾蒂西亞",
+   "rarity": "R",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "蘭斯",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "迦遊羅",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "迪歐斯",
+   "rarity": "R",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "銀狼",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "阿倫",
+   "rarity": "R",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "阿爾弗雷德",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "霧風",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ]
+  },
+  {
+   "name": "高裡",
+   "rarity": "SSR",
+   "sources": [
+    "wiki"
+   ]
+  },
+  {
+   "name": "鹿莎",
+   "rarity": "SR",
+   "sources": [
+    "ingame(gear)",
+    "wiki"
+   ],
+   "wiki_name": "麗莎"
+  }
+ ]
+}

@@ -71,6 +71,8 @@
 
 ## 資料夾結構
 
+> 2026-10-13 更新：下面是六月的結構。現在 `raw/`、`data/`、`cache-manifest.json` 搬進 `夢幻模擬戰/sources/wiki/`，另外多了遊戲畫面拍圖解析的 `sources/ingame/` 與合併檢視 `merged/`，現況看 `夢幻模擬戰/CONTEXT.md`。
+
 ```
 e:\WorkSpace\遊戲資料\
 ├── _shared/                     # 跨遊戲共用

@@ -1,9 +1,11 @@
 ---
 title: game-data — 遊戲資料倉
-description: 查遊戲資料檔（串檔產出/設定資料）存放倉時讀
+description: 查遊戲資料（夢幻模擬戰的英雄、技能、專屬裝備、鑄紋、士兵；POE1 裝備詞綴）放在哪、哪一份準時讀
 type: project
 date: 2026-07-22
-keywords: [game-data, 遊戲資料, 串檔]
+keywords: [game-data, 遊戲資料, 夢幻模擬戰, 夢戰, 英雄資料, wiki, POE1]
 projects: [game-data]
 ---
-遊戲資料存放 repo（無 README——內容以串檔資料為主，詳查 repo 結構）。
+遊戲資料存放 repo（GitHub nothingkane/game-data，公開）。
+夢幻模擬戰/：兩個來源分開放——sources/ingame/（2026-10 遊戲畫面拍圖解析，英雄 214 份、專屬裝備、鑄紋技能；由 qa-automation 的工具讀寫）、sources/wiki/（2026-06 爬的 Biligame Wiki）；aliases.json 是兩邊名字對照；merged/ 是程式併出來的一隻一份（不手改，跑 夢幻模擬戰/tools/build_merged.py）。細節看 夢幻模擬戰/CONTEXT.md。
+POE1/：裝備詞綴。_shared/scraper/：爬蟲與解析器。

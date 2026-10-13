@@ -1,0 +1,203 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（rc_19），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/rc_19/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 597、粉紅 0）",
+      "關鍵字只有 2 個"
+    ]
+  },
+  "name": "維拉",
+  "rarity": "SSR",
+  "stars": 6,
+  "level": "70/70",
+  "power": 9308,
+  "name_color": "藍",
+  "unit_type": "僧侶",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "戰略大師",
+    "傳說彼端"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "C",
+      "base": 2844,
+      "bonus": 5356
+    },
+    "攻擊": {
+      "grade": "C",
+      "base": 312,
+      "bonus": 205
+    },
+    "智力": {
+      "grade": "S",
+      "base": 545,
+      "bonus": 613
+    },
+    "防禦": {
+      "grade": "C",
+      "base": 228,
+      "bonus": 296
+    },
+    "魔防": {
+      "grade": "C",
+      "base": 303,
+      "bonus": 232
+    },
+    "技巧": {
+      "grade": "D",
+      "base": 80,
+      "bonus": 35
+    }
+  },
+  "talent": {
+    "name": "天才軍師",
+    "text": "使用輔助技能時射程增加2。士兵全屬性提升20%。英雄死亡時，驅散5格以內所有友軍2個弱化效果，並獲得“死守”:戰前恢復維拉智力5倍的生命，持續3回合。"
+  },
+  "skills": [
+    {
+      "name": "驅散",
+      "cost": 2,
+      "category": "支援",
+      "cooldown": 1,
+      "range": "2格",
+      "area": "3格",
+      "equipped": false,
+      "text": "[支援]主動使用，恢復範圍內多個部隊的生命值，恢復量為施法者智力的1.5倍，並驅散3個弱化效果。"
+    },
+    {
+      "name": "豪賭的計略",
+      "cost": 3,
+      "category": "主動",
+      "cooldown": 15,
+      "range": "自身",
+      "area": "單體",
+      "equipped": true,
+      "text": "[主動]主動使用，扣除英雄剩餘生命的99%，觸發英雄天賦中的[英雄死亡]時的效果（此效果目標不包括自己）。同時令這些部隊傷害提升15%，遭受傷害降低15%，持續3回合。"
+    },
+    {
+      "name": "強化",
+      "cost": 1,
+      "category": "支援",
+      "cooldown": 1,
+      "range": "3格",
+      "area": "單體",
+      "text": "[支援]主動使用，提升單個部隊的攻擊、智力20%，且免疫:“攻擊、智力降低”、“無法使用主動技能”，持續2回合。",
+      "from_lib": "L0219",
+      "equipped": false
+    },
+    {
+      "name": "群體治療",
+      "cost": 2,
+      "category": "治療",
+      "cooldown": 1,
+      "range": "3格",
+      "area": "3格",
+      "text": "[治療]主動使用，恢復範圍內多個部隊的生命值，恢復量為施法者智力的3倍。並驅散1個弱化效果。",
+      "from_lib": "L0035",
+      "equipped": false
+    },
+    {
+      "name": "防禦大應援",
+      "cost": 2,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]行動結束時，自身2格範圍內的2個其他友軍“遭受傷害”降低15%，同時免疫“防禦、魔防降低”、\"無法被治療“效果，持續1回合。",
+      "equipped": true,
+      "from_lib": "L0402"
+    },
+    {
+      "name": "戰術撤離",
+      "cost": 2,
+      "category": "支援",
+      "cooldown": 5,
+      "range": "4格",
+      "area": "4格",
+      "equipped": false,
+      "text": "[支援]主動使用，可以使範圍內所有生命值低於100%的己方部隊傳送回自己身邊，同時恢復生命，恢復量為施法者智力的3倍。"
+    },
+    {
+      "name": "堅守",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]進入戰鬥時，防禦提升7%。",
+      "from_lib": "L0130",
+      "equipped": false
+    },
+    {
+      "name": "重整旗鼓",
+      "cost": 1,
+      "category": "支援",
+      "cooldown": 2,
+      "range": "4格",
+      "area": "單體",
+      "equipped": false,
+      "text": "[支援]主動使用，可以使1個已經行動完並且士兵全部陣亡的己方部隊再次行動，同時恢復生命，恢復量為施法者智力的5倍。"
+    },
+    {
+      "name": "背水",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]部隊生命低於50%時，進入戰鬥時防禦、魔防提升10%。",
+      "from_lib": "L0060",
+      "equipped": true
+    },
+    {
+      "name": "群體強化",
+      "cost": 2,
+      "category": "支援",
+      "cooldown": 2,
+      "range": "3格",
+      "area": "3格",
+      "text": "[支援]主動使用，使得範圍內多個部隊攻擊、智力提升20%，且免疫“攻擊、智力降低”、“無法使用主動技能”，持續2回合。",
+      "equipped": false,
+      "from_lib": "L0289"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "僧侶純輔助（軍師）：輔助技能射程 +2；豪賭的計略自己扣到剩 1% 血，換周圍友軍「戰前回血＋傷害 +15%＋減傷 15%」三回合，冷卻 15 回合等於一場一次。重整旗鼓能讓「士兵死光的友軍」再行動。沒有超絕。只有兩個關鍵字。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "群體治療",
+      "解弱化",
+      "友軍增傷",
+      "友軍減傷",
+      "拉回友軍",
+      "給友軍再行動(條件：士兵全滅)",
+      "輔助射程+2"
+    ]
+  },
+  "exclusive_gear": {
+    "name": "星海的提督",
+    "slot": "頭盔",
+    "skill": "奇蹟魔術師",
+    "unlock": "強化至Lv.10啟動",
+    "text": "生命+2%。英雄生命小於等於50%時，免疫“固定傷害”；使用技能後有50%機率使該技能冷卻時間減少2回合。",
+    "source": "exclusive_gear.json（2026-10-12 秘境商店，g126.png）；學長有沒有這件、有沒有強化到 Lv.10 沒有看"
+  },
+  "rune_skill": {
+    "status": "已解鎖",
+    "name": "軍師的遠慮",
+    "category": "被動",
+    "text": "智力+5%；使用單體支援技能時，可額外對目標施加“死守”。",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）"
+  }
+}

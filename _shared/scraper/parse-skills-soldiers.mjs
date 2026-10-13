@@ -9,8 +9,8 @@ import { join } from 'path';
 import * as cheerio from 'cheerio';
 import * as OpenCC from 'opencc-js';
 
-const RAW_DIR = join(import.meta.dirname, '../../夢幻模擬戰/raw');
-const DATA_DIR = join(import.meta.dirname, '../../夢幻模擬戰/data');
+const RAW_DIR = join(import.meta.dirname, '../../夢幻模擬戰/sources/wiki/raw');
+const DATA_DIR = join(import.meta.dirname, '../../夢幻模擬戰/sources/wiki/data');
 const s2t = OpenCC.Converter({ from: 'cn', to: 'twp' });
 const toTC = (t) => t ? s2t(t.trim()) : '';
 

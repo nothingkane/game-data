@@ -1,0 +1,152 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（re_60），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/re_60/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 0、粉紅 0）",
+      "3 星（三顆金、三顆灰）",
+      "技能只有 5 顆",
+      "關鍵字只有 2 個"
+    ]
+  },
+  "name": "艾米莉亞",
+  "rarity": "SSR",
+  "stars": 3,
+  "level": "70/70",
+  "power": 4919,
+  "name_color": "白",
+  "unit_type": "僧侶",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "帝國之輝",
+    "公主聯盟"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "A",
+      "base": 2478,
+      "bonus": 870
+    },
+    "攻擊": {
+      "grade": "C",
+      "base": 236,
+      "bonus": 166
+    },
+    "智力": {
+      "grade": "C",
+      "base": 190,
+      "bonus": 71
+    },
+    "防禦": {
+      "grade": "A",
+      "base": 199,
+      "bonus": 79
+    },
+    "魔防": {
+      "grade": "S",
+      "base": 185,
+      "bonus": 50
+    },
+    "技巧": {
+      "grade": "D",
+      "base": 54,
+      "bonus": 15
+    }
+  },
+  "talent": {
+    "name": "神力的傳承",
+    "text": "部隊血量越高時，減少遭受魔法傷害越多，最多減少15%。並且在遭受致命傷害時不會死亡，之後生命值恢復15%。該效果每場戰鬥最多觸發1次。"
+  },
+  "skills": [
+    {
+      "name": "聖衛",
+      "cost": 2,
+      "category": "主動",
+      "cooldown": 2,
+      "range": "自身",
+      "area": "單體",
+      "text": "[被動]替相鄰友軍承受所有攻擊。[主動]護衛範圍提升為2格，並獲得[聖衛]效果:用\"魔防\"的1.6倍來代替\"攻擊\"，可以反擊2格的遠端攻擊，持續2回合。",
+      "equipped": true,
+      "from_lib": "L0309"
+    },
+    {
+      "name": "公正對決",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]部隊生命值高於90%時，進入戰鬥前，如果自身防禦高於敵軍，會先於敵軍進行攻擊。",
+      "equipped": false,
+      "from_lib": "L0577"
+    },
+    {
+      "name": "防禦大應援",
+      "cost": 2,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]行動結束時，自身2格範圍內的2個其他友軍“遭受傷害”降低15%，同時免疫“防禦、魔防降低”、\"無法被治療“效果，持續1回合。",
+      "from_lib": "L0402",
+      "equipped": false
+    },
+    {
+      "name": "奉獻",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]戰鬥後，40%的機率恢復我方其他部隊的生命。恢復量為部隊生命上限的15%。",
+      "from_lib": "L0100",
+      "equipped": true
+    },
+    {
+      "name": "正義",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 2,
+      "range": "1格",
+      "area": "單體",
+      "text": "[物理傷害]攻擊單個敵軍，造成1.5倍的戰鬥傷害。戰鬥前，獲得[聖衛]效果:用\"魔防\"的1.6倍來代替\"攻擊\"，可以反擊2格的遠端攻擊，持續2回合。",
+      "equipped": true,
+      "from_lib": "L0304"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "兵種圖示僧侶的坦：帶聖衛（全攻擊護衛）、有一次不死。只有 5 顆技能、都是已讀過的通用技能，3 星、戰力 4919。沒有超絕。只有兩個關鍵字。名字是白的。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "護衛",
+      "僧侶",
+      "魔法減傷",
+      "不死一次",
+      "3星",
+      "養成度低"
+    ]
+  },
+  "exclusive_gear": {
+    "name": "榮耀的傳承",
+    "slot": "武器",
+    "skill": "炎龍守護",
+    "unlock": "強化至Lv.10啟動",
+    "text": "防禦、魔防+1%。被攻擊進入戰鬥時，部隊遭受物理傷害降低10%。自身擁有[聖衛]或[高階聖衛]效果時，英雄可以對遠端攻擊進行反擊。",
+    "source": "exclusive_gear.json（2026-10-12 秘境商店，g077.png）；學長有沒有這件、有沒有強化到 Lv.10 沒有看"
+  },
+  "rune_skill": {
+    "status": "可獲得（學長還沒解鎖）",
+    "name": "炎龍傳承",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）；text_wiki 來自 2026-06-20 爬的 Biligame Wiki，數字可能改過",
+    "text_wiki": "部隊血量越高時，部隊反擊傷害提升越多，最多提升15%。"
+  }
+}

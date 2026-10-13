@@ -1,0 +1,183 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（rc_14），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/rc_14/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 0、粉紅 0）",
+      "攜帶 COST 合計 6",
+      "2026-10-12 晚上更正 COST：盾擊 1→2（程式數技能說明框的紅點；原本是 CanL 用眼睛抄的）"
+    ]
+  },
+  "name": "雅兒貝德",
+  "rarity": "SSR",
+  "stars": 6,
+  "level": "70/70",
+  "power": 9377,
+  "name_color": "白",
+  "unit_type": "步兵",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "黑暗輪迴",
+    "時空樞紐",
+    "夢幻轉生"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "S",
+      "base": 5140,
+      "bonus": 5170
+    },
+    "攻擊": {
+      "grade": "A",
+      "base": 479,
+      "bonus": 401
+    },
+    "智力": {
+      "grade": "D",
+      "base": 265,
+      "bonus": 112
+    },
+    "防禦": {
+      "grade": "S",
+      "base": 409,
+      "bonus": 463
+    },
+    "魔防": {
+      "grade": "B",
+      "base": 255,
+      "bonus": 252
+    },
+    "技巧": {
+      "grade": "D",
+      "base": 96,
+      "bonus": 35
+    }
+  },
+  "talent": {
+    "name": "護衛之主",
+    "text": "自身2格範圍有友軍部隊時，遭受傷害降低25%。替自身1圈範圍內的友軍承受所有攻擊。被攻擊進入戰鬥前，用\"防禦\"的1.6倍來代替\"攻擊\"，且造成傷害提升75%。"
+  },
+  "skills": [
+    {
+      "name": "盾擊",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 3,
+      "range": "1格",
+      "area": "單體",
+      "text": "[物理傷害]攻擊單個敵軍，造成1倍傷害。進戰鬥前，使敵軍“暈眩”1回合。",
+      "from_lib": "L0138",
+      "equipped": false
+    },
+    {
+      "name": "神鎧·赫爾梅斯",
+      "cost": 3,
+      "category": "主動",
+      "cooldown": 3,
+      "range": "自身",
+      "area": "單體",
+      "equipped": true,
+      "text": "[被動]免疫“暈眩”，抵擋一次致命傷害，並且生命值恢復20%。每場戰鬥最多觸發一次。[主動]主動使用，替2格範圍內的所有友軍承受所有攻擊，獲得[神鎧]:“遭受暴擊率降低30%，被攻擊進入戰鬥時30%機率觸發，部隊受到所有傷害降低50%”，持續3回合。（[神鎧]效果無法被免疫和驅散）"
+    },
+    {
+      "name": "格擋",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]被近戰攻擊，進入戰鬥時有30%機率觸發，部隊受到的物理傷害減少30%。",
+      "from_lib": "L0097",
+      "equipped": false
+    },
+    {
+      "name": "耶利哥之牆",
+      "cost": 2,
+      "category": "主動",
+      "cooldown": 2,
+      "range": "自身",
+      "area": "單體",
+      "equipped": false,
+      "text": "[主動]主動使用，替2格範圍內的所有友軍承受所有攻擊，防禦提升20%，遭受暴擊率降低20%，持續2回合。"
+    },
+    {
+      "name": "戰吼",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]主動攻擊進入戰鬥前，驅散敵軍1個強化效果，並降低敵軍10%的攻擊、防禦，持續1回合。",
+      "from_lib": "L0026",
+      "equipped": true
+    },
+    {
+      "name": "黑鳶之盾",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "equipped": false,
+      "text": "[被動]被攻擊進入戰鬥，戰後對敵方造成一次[固定傷害]。（傷害數值為英雄防禦的1.5倍）"
+    },
+    {
+      "name": "攻擊威嚇",
+      "cost": 2,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]行動結束時，使得周圍2格以內所有敵軍的攻擊、智力降低15%，持續1回合。",
+      "from_lib": "L0027",
+      "equipped": true
+    },
+    {
+      "name": "堅韌",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]被攻擊進入戰鬥前，自身防禦提升5%，持續1回合。可疊加。",
+      "equipped": false,
+      "from_lib": "L0171"
+    },
+    {
+      "name": "漆黑之欲",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 4,
+      "range": "1格",
+      "area": "單體",
+      "equipped": false,
+      "text": "[被動]自身每擁有1個弱化狀態，在行動結束時，[漆黑之欲]的冷卻時間減少2回合。[物理傷害]攻擊單個敵軍，造成1.4倍傷害。戰鬥前，用\"防禦\"的1.6倍代替\"攻擊\"，同時驅散自身最多3個弱化狀態，每驅散1個弱化狀態，則獲得10%的傷害加成，並在戰後將驅散掉的所有異常狀態附加到目標身上。"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "步兵純坦：天賦本身就帶全攻擊護衛（1 圈），防禦 409 是目前讀過最高；被打時用防禦 1.6 倍當攻擊、傷害再 +75%，是「讓人來撞」的反擊坦——合學長講過的「丟一隻夠硬、反擊夠痛的到中間」。沒有超絕。名字是白的（合作角色）。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "護衛(天賦)",
+      "反擊型",
+      "減傷",
+      "不死一次",
+      "固定傷害(反擊)",
+      "免疫眩暈",
+      "自解弱化"
+    ]
+  },
+  "rune_skill": {
+    "status": "暫未開放",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）"
+  }
+}

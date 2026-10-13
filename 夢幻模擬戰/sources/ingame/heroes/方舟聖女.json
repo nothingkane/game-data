@@ -1,0 +1,101 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（rf_26），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/rf_26/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 0、粉紅 0）",
+      "3 星（三顆金、三顆灰）",
+      "技能只有 1 顆",
+      "能力值評級是從縮小的疊圖讀的，字很小，可能讀錯"
+    ]
+  },
+  "name": "方舟聖女",
+  "rarity": "SSR",
+  "stars": 3,
+  "level": "70/70",
+  "power": 4211,
+  "name_color": "白",
+  "unit_type": "法師",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "主角光環",
+    "公主聯盟",
+    "超凡領域"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "B",
+      "base": 1179,
+      "bonus": 870
+    },
+    "攻擊": {
+      "grade": "D",
+      "base": 113,
+      "bonus": 166
+    },
+    "智力": {
+      "grade": "S",
+      "base": 208,
+      "bonus": 71
+    },
+    "防禦": {
+      "grade": "C",
+      "base": 89,
+      "bonus": 79
+    },
+    "魔防": {
+      "grade": "A",
+      "base": 132,
+      "bonus": 50
+    },
+    "技巧": {
+      "grade": "D",
+      "base": 21,
+      "bonus": 15
+    }
+  },
+  "talent": {
+    "name": "心底魔影",
+    "text": "部隊血量越高時智力越高，最多提升10%。主動對敵軍造成傷害時50%機率對其施加1個強力弱化效果。自身被攻擊受到傷害時，50%機率對其施加1個弱化效果。"
+  },
+  "skills": [
+    {
+      "name": "冰凍",
+      "cost": 1,
+      "category": "魔法傷害",
+      "cooldown": 1,
+      "range": "2格",
+      "area": "單體",
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害，對「槍兵」有特效。",
+      "from_lib": "L0003",
+      "equipped": true
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "法師輸出，只有 1 顆技能、白字能力值很低、3 星、戰力 4211——還沒練。沒有超絕。名字是白的。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "魔法輸出",
+      "弱化(機率)",
+      "3星",
+      "養成度低"
+    ]
+  },
+  "exclusive_gear": {
+    "name": "拂曉之冠",
+    "slot": "頭盔",
+    "skill": "微光匯聚",
+    "unlock": "強化至Lv.10啟動",
+    "text": "生命+2%。自身周圍1圈有2名及以上其他友軍時，輝黯相依不再對友軍造成傷害，遭受治療效果提升8%。",
+    "source": "exclusive_gear.json（2026-10-12 秘境商店，g054.png）；學長有沒有這件、有沒有強化到 Lv.10 沒有看"
+  }
+}

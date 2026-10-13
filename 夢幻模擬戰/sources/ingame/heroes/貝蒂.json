@@ -1,0 +1,201 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（rb_29），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/rb_29/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 0、粉紅 173）"
+    ]
+  },
+  "name": "貝蒂",
+  "rarity": "SSR",
+  "stars": 6,
+  "level": "70/70",
+  "power": 9649,
+  "name_color": "粉紅",
+  "unit_type": "步兵",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "光輝軍團",
+    "帝國之輝",
+    "黑暗輪迴"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "S",
+      "base": 4980,
+      "bonus": 6271
+    },
+    "攻擊": {
+      "grade": "A",
+      "base": 527,
+      "bonus": 648
+    },
+    "智力": {
+      "grade": "D",
+      "base": 249,
+      "bonus": 113
+    },
+    "防禦": {
+      "grade": "S",
+      "base": 387,
+      "bonus": 294
+    },
+    "魔防": {
+      "grade": "B",
+      "base": 305,
+      "bonus": 237
+    },
+    "技巧": {
+      "grade": "D",
+      "base": 104,
+      "bonus": 35
+    }
+  },
+  "talent": {
+    "name": "劍刃領域",
+    "text": "遭受範圍傷害降低30%。當周圍3格內的一名友軍被敵軍攻擊後，對攻擊者造成貝蒂攻擊1倍的[固定傷害]（該效果無法免疫），並有30%的機率對其施加1個隨機的弱化效果。之後提升自身20%攻擊和魔防，持續2回合。"
+  },
+  "skills": [
+    {
+      "name": "重擊",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 3,
+      "range": "1格",
+      "area": "單體",
+      "text": "[物理傷害]攻擊單個敵軍，造成1.2倍傷害。如果自身處於防禦地形上，則在戰前使敵軍“暈眩”，持續1回合。",
+      "from_lib": "L0245",
+      "equipped": true
+    },
+    {
+      "name": "劍刃亂舞",
+      "cost": 3,
+      "category": "物理傷害",
+      "cooldown": 5,
+      "range": "自身",
+      "area": "2圈",
+      "equipped": false,
+      "text": "[被動]抵擋範圍技能造成的致命一擊（每場戰鬥最多觸發3次）。當天賦範圍內的一名友軍被敵軍攻擊後，對攻擊者及其周圍3格內2名敵軍施加“造成傷害降低15%”，持續1回合。[物理傷害]對自身周圍2圈內的所有敵軍造成0.3倍的範圍傷害，並造成一次貝蒂攻擊1倍的[固定傷害]，同時使得敵軍\"無法遭受治療\"，持續2回合。"
+    },
+    {
+      "name": "反擊",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]替相鄰友軍承受物理攻擊。被攻擊進入戰鬥時，攻擊提升12%。",
+      "equipped": false,
+      "from_lib": "L0019"
+    },
+    {
+      "name": "劍氣",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "equipped": true,
+      "text": "[被動]主動戰鬥後，對自身周圍1圈的所有敵軍造成0.1倍範圍傷害。"
+    },
+    {
+      "name": "眾志",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "equipped": false,
+      "text": "[被動]周圍2格以內，每有1名友軍，則防禦、魔防增加5%，最多增加15%。"
+    },
+    {
+      "name": "技巧威嚇",
+      "cost": 2,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "equipped": false,
+      "text": "[被動]行動結束時，使得周圍3格以內所有敵軍的\"技巧\"降低20%，持續1回合。"
+    },
+    {
+      "name": "技巧應援",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "equipped": false,
+      "text": "[被動]行動結束時，使相鄰的1個友軍\"技巧\"提升20%，且免疫:“治療反轉（施加的治療轉化為傷害）”、“無法再行動”，持續1回合。"
+    },
+    {
+      "name": "鐵腕",
+      "cost": 2,
+      "category": "主動",
+      "cooldown": 2,
+      "range": "自身",
+      "area": "單體",
+      "text": "[被動]替相鄰友軍承受物理攻擊。[主動]護衛範圍提升為2格，攻擊提升20%，並獲得[招架]效果，持續2回合。",
+      "equipped": false,
+      "from_lib": "L0141"
+    },
+    {
+      "name": "明鏡",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]遭受治療效果+15%。被近戰攻擊，進入戰鬥時部隊攻防提升10%。",
+      "equipped": true,
+      "from_lib": "L0101"
+    },
+    {
+      "name": "鐵盔",
+      "cost": 2,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]被遠端攻擊，進入戰鬥時25%機率觸發，部隊受到所有傷害降低50%。",
+      "from_lib": "L0199",
+      "equipped": false
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "步兵坦，不靠護衛、靠「誰打我隊友我就燒誰」：周圍 3 格友軍被打，攻擊者就吃她攻擊 1 倍的固定傷害（無法免疫）。防禦 S、生命 S。沒有護衛技能，也沒有超絕。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "坦(無護衛)",
+      "固定傷害(反制)",
+      "範圍減傷",
+      "弱化",
+      "禁療",
+      "減敵傷害"
+    ]
+  },
+  "exclusive_gear": {
+    "name": "燎星之隕",
+    "slot": "頭盔",
+    "skill": "絕境反擊",
+    "unlock": "強化至Lv.10啟動",
+    "text": "生命+2%。部隊血量越低時，造成的固定傷害越高，最多提升30%。",
+    "source": "exclusive_gear.json（2026-10-12 秘境商店，g142.png）；學長有沒有這件、有沒有強化到 Lv.10 沒有看"
+  },
+  "rune_skill": {
+    "status": "已解鎖",
+    "name": "隕刃風暴",
+    "category": "被動",
+    "text": "攻擊、防禦+5%；天賦效果範圍+1。",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）"
+  }
+}

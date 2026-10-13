@@ -10,7 +10,7 @@ import { chromium } from 'playwright';
 import { writeFileSync, mkdirSync, existsSync, statSync } from 'fs';
 import { join } from 'path';
 
-const BASE_DIR = join(import.meta.dirname, '../../夢幻模擬戰/raw');
+const BASE_DIR = join(import.meta.dirname, '../../夢幻模擬戰/sources/wiki/raw');
 const DELAY_MIN = 8000;
 const DELAY_MAX = 20000;
 

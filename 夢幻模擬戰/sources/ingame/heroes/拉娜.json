@@ -1,0 +1,227 @@
+{
+  "_meta": {
+    "captured": "2026-10-11",
+    "source": "hero_capture.py 實機拍（u_08），CanL 親眼讀總表 new_sheet_1",
+    "screenshots": "runtime/logs/langrisser/2026-10-11/hero_capture/u_08/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤（含鑄紋技能）",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "帶 from_lib 的技能是比對工具對到已讀過的，文字由 hero_fill.py 帶過來",
+      "攜帶中的三顆 COST 合計 5"
+    ]
+  },
+  "name": "拉娜",
+  "rarity": "SP",
+  "stars": 6,
+  "level": "70/70",
+  "power": 9566,
+  "name_color": "白",
+  "gender": "女",
+  "gender_source": "學長 2026-10-11 23:07（名字是白色，白色代表什麼學長也不知道）",
+  "unit_type": "僧侶",
+  "keywords": [
+    "黑暗輪迴",
+    "公主聯盟"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "A",
+      "base": 3925,
+      "bonus": 4395
+    },
+    "攻擊": {
+      "grade": "D",
+      "base": 290,
+      "bonus": 206
+    },
+    "智力": {
+      "grade": "S",
+      "base": 590,
+      "bonus": 684
+    },
+    "防禦": {
+      "grade": "B",
+      "base": 265,
+      "bonus": 270
+    },
+    "魔防": {
+      "grade": "A",
+      "base": 362,
+      "bonus": 273
+    },
+    "技巧": {
+      "grade": "B",
+      "base": 167,
+      "bonus": 71
+    }
+  },
+  "talent": {
+    "name": "暗光的聖裁",
+    "text": "自身每有一個強化效果，則傷害提升7%，最高35%。攜帶近戰士兵時，範圍技能範圍+1、射程+1。攜帶遠端士兵時，使用需要進入戰鬥的遠端技能時部隊射程+1。"
+  },
+  "cost_cap": 6,
+  "skills": [
+    {
+      "name": "暗鐮",
+      "cost": 2,
+      "category": "魔法傷害",
+      "cooldown": 2,
+      "range": "2格",
+      "area": "單體",
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.3倍傷害。無視敵軍30%的魔防。戰後，恢復造成傷害的50%的生命值。",
+      "equipped": false,
+      "from_lib": "L0067"
+    },
+    {
+      "name": "元素毀滅",
+      "cost": 3,
+      "category": "魔法傷害",
+      "cooldown": 3,
+      "range": "2格",
+      "area": "單體",
+      "equipped": false,
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害，進入戰鬥前士兵射程+1，戰鬥後，恢復傷害數值30%的生命。對「步兵」、「騎兵」、「槍兵」、「飛兵」有特效。"
+    },
+    {
+      "name": "冰凍",
+      "cost": 1,
+      "category": "魔法傷害",
+      "cooldown": 1,
+      "range": "2格",
+      "area": "單體",
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害，對「槍兵」有特效。",
+      "equipped": false,
+      "from_lib": "L0003"
+    },
+    {
+      "name": "冰錐",
+      "cost": 2,
+      "category": "魔法傷害",
+      "cooldown": 3,
+      "range": "3格",
+      "area": "3格",
+      "equipped": false,
+      "text": "[魔法傷害]攻擊範圍內多個敵軍，造成0.3倍的範圍傷害，對「槍兵」有特效。並使敵軍“移動力”降低1格，且無法進行護衛，持續2回合。"
+    },
+    {
+      "name": "魔防威嚇",
+      "cost": 2,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "equipped": false,
+      "text": "[被動]行動結束時，使得周圍3格以內所有敵軍部隊的\"魔防\"降低20%，持續1回合。"
+    },
+    {
+      "name": "黑洞",
+      "cost": 2,
+      "category": "魔法傷害",
+      "cooldown": 5,
+      "range": "3格",
+      "area": "4格",
+      "text": "[魔法傷害]攻擊範圍內多個敵軍，造成0.36倍的範圍傷害。對每個部隊分別造成2個隨機的弱化效果。",
+      "equipped": false,
+      "from_lib": "L0072"
+    },
+    {
+      "name": "雷擊",
+      "cost": 1,
+      "category": "魔法傷害",
+      "cooldown": 1,
+      "range": "2格",
+      "area": "單體",
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害，對「騎兵」有特效。",
+      "equipped": false,
+      "from_lib": "L0107"
+    },
+    {
+      "name": "淨化",
+      "cost": 2,
+      "category": "魔法傷害",
+      "cooldown": 2,
+      "range": "2格",
+      "area": "單體",
+      "equipped": true,
+      "text": "[魔法傷害]攻擊單個敵軍，造成1.5倍傷害，目標為「魔物」時有特效。戰後去除目標身上2個強化效果。"
+    },
+    {
+      "name": "天罰",
+      "cost": 2,
+      "category": "魔法傷害",
+      "cooldown": 5,
+      "range": "自身",
+      "area": "5格",
+      "text": "[魔法傷害]暴擊率提升50%，對自身周圍5格內的所有敵軍造成0.35倍的範圍傷害。對「魔物」有特效。",
+      "equipped": true,
+      "from_lib": "L0006"
+    },
+    {
+      "name": "召喚亡靈",
+      "cost": 2,
+      "category": "支援",
+      "cooldown": 4,
+      "range": "3格",
+      "area": "單體",
+      "text": "召喚1個亡靈法師部隊。",
+      "equipped": false,
+      "from_lib": "L0073"
+    },
+    {
+      "name": "元素迴響",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "equipped": true,
+      "text": "[被動]使用主動技能造成傷害後，使該技能冷卻時間隨機減少1-5回合。"
+    },
+    {
+      "name": "相位移動",
+      "cost": 2,
+      "category": "主動",
+      "cooldown": 4,
+      "range": "自身",
+      "area": "單體",
+      "equipped": false,
+      "text": "[主動]主動使用，標記當前位置，並使自己傳送到範圍內任意一個格子上，同時獲得[相位]效果:英雄受到傷害降低75%，主動攻擊進入戰鬥前，恢復自身部隊100%的生命。行動結束時，使自身部隊傳送到標記的位置，持續1回合，不可驅散。"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "super_buff_caveat": "12 顆技能的敘述裡都沒有「大幅提升」字樣",
+    "covered_by": "黑暗輪迴、公主聯盟兩種超絕蓋得到她；公主有露娜，黑暗的舊型主動超絕在波贊魯身上（沒帶）",
+    "role_guess": "魔法輸出（兵種僧侶、智力 S）：身上強化越多傷害越高（最高 +35%），所以特別吃超絕與友軍給的強化；元素迴響讓放過的技能冷卻隨機減 1～5 回合。帶著天罰（自身周圍 5 格範圍）。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "魔法輸出",
+      "範圍魔法",
+      "吃強化數量",
+      "減冷卻",
+      "驅散強化",
+      "對魔物特效",
+      "傳送(去了會回來)"
+    ]
+  },
+  "exclusive_gear": {
+    "name": "黑色新娘",
+    "slot": "護甲",
+    "skill": "深暗",
+    "unlock": "強化至Lv.10啟動",
+    "text": "生命+1%。進入戰鬥前，使敵軍遭受一個隨機的強力弱化效果。",
+    "source": "exclusive_gear.json（2026-10-12 秘境商店，g164.png）；學長有沒有這件、有沒有強化到 Lv.10 沒有看"
+  },
+  "rune_skill": {
+    "status": "已解鎖",
+    "name": "暗光加護",
+    "category": "被動",
+    "text": "智力+5%；部隊射程+1，使用技能攻擊前，根據選中的目標數量獲得隨機強化效果。",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）"
+  }
+}

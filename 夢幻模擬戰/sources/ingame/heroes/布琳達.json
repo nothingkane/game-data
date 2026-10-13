@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（re_48），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/re_48/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 0、粉紅 293）",
+      "3 星（三顆金、三顆灰）",
+      "技能只有 5 顆",
+      "關鍵字只有 2 個"
+    ]
+  },
+  "name": "布琳達",
+  "rarity": "SSR",
+  "stars": 3,
+  "level": "70/70",
+  "power": 5692,
+  "name_color": "粉紅",
+  "unit_type": "騎兵",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "流星直擊",
+    "傳說彼端"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "A",
+      "base": 3832,
+      "bonus": 870
+    },
+    "攻擊": {
+      "grade": "S",
+      "base": 401,
+      "bonus": 166
+    },
+    "智力": {
+      "grade": "D",
+      "base": 168,
+      "bonus": 71
+    },
+    "防禦": {
+      "grade": "A",
+      "base": 264,
+      "bonus": 79
+    },
+    "魔防": {
+      "grade": "B",
+      "base": 228,
+      "bonus": 50
+    },
+    "技巧": {
+      "grade": "C",
+      "base": 90,
+      "bonus": 15
+    }
+  },
+  "talent": {
+    "name": "風華典範",
+    "text": "與生命百分比低於和等於自己的部隊戰鬥時，傷害提升10%。當主動攻擊和被攻擊進入戰鬥的次數累積5次後，在行動結束時，可以額外行動一次，並在此次行動結束後，重新開始計數。"
+  },
+  "skills": [
+    {
+      "name": "疾突",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 2,
+      "range": "1格",
+      "area": "單體",
+      "text": "[物理傷害]攻擊單個敵軍，造成1.5倍攻擊傷害。戰鬥前，部隊的防禦和魔防提升30%。",
+      "from_lib": "L0076",
+      "equipped": false
+    },
+    {
+      "name": "破攻",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]進入戰鬥前，50%的機率使得敵軍的攻擊、智力降低20%，持續1回合。",
+      "from_lib": "L0088",
+      "equipped": true
+    },
+    {
+      "name": "再移動",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]主動進入戰鬥時，傷害提升10%。只要有剩餘的移動力，攻擊後可以再次移動。",
+      "from_lib": "L0078",
+      "equipped": true
+    },
+    {
+      "name": "強襲",
+      "cost": 2,
+      "category": "支援",
+      "cooldown": 3,
+      "range": "自身",
+      "area": "單體",
+      "text": "[支援]主動使用，攻擊提升20%，持續1回合。使用後可以額外行動3格，可再次攻擊。",
+      "equipped": true,
+      "from_lib": "L0083"
+    },
+    {
+      "name": "黑耀突擊",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 5,
+      "range": "1格",
+      "area": "單體",
+      "equipped": false,
+      "text": "[物理傷害]攻擊單個敵軍，造成1.1倍傷害，並造成[位移]效果:將目標撞開2格。攻擊前每移動一格，傷害提升20%（最多提升60%）。戰鬥前使得敵軍獲得[傷口詛咒]:“被施加的治療直接轉變為治療量20%的傷害”，持續1回合。（該效果無法被驅散）"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "騎兵物理輸出，累計進 5 次戰鬥可多行動一次。只有 5 顆技能、3 星、戰力 5692。沒有超絕。只有兩個關鍵字。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "物理輸出",
+      "再行動(累計5次戰鬥)",
+      "位移(撞開)",
+      "治療反轉",
+      "3星",
+      "養成度低"
+    ]
+  },
+  "exclusive_gear": {
+    "name": "月之回憶",
+    "slot": "護甲",
+    "skill": "輕靈倩影",
+    "unlock": "強化至Lv.10啟動",
+    "text": "生命、防禦+1%。當觸發風華典範額外行動時，驅散自身2個弱化效果並使自己獲得造成傷害提高10%，遭受傷害降低10%，持續1回合。",
+    "source": "exclusive_gear.json（2026-10-12 秘境商店，g083.png）；學長有沒有這件、有沒有強化到 Lv.10 沒有看"
+  },
+  "rune_skill": {
+    "status": "可獲得（學長還沒解鎖）",
+    "name": "烈影風華",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）；text_wiki 來自 2026-06-20 爬的 Biligame Wiki，數字可能改過",
+    "text_wiki": "攻擊+5%。觸發天賦的再行動時，獲得“暴擊率提升100%，持續1回合”。"
+  }
+}

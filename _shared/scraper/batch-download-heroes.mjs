@@ -13,8 +13,8 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
 const HERO_LIST = join(import.meta.dirname, 'hero-list.json');
-const RAW_DIR = join(import.meta.dirname, '../../夢幻模擬戰/raw/heroes');
-const MANIFEST_PATH = join(import.meta.dirname, '../../夢幻模擬戰/cache-manifest.json');
+const RAW_DIR = join(import.meta.dirname, '../../夢幻模擬戰/sources/wiki/raw/heroes');
+const MANIFEST_PATH = join(import.meta.dirname, '../../夢幻模擬戰/sources/wiki/cache-manifest.json');
 
 const DELAY_MIN = 5000;
 const DELAY_MAX = 15000;

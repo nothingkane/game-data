@@ -1,0 +1,223 @@
+{
+  "_meta": {
+    "captured": "2026-10-11",
+    "source": "hero_capture.py 實機拍（u_05），CanL 親眼讀總表 new_sheet_1",
+    "screenshots": "runtime/logs/langrisser/2026-10-11/hero_capture/u_05/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤（含鑄紋技能）",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "帶 from_lib 的技能是比對工具對到已讀過的，文字由 hero_fill.py 帶過來",
+      "2026-10-12 晚上更正 COST：隱秘 2→1、煙霧 2→1（程式數技能說明框的紅點；原本是 CanL 用眼睛抄的）"
+    ]
+  },
+  "name": "雪莉",
+  "rarity": "SP",
+  "stars": 6,
+  "level": "70/70",
+  "power": 9672,
+  "name_color": "粉紅",
+  "unit_type": "僧侶",
+  "keywords": [
+    "光輝軍團",
+    "公主聯盟",
+    "流星直擊"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "A",
+      "base": 4232,
+      "bonus": 5343
+    },
+    "攻擊": {
+      "grade": "S",
+      "base": 595,
+      "bonus": 800
+    },
+    "智力": {
+      "grade": "D",
+      "base": 233,
+      "bonus": 133
+    },
+    "防禦": {
+      "grade": "A",
+      "base": 290,
+      "bonus": 286
+    },
+    "魔防": {
+      "grade": "B",
+      "base": 301,
+      "bonus": 213
+    },
+    "技巧": {
+      "grade": "C",
+      "base": 164,
+      "bonus": 70
+    }
+  },
+  "talent": {
+    "name": "復國之公主",
+    "text": "移動時部隊可以通過的地形都視為\"平地\"。被攻擊進入戰鬥時遭受傷害降低20%。主動攻擊進入戰鬥攻擊提升25%，戰後自身2格範圍內敵軍數量小於等於1時，可以額外行動1次。（[觸發冷卻]再行動效果需要間隔2回合才可以再次觸發。）"
+  },
+  "cost_cap": 6,
+  "skills": [
+    {
+      "name": "雷光",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 3,
+      "range": "1格",
+      "area": "單體",
+      "equipped": false,
+      "text": "[物理傷害]攻擊單個敵軍，造成1.5倍的戰鬥傷害。成功消滅敵軍時，該技能的冷卻時間減少3。"
+    },
+    {
+      "name": "轟雷一閃",
+      "cost": 3,
+      "category": "物理傷害",
+      "cooldown": 5,
+      "range": "1格",
+      "area": "單體",
+      "equipped": true,
+      "text": "[物理傷害]攻擊單個敵軍，造成1.6倍傷害。戰鬥後，恢復傷害數值100%的生命。成功消滅目標時，該技能的冷卻時間減少4回合；反之，使得敵軍[眩暈]，持續1回合。（該效果無法被驅散）"
+    },
+    {
+      "name": "整軍",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]部隊生命值高於90%時，攻擊、防禦提升10%。",
+      "equipped": false,
+      "from_lib": "L0041"
+    },
+    {
+      "name": "增援",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]行動結束時，恢復自身部隊20%生命。",
+      "equipped": false,
+      "from_lib": "L0155"
+    },
+    {
+      "name": "風語",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 2,
+      "range": "自身",
+      "area": "1圈",
+      "equipped": false,
+      "text": "[物理傷害]對自身周圍1圈的所有敵軍造成0.3倍的範圍傷害，並對每個目標施加隨機的弱化效果。"
+    },
+    {
+      "name": "迅雷",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 5,
+      "range": "1格",
+      "area": "單體",
+      "equipped": false,
+      "text": "[物理傷害]攻擊單個敵軍，造成1.6倍的戰鬥傷害。戰鬥後獲得[疾風]和[御風]效果，持續2回合。"
+    },
+    {
+      "name": "隱秘",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]主動進入戰鬥時，暴擊率提升10%，遭受傷害降低20%。",
+      "equipped": false,
+      "from_lib": "L0016"
+    },
+    {
+      "name": "影襲",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 2,
+      "range": "2格",
+      "area": "單體",
+      "text": "[物理傷害]無視護衛直接攻擊單個敵軍，造成1.3倍傷害。",
+      "equipped": false,
+      "from_lib": "L0015"
+    },
+    {
+      "name": "煙霧",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "equipped": false,
+      "text": "[被動]主動進入戰鬥，戰後有30%機率觸發，遭受所有傷害降低30%，持續1回合。"
+    },
+    {
+      "name": "急救",
+      "cost": 1,
+      "category": "治療",
+      "cooldown": 3,
+      "range": "自身",
+      "area": "單體",
+      "equipped": false,
+      "text": "[治療]主動使用，恢復自身部隊100%的生命。"
+    },
+    {
+      "name": "疾馳",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "equipped": true,
+      "text": "[被動]部隊移動力+2，自身為[混合部隊]時，行動結束時恢復自身部隊30%生命。"
+    },
+    {
+      "name": "聖雷",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 3,
+      "range": "1格",
+      "area": "單體",
+      "equipped": true,
+      "text": "[物理傷害]攻擊單個敵軍，造成1.4倍傷害。並造成[位移]效果:將目標撞開2格，戰鬥後，恢復傷害數值20%的生命，並使得敵軍“被動技能失效”，持續1回合。"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "super_buff_caveat": "12 顆技能的敘述裡都沒有「大幅提升」字樣",
+    "covered_by": "光輝軍團、公主聯盟、流星直擊三種超絕蓋得到她；光輝有艾爾文，公主有露娜",
+    "role_guess": "近戰物理刺客型（兵種是僧侶，剋魔物）：主動攻擊 +25%，打完身邊敵人少就再行動；轟雷一閃回滿傷害量的血、沒殺掉就暈人。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "再行動",
+      "暈眩",
+      "位移(撞開)",
+      "被動失效",
+      "自我回復",
+      "移動力+2"
+    ]
+  },
+  "exclusive_gear": {
+    "name": "1UP",
+    "slot": "護甲",
+    "skill": "復活幣",
+    "unlock": "強化至Lv.10啟動",
+    "text": "防禦、魔防+1%。主動攻擊進入戰鬥時，如果受到致命傷害，不會死亡。（[觸發冷卻]該效果需要間隔4回合才能再次觸發）",
+    "source": "exclusive_gear.json（2026-10-12 秘境商店，g156.png）；學長有沒有這件、有沒有強化到 Lv.10 沒有看"
+  },
+  "rune_skill": {
+    "status": "已解鎖",
+    "name": "無羈公主",
+    "category": "被動",
+    "text": "攻擊+10%；觸發天賦再行動時，身上攜帶的強化效果回合數不會減少，並且自身所有技能冷卻時間減少1回合。",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）"
+  }
+}

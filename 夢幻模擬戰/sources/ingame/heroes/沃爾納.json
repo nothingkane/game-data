@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "captured": "2026-10-12",
+    "source": "hero_capture.py 實機拍（re_25），CanL 親眼讀總表 new_sheet；hero_build.py 組檔",
+    "screenshots": "runtime/logs/langrisser/2026-10-12/hero_capture/re_25/",
+    "not_viewed": [
+      "職業頁籤",
+      "士兵頁籤",
+      "裝備頁籤",
+      "覺醒頁籤",
+      "生平"
+    ],
+    "notes": [
+      "raw 的文字照畫面抄；analysis 是 CanL 的判讀，不是遊戲寫的",
+      "名字顏色是程式數像素判的（青 0、粉紅 0）",
+      "4 星（四顆金、兩顆灰）",
+      "技能只有 5 顆",
+      "關鍵字只有 2 個",
+      "2026-10-12 晚上更正 COST：撞擊 2→1（程式數技能說明框的紅點；原本是 CanL 用眼睛抄的）"
+    ]
+  },
+  "name": "沃爾納",
+  "rarity": "SSR",
+  "stars": 4,
+  "level": "70/70",
+  "power": 5206,
+  "name_color": "白",
+  "unit_type": "騎兵",
+  "unit_type_source": "詳情頁左上的兵種圖示，CanL 對英雄清單「篩選」視窗的兵種圖例讀的",
+  "keywords": [
+    "帝國之輝",
+    "夢幻轉生"
+  ],
+  "stats": {
+    "生命": {
+      "grade": "A",
+      "base": 2601,
+      "bonus": 870
+    },
+    "攻擊": {
+      "grade": "S",
+      "base": 379,
+      "bonus": 166
+    },
+    "智力": {
+      "grade": "D",
+      "base": 158,
+      "bonus": 71
+    },
+    "防禦": {
+      "grade": "B",
+      "base": 176,
+      "bonus": 79
+    },
+    "魔防": {
+      "grade": "B",
+      "base": 156,
+      "bonus": 50
+    },
+    "技巧": {
+      "grade": "C",
+      "base": 79,
+      "bonus": 15
+    }
+  },
+  "talent": {
+    "name": "機械統帥",
+    "text": "行動結束時，使周圍2格以內3個其他友軍部隊獲得“移動力”+1和[越野]:“通過防禦地形時，部隊可以獲得1格免除移動力降低的機會”，持續1回合。"
+  },
+  "skills": [
+    {
+      "name": "猛撞",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 2,
+      "range": "1格",
+      "area": "單體",
+      "text": "[物理傷害]攻擊單個敵軍，造成1.4倍傷害，並造成[位移]效果:將目標撞開2格，同時使\"防禦\"降低20%，且無法進行護衛，持續2回合。",
+      "from_lib": "L0090",
+      "equipped": true
+    },
+    {
+      "name": "撞擊",
+      "cost": 1,
+      "category": "物理傷害",
+      "cooldown": 2,
+      "range": "1格",
+      "area": "單體",
+      "text": "[物理傷害]攻擊單個敵軍，造成1.2倍傷害。並造成[位移]效果:將目標撞開2格，同時使其移動力降低2，且無法進行護衛，持續1回合。",
+      "equipped": true,
+      "from_lib": "L0294"
+    },
+    {
+      "name": "警戒",
+      "cost": 1,
+      "category": "被動",
+      "cooldown": null,
+      "range": null,
+      "area": null,
+      "text": "[被動]主動攻擊進入戰鬥時，防禦提升12%。",
+      "from_lib": "L0227",
+      "equipped": true
+    },
+    {
+      "name": "疾突",
+      "cost": 2,
+      "category": "物理傷害",
+      "cooldown": 2,
+      "range": "1格",
+      "area": "單體",
+      "text": "[物理傷害]攻擊單個敵軍，造成1.5倍攻擊傷害。戰鬥前，部隊的防禦和魔防提升30%。",
+      "from_lib": "L0076",
+      "equipped": false
+    },
+    {
+      "name": "疾行",
+      "cost": 2,
+      "category": "支援",
+      "cooldown": 3,
+      "range": "自身",
+      "area": "3格",
+      "text": "[支援]主動使用，範圍內所有友軍的移動力提升1，攻擊、智力提升20%，且免疫:“移動力降低”，“所有被動技能失效”，持續2回合。",
+      "equipped": false,
+      "from_lib": "L0061"
+    }
+  ],
+  "analysis": {
+    "super_buff": [],
+    "role_guess": "騎兵，天賦每回合給周圍 2 格的 3 名友軍移動 +1。只有 5 顆技能、都是通用技能，4 星、戰力 5206——還沒練。沒有超絕。只有兩個關鍵字。名字是白的。從文字推的，沒在戰鬥裡驗過",
+    "tags": [
+      "友軍移動+1",
+      "物理輸出",
+      "4星",
+      "養成度低"
+    ]
+  },
+  "exclusive_gear": {
+    "name": "機動爆碎劍",
+    "slot": "武器",
+    "skill": "強襲萬鈞",
+    "unlock": "強化至Lv.10啟動",
+    "text": "攻擊+2%。主動攻擊進入戰鬥前，每移動一格部隊無視敵軍1%的防禦。",
+    "source": "exclusive_gear.json（2026-10-12 秘境商店，g067.png）；學長有沒有這件、有沒有強化到 Lv.10 沒有看"
+  },
+  "rune_skill": {
+    "status": "可獲得（學長還沒解鎖）",
+    "name": "隱備機核",
+    "source": "rune_skills.json（2026-10-12 英雄詳情 > 裝備 > 鑄紋）；text_wiki 來自 2026-06-20 爬的 Biligame Wiki，數字可能改過",
+    "text_wiki": "攻擊+5%；使用[機動變形]後，可以再次行動，每回合僅觸發1次。"
+  }
+}

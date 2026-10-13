@@ -1,0 +1,332 @@
+[
+ {
+  "folder": "h_01",
+  "name": "冰淵凌御者",
+  "rarity": "LLR",
+  "unit_type": "飛兵",
+  "name_color": "白",
+  "px": [
+   17,
+   0
+  ]
+ },
+ {
+  "folder": "h_02",
+  "name": "幽瞳幻惑使",
+  "rarity": "LLR",
+  "unit_type": "魔物",
+  "name_color": "白",
+  "px": [
+   0,
+   0
+  ]
+ },
+ {
+  "folder": "h_03",
+  "name": "炎龍破滅者",
+  "rarity": "LLR",
+  "unit_type": "魔物",
+  "name_color": "白",
+  "px": [
+   1326,
+   0
+  ]
+ },
+ {
+  "folder": "h_04",
+  "name": "輝耀聖召使",
+  "rarity": "LLR",
+  "unit_type": "僧侶",
+  "name_color": "白",
+  "px": [
+   0,
+   0
+  ]
+ },
+ {
+  "folder": "h_05",
+  "name": "輝黯逆命者",
+  "rarity": "LLR",
+  "unit_type": "騎兵",
+  "name_color": "白",
+  "px": [
+   0,
+   0
+  ]
+ },
+ {
+  "folder": "h_06",
+  "name": "曉浪馭虹使",
+  "rarity": "LLR",
+  "unit_type": "水兵",
+  "name_color": "白",
+  "px": [
+   12,
+   0
+  ]
+ },
+ {
+  "folder": "s_01",
+  "name": "娜姆",
+  "rarity": "SP",
+  "unit_type": "弓兵",
+  "name_color": "粉紅",
+  "px": [
+   0,
+   697
+  ]
+ },
+ {
+  "folder": "s_02",
+  "name": "波贊魯",
+  "rarity": "SP",
+  "unit_type": "魔物",
+  "name_color": "藍",
+  "px": [
+   777,
+   0
+  ]
+ },
+ {
+  "folder": "s_03",
+  "name": "迪哈爾特",
+  "rarity": "SP",
+  "unit_type": "騎兵",
+  "name_color": "藍",
+  "px": [
+   1167,
+   0
+  ]
+ },
+ {
+  "folder": "s_04",
+  "name": "利昂",
+  "rarity": "SP",
+  "unit_type": "騎兵",
+  "name_color": "藍",
+  "px": [
+   531,
+   0
+  ]
+ },
+ {
+  "folder": "s_05",
+  "name": "雷丁",
+  "rarity": "SP",
+  "unit_type": "僧侶",
+  "name_color": "藍",
+  "px": [
+   317,
+   0
+  ]
+ },
+ {
+  "folder": "s_06",
+  "name": "蕾伽爾",
+  "rarity": "SP",
+  "unit_type": "法師",
+  "name_color": "粉紅",
+  "px": [
+   0,
+   808
+  ]
+ },
+ {
+  "folder": "s_07",
+  "name": "艾爾文",
+  "rarity": "SP",
+  "unit_type": "騎兵",
+  "name_color": "藍",
+  "px": [
+   612,
+   0
+  ]
+ },
+ {
+  "folder": "u_01",
+  "name": "蘭芳特",
+  "rarity": "SP",
+  "unit_type": "飛兵",
+  "name_color": "藍",
+  "px": [
+   806,
+   0
+  ]
+ },
+ {
+  "folder": "u_02",
+  "name": "巴恩哈特",
+  "rarity": "SP",
+  "unit_type": "龍",
+  "name_color": "藍",
+  "px": [
+   998,
+   0
+  ]
+ },
+ {
+  "folder": "u_03",
+  "name": "露娜",
+  "rarity": "SP",
+  "unit_type": "飛兵",
+  "name_color": "粉紅",
+  "px": [
+   0,
+   600
+  ]
+ },
+ {
+  "folder": "u_04",
+  "name": "亞魯特繆拉",
+  "rarity": "SP",
+  "unit_type": "飛兵",
+  "name_color": "藍",
+  "px": [
+   1353,
+   0
+  ]
+ },
+ {
+  "folder": "u_05",
+  "name": "雪莉",
+  "rarity": "SP",
+  "unit_type": "僧侶",
+  "name_color": "粉紅",
+  "px": [
+   0,
+   476
+  ]
+ },
+ {
+  "folder": "u_06",
+  "name": "尤莉婭",
+  "rarity": "SP",
+  "unit_type": "步兵",
+  "name_color": "粉紅",
+  "px": [
+   0,
+   745
+  ]
+ },
+ {
+  "folder": "u_07",
+  "name": "艾梅達",
+  "rarity": "SP",
+  "unit_type": "法師",
+  "name_color": "粉紅",
+  "px": [
+   1,
+   1594
+  ]
+ },
+ {
+  "folder": "u_08",
+  "name": "拉娜",
+  "rarity": "SP",
+  "unit_type": "僧侶",
+  "name_color": "?",
+  "px": [
+   0,
+   0
+  ]
+ },
+ {
+  "folder": "u_09",
+  "name": "蒂亞莉絲",
+  "rarity": "SP",
+  "unit_type": "僧侶",
+  "name_color": "?",
+  "px": [
+   0,
+   0
+  ]
+ },
+ {
+  "folder": "u_10",
+  "name": "蘭迪烏斯",
+  "rarity": "SP",
+  "unit_type": "騎兵",
+  "name_color": "藍",
+  "px": [
+   1152,
+   0
+  ]
+ },
+ {
+  "folder": "u_11",
+  "name": "芙蕾雅",
+  "rarity": "SP",
+  "unit_type": "僧侶",
+  "name_color": "粉紅",
+  "px": [
+   0,
+   725
+  ]
+ },
+ {
+  "folder": "u_12",
+  "name": "馬修",
+  "rarity": "SP",
+  "unit_type": "步兵",
+  "name_color": "藍",
+  "px": [
+   535,
+   0
+  ]
+ },
+ {
+  "folder": "u_13",
+  "name": "海恩",
+  "rarity": "SP",
+  "unit_type": "法師",
+  "name_color": "藍",
+  "px": [
+   496,
+   8
+  ]
+ },
+ {
+  "folder": "u_14",
+  "name": "格尼爾",
+  "rarity": "SP",
+  "unit_type": "弓兵",
+  "name_color": "藍",
+  "px": [
+   822,
+   0
+  ]
+ },
+ {
+  "folder": "u_15",
+  "name": "歐米伽",
+  "rarity": "SP",
+  "unit_type": "步兵",
+  "name_color": "藍",
+  "px": [
+   850,
+   0
+  ]
+ },
+ {
+  "folder": "u_16",
+  "name": "西格瑪",
+  "rarity": "SP",
+  "unit_type": "刺客",
+  "name_color": "藍",
+  "px": [
+   898,
+   0
+  ]
+ },
+ {
+  "folder": "u_17",
+  "name": "路因",
+  "rarity": "SP",
+  "unit_type": "槍兵",
+  "name_color": "藍",
+  "px": [
+   582,
+   0
+  ]
+ }
+]
