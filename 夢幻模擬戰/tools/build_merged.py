@@ -99,7 +99,7 @@ def tally(rows):
     return out
 
 
-def merge(name, game, wiki, gear, gear_label):
+def merge(name, game, wiki, gear, gear_label, wiki_skills):
     """一隻英雄的合併。game、wiki、gear 任一個可以是 None。"""
     out = {"name": name, "sources": [], "_from": {}}
 
@@ -129,8 +129,11 @@ def merge(name, game, wiki, gear, gear_label):
             put(key, wiki.get(key), WIKI_LABEL)
         check = {dst: wiki[src] for src, dst in WIKI_CHECK.items() if wiki.get(src)}
         if game:
+            if wiki_skills:
+                check["skills"] = [s["name"] for s in wiki_skills]    # wiki 英雄頁「習得技能」列的，只留名字
             put("wiki_check", check, WIKI_LABEL)
         else:
+            put("skills", [{k: v for k, v in s.items() if k not in ("heroes", "heroCount")} for s in wiki_skills], WIKI_LABEL)
             # 沒有遊戲畫面的版本，wiki 的就是唯一一份
             put("talents", check.get("talents"), WIKI_LABEL)
             put("rune_skill", check.get("rune_skill"), WIKI_LABEL)
@@ -145,6 +148,13 @@ def merge(name, game, wiki, gear, gear_label):
 
 
 def build_heroes(games, wikis, gear_file, to_wiki):
+    skills_of = {}      # wiki 的英雄名 → 他英雄頁上列的技能
+    for skill in load(os.path.join(WIKI, "skills.json")):
+        for hero in skill.get("heroes", []):
+            skills_of.setdefault(hero, []).append(skill)
+    unknown = sorted(set(skills_of) - set(wikis))
+    if unknown:
+        raise SystemExit(f"skills.json 的 heroes 有 heroes.json 沒有的名字：{unknown}")
     gears = {g["owner"]: g for g in gear_file["items"]}
     gear_label = f"ingame {gear_file['_meta']['captured']}"
     to_ingame = {v: k for k, v in to_wiki.items()}
@@ -155,11 +165,11 @@ def build_heroes(games, wikis, gear_file, to_wiki):
         wiki = wikis.get(wiki_name)
         if wiki:
             used_wiki.add(wiki_name)
-        merged.append(merge(name, game, wiki, gears.get(name), gear_label))
+        merged.append(merge(name, game, wiki, gears.get(name), gear_label, skills_of.get(wiki_name, [])))
     for name, wiki in sorted(wikis.items()):
         if name not in used_wiki:
             ingame_name = to_ingame.get(name, name)
-            merged.append(merge(ingame_name, None, wiki, gears.get(ingame_name), gear_label))
+            merged.append(merge(ingame_name, None, wiki, gears.get(ingame_name), gear_label, skills_of.get(name, [])))
 
     for hero in merged:
         dump(os.path.join("heroes", hero["name"] + ".json"), hero)
@@ -183,6 +193,8 @@ def build_heroes(games, wikis, gear_file, to_wiki):
     print(f"  只有遊戲畫面 {len(only_game)}：{'、'.join(only_game)}")
     print(f"  只有 wiki {len(only_wiki)}")
     print(f"  wiki 的英雄資料加上遊戲畫面拍到的專屬裝備 {len(gear_only)}：{'、'.join(gear_only)}")
+    no_skill = [h["name"] for h in merged if "ingame" not in h["sources"] and "skills" not in h]
+    print(f"  沒有遊戲畫面英雄檔的 {len(only_wiki) + len(gear_only)} 隻裡，wiki 也沒列技能的 {len(no_skill)}：{'、'.join(no_skill)}")
     print(f"  專屬裝備的主人兩邊都找不到的 {len(gear_unmatched)}：{'、'.join(gear_unmatched)}")
     return merged
 
@@ -220,7 +232,7 @@ def build_skills(games, aliases):
         rows.append(row)
     for name, skill in sorted(wiki.items()):
         if name not in used:
-            rows.append({"name": name, "sources": ["wiki"], "wiki": skill})
+            rows.append({"name": name, "sources": ["wiki"], "heroes_wiki": skill.get("heroes", []), "wiki": skill})
     dump("skills.json", {"_meta": GENERATED, "skills": rows})
 
     both = [r for r in rows if len(r["sources"]) == 2]

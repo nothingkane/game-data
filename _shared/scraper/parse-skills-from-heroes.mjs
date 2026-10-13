@@ -95,6 +95,7 @@ function main() {
     span: s.span === '-' ? null : toTC(s.span),
     description: toTC(s.description.substring(0, 500)),
     heroCount: skillHeroes.get(s.name)?.size || 0,
+    heroes: [...(skillHeroes.get(s.name) || [])].map(toTC).sort((a, b) => a.localeCompare(b, 'zh')),
   })).sort((a, b) => a.name.localeCompare(b.name, 'zh'));
 
   mkdirSync(DATA_DIR, { recursive: true });

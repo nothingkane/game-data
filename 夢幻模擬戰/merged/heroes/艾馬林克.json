@@ -18,6 +18,7 @@
   "bondConditions": "wiki 2026-06-20",
   "bondHelpers": "wiki 2026-06-20",
   "heartBonds": "wiki 2026-06-20",
+  "skills": "wiki 2026-06-20",
   "talents": "wiki 2026-06-20",
   "rune_skill": "wiki 2026-06-20",
   "exclusive_gear": "ingame 2026-10-12",
@@ -177,6 +178,80 @@
   {
    "level": 10,
    "effect": "英雄全屬性+5%。"
+  }
+ ],
+ "skills": [
+  {
+   "name": "衝鋒",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]在攻擊前，每移動1格，攻擊提升5%（最多提升15%）。"
+  },
+  {
+   "name": "防禦威嚇",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]行動結束時，使得周圍2格以內所有敵軍的防禦降低15%，持續1回合。"
+  },
+  {
+   "name": "疾突",
+   "type": "物理傷害",
+   "cd": "2回合",
+   "range": "1格",
+   "span": "單體",
+   "description": "[物理傷害]攻擊單個敵軍，造成1.5倍攻擊傷害。進入戰鬥前，部隊的防禦和魔防提升30%。"
+  },
+  {
+   "name": "破甲",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]進入戰鬥前，50%的機率使得敵軍的防禦降低20%，持續1回合。"
+  },
+  {
+   "name": "破陣",
+   "type": "物理傷害",
+   "cd": "3回合",
+   "range": "1格",
+   "span": "單體",
+   "description": "[物理傷害]攻擊單個敵軍，造成1倍傷害。並造成[位移]效果：將目標撞開2格，同時使其下回合無法行動。"
+  },
+  {
+   "name": "再移動",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]主動進入戰鬥時，傷害提升10%。只要有剩餘的移動力，攻擊後可以再次移動。"
+  },
+  {
+   "name": "招架",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]替相鄰友軍承受物理攻擊。被攻擊時，將“攻擊”的7%增加到“防禦”上。"
+  },
+  {
+   "name": "重盾",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]被近戰攻擊，進入戰鬥時有25%機率觸發，部隊受到的傷害降低50%。"
+  },
+  {
+   "name": "撞擊",
+   "type": "物理傷害",
+   "cd": "2回合",
+   "range": "1格",
+   "span": "單體",
+   "description": "[物理傷害]攻擊單個敵軍，造成1.2倍傷害。並造成[位移]效果：將目標撞開2格，同時使其移動力降低2，且無法進行護衛，持續1回合。"
   }
  ],
  "talents": [

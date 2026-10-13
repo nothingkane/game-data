@@ -17,6 +17,7 @@
   "bondConditions": "wiki 2026-06-20",
   "bondHelpers": "wiki 2026-06-20",
   "heartBonds": "wiki 2026-06-20",
+  "skills": "wiki 2026-06-20",
   "talents": "wiki 2026-06-20",
   "rune_skill": "wiki 2026-06-20",
   "exclusive_gear": "wiki 2026-06-20"
@@ -160,6 +161,64 @@
   {
    "level": 10,
    "effect": "英雄全屬性+5%。"
+  }
+ ],
+ "skills": [
+  {
+   "name": "衝鋒",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]在攻擊前，每移動1格，攻擊提升5%（最多提升15%）。"
+  },
+  {
+   "name": "風壓",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]本部隊造成傷害後，對周圍2格的敵軍造成0.1倍的範圍傷害，50%機率對每個目標施加隨機的弱化效果。"
+  },
+  {
+   "name": "風語",
+   "type": "物理傷害",
+   "cd": "2回合",
+   "range": "自身",
+   "span": "1圈",
+   "description": "[物理傷害]對自身周圍1圈的所有敵軍造成0.3倍的範圍傷害，並對每個目標施加1個隨機的弱化效果。"
+  },
+  {
+   "name": "堅守",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]進入戰鬥時，防禦提升7%。"
+  },
+  {
+   "name": "雷光",
+   "type": "物理傷害",
+   "cd": "3回合",
+   "range": "1格",
+   "span": "單體",
+   "description": "[物理傷害]攻擊單個敵軍，造成1.5倍的戰鬥傷害。成功消滅敵軍時，該技能的冷卻時間減少3回合。"
+  },
+  {
+   "name": "水槍",
+   "type": "物理傷害",
+   "cd": "2回合",
+   "range": "1格",
+   "span": "單體",
+   "description": "[物理傷害]攻擊單個敵軍，造成1.5倍的傷害。在水中傷害為2倍。"
+  },
+  {
+   "name": "御風",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]生命大於50%進入戰鬥時，遭受所有傷害降低15%。"
   }
  ],
  "talents": [

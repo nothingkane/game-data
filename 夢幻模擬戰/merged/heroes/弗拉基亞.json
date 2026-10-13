@@ -18,6 +18,7 @@
   "bondConditions": "wiki 2026-06-20",
   "bondHelpers": "wiki 2026-06-20",
   "heartBonds": "wiki 2026-06-20",
+  "skills": "wiki 2026-06-20",
   "talents": "wiki 2026-06-20",
   "rune_skill": "wiki 2026-06-20",
   "exclusive_gear": "ingame 2026-10-12",
@@ -183,6 +184,80 @@
   {
    "level": 10,
    "effect": "英雄全屬性+5%。"
+  }
+ ],
+ "skills": [
+  {
+   "name": "攻擊威嚇",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]行動結束時，使得周圍2格以內所有敵軍的攻擊、智力降低15%，持續1回合。"
+  },
+  {
+   "name": "詭步",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]暴擊率提升10%。戰鬥中消滅過部隊後，可以獲得再次移動3格的機會。"
+  },
+  {
+   "name": "迴旋",
+   "type": "物理傷害",
+   "cd": "3回合",
+   "range": "3格",
+   "span": "單體",
+   "description": "[物理傷害]攻擊單個敵軍，造成1.2倍物理傷害。若本次攻擊沒有被護衛，則在戰鬥結束後造成[位移]效果：與目標位置互換，同時自身遭受所有傷害降低20%，持續2回合。"
+  },
+  {
+   "name": "進擊",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]進入戰鬥時，自身部隊的攻擊提升7%。"
+  },
+  {
+   "name": "狙足",
+   "type": "物理傷害",
+   "cd": "2回合",
+   "range": "2格",
+   "span": "單體",
+   "description": "[物理傷害]攻擊單個敵軍，造成1.4倍的戰鬥傷害，對「飛兵」有特效。戰鬥後，使得敵軍的移動力降低1，且無法進行護衛，持續1回合。（該效果無法被驅散）"
+  },
+  {
+   "name": "掠奪",
+   "type": "物理傷害",
+   "cd": "2回合",
+   "range": "2格",
+   "span": "單體",
+   "description": "[物理傷害]無視護衛直接攻擊單個敵軍，造成1.1倍傷害。戰鬥後，偷取對方最多3個強化效果。"
+  },
+  {
+   "name": "魔防威嚇",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]行動結束時，使得周圍3格以內所有敵軍部隊的“魔防”降低20%，持續1回合。"
+  },
+  {
+   "name": "煙霧",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]主動進入戰鬥，戰後有30%機率觸發，遭受所有傷害降低30%，持續1回合。"
+  },
+  {
+   "name": "增援",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]行動結束時，恢復自身部隊20%生命。"
   }
  ],
  "talents": [

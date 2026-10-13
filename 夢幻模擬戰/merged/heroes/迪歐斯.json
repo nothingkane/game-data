@@ -17,6 +17,7 @@
   "bondConditions": "wiki 2026-06-20",
   "bondHelpers": "wiki 2026-06-20",
   "heartBonds": "wiki 2026-06-20",
+  "skills": "wiki 2026-06-20",
   "talents": "wiki 2026-06-20",
   "rune_skill": "wiki 2026-06-20",
   "exclusive_gear": "wiki 2026-06-20"
@@ -160,6 +161,64 @@
   {
    "level": 10,
    "effect": "英雄全屬性+5%。"
+  }
+ ],
+ "skills": [
+  {
+   "name": "進擊",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]進入戰鬥時，自身部隊的攻擊提升7%。"
+  },
+  {
+   "name": "狙足",
+   "type": "物理傷害",
+   "cd": "2回合",
+   "range": "2格",
+   "span": "單體",
+   "description": "[物理傷害]攻擊單個敵軍，造成1.4倍的戰鬥傷害，對「飛兵」有特效。戰鬥後，使得敵軍的移動力降低1，且無法進行護衛，持續1回合。（該效果無法被驅散）"
+  },
+  {
+   "name": "瞄準",
+   "type": "支援",
+   "cd": "2回合",
+   "range": "自身",
+   "span": "單體",
+   "description": "[支援]使用後，本部隊傷害提升10%，持續1回合。使用後可以額外行動2格，可再次攻擊。"
+  },
+  {
+   "name": "破攻",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]進入戰鬥前，50%的機率使得敵軍的攻擊、智力降低20%，持續1回合。"
+  },
+  {
+   "name": "破魔",
+   "type": "被動",
+   "cd": null,
+   "range": null,
+   "span": null,
+   "description": "[被動]進入戰鬥前，50%的機率使得敵軍的魔防降低25%，持續1回合。"
+  },
+  {
+   "name": "破陣",
+   "type": "物理傷害",
+   "cd": "3回合",
+   "range": "1格",
+   "span": "單體",
+   "description": "[物理傷害]攻擊單個敵軍，造成1倍傷害。並造成[位移]效果：將目標撞開2格，同時使其下回合無法行動。"
+  },
+  {
+   "name": "水槍",
+   "type": "物理傷害",
+   "cd": "2回合",
+   "range": "1格",
+   "span": "單體",
+   "description": "[物理傷害]攻擊單個敵軍，造成1.5倍的傷害。在水中傷害為2倍。"
   }
  ],
  "talents": [
