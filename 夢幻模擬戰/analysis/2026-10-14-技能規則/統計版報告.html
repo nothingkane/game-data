@@ -1,0 +1,741 @@
+<title>夢戰技能規則歸納</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* 版型：戰術手冊——左側章節索引（桌機黏住）、右側單欄內文；強化用暗金、弱化用鏽紅，跟遊戲裡的 buff／debuff 圖示同一個語意 */
+:root {
+  --bg: #f3f4f6;
+  --paper: #fbfbfc;
+  --ink: #1a2130;
+  --muted: #5b6475;
+  --line: #d9dde4;
+  --accent: #2c5a8a;      /* 規則、標題 */
+  --buff: #9a6a1c;        /* 強化 */
+  --debuff: #a63d3a;      /* 弱化 */
+  --buff-soft: #f2e7d3;
+  --debuff-soft: #f4dedc;
+  --accent-soft: #dfe8f2;
+  --bar: #2c5a8a;
+  --f-display: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --f-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --f-mono: "JetBrains Mono", "Consolas", monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12161d; --paper: #181d26; --ink: #e4e7ec; --muted: #9aa3b2; --line: #2b3340;
+    --accent: #7fa8d6; --buff: #d9a650; --debuff: #e07a72;
+    --buff-soft: #2c2416; --debuff-soft: #2f1c1b; --accent-soft: #1d2a3a; --bar: #6f9bcc;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12161d; --paper: #181d26; --ink: #e4e7ec; --muted: #9aa3b2; --line: #2b3340;
+  --accent: #7fa8d6; --buff: #d9a650; --debuff: #e07a72;
+  --buff-soft: #2c2416; --debuff-soft: #2f1c1b; --accent-soft: #1d2a3a; --bar: #6f9bcc;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15.5px; line-height: 1.75; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 36px 80px; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 44px; }
+@media (max-width: 860px) { .wrap { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-inline: 16px; } nav.toc { position: static !important; } }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 20px); align-self: start; font-size: 13.5px; }
+nav.toc .lbl { font-size: 11.5px; letter-spacing: .12em; color: var(--muted); margin-bottom: 8px; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; counter-reset: s; }
+nav.toc a { color: var(--ink); text-decoration: none; display: flex; gap: 8px; padding: 3px 8px; border-radius: 4px; }
+nav.toc a:hover, nav.toc a:focus-visible { background: var(--accent-soft); outline: none; }
+nav.toc a span { font-family: var(--f-mono); color: var(--muted); font-size: 12px; min-width: 1.6em; padding-top: 1px; }
+@media (max-width: 860px) { nav.toc ol { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } }
+main { min-width: 0; }
+header.hero { border-bottom: 2px solid var(--ink); padding-bottom: 22px; margin-bottom: 28px; }
+.eyebrow { font-size: 12px; letter-spacing: .14em; color: var(--accent); font-weight: 700; }
+h1 { font-family: var(--f-display); font-weight: 900; font-size: clamp(30px, 5vw, 44px); line-height: 1.2; margin: 6px 0 10px; text-wrap: balance; }
+.lede { font-size: 17px; max-width: 46em; color: var(--ink); margin: 0 0 14px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--muted); }
+.meta b { font-family: var(--f-mono); color: var(--ink); font-weight: 600; }
+.takeaways { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin: 26px 0 8px; }
+.tk { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+.tk .n { font-family: var(--f-mono); font-size: 24px; font-weight: 600; color: var(--accent); line-height: 1.2; }
+.tk.b .n { color: var(--buff); } .tk.d .n { color: var(--debuff); }
+.tk p { margin: 4px 0 0; font-size: 14px; }
+section { padding-top: 34px; margin-top: 30px; border-top: 1px solid var(--line); }
+h2 { font-family: var(--f-display); font-weight: 600; font-size: 26px; margin: 0 0 6px; display: flex; gap: 12px; align-items: baseline; text-wrap: balance; }
+h2 .no { font-family: var(--f-mono); font-size: 15px; color: var(--accent); font-weight: 600; }
+.concl { font-size: 16.5px; font-weight: 500; max-width: 48em; margin: 4px 0 18px; padding-left: 14px; border-left: 3px solid var(--accent); }
+h3 { font-size: 15px; font-weight: 700; margin: 26px 0 10px; letter-spacing: .02em; }
+p { max-width: 50em; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px 32px; }
+.grid2 > * { min-width: 0; }
+/* 長條 */
+.bars { display: grid; gap: 5px; margin: 6px 0 10px; }
+.bar { display: grid; grid-template-columns: minmax(7em, 13em) minmax(0, 1fr) 7.5em; gap: 10px; align-items: center; font-size: 13.5px; }
+.bar .k { overflow-wrap: anywhere; }
+.bar .t { height: 12px; background: var(--accent-soft); border-radius: 2px; overflow: hidden; }
+.bar .t i { display: block; height: 100%; width: calc(var(--w, 0) * 1%); background: var(--bar); }
+.bars.buff .t i { background: var(--buff); } .bars.buff .t { background: var(--buff-soft); }
+.bars.debuff .t i { background: var(--debuff); } .bars.debuff .t { background: var(--debuff-soft); }
+.bar .v { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.bar.hl .k { font-weight: 700; } .bar.hl .v { color: var(--ink); font-weight: 600; }
+@media (max-width: 480px) { .bar { grid-template-columns: 6.5em minmax(0, 1fr) 6.2em; font-size: 12.5px; } }
+/* 表格 */
+.tbl { overflow-x: auto; margin: 8px 0 14px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; letter-spacing: .06em; color: var(--muted); font-weight: 700; background: var(--bg); white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.rule { font-weight: 700; white-space: nowrap; }
+q { quotes: "「" "」"; color: var(--ink); }
+.src { color: var(--muted); font-size: 12.5px; white-space: nowrap; }
+.tag { display: inline-block; font-size: 11.5px; padding: 0 7px; border-radius: 3px; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
+.tag.inf { background: var(--accent-soft); color: var(--accent); }
+.tag.new { background: var(--debuff-soft); color: var(--debuff); }
+.tag.ok { background: var(--buff-soft); color: var(--buff); }
+.note { background: var(--paper); border: 1px solid var(--line); border-left: 3px solid var(--muted); border-radius: 4px; padding: 10px 14px; font-size: 14px; margin: 12px 0; max-width: 52em; }
+.note.warn { border-left-color: var(--debuff); }
+.note.key { border-left-color: var(--buff); }
+.note p { margin: 4px 0; }
+/* 文字骨架 */
+.skel { display: grid; gap: 12px; margin: 10px 0 16px; }
+.sk { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+.sk .h { font-size: 12.5px; color: var(--muted); letter-spacing: .06em; font-weight: 700; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.sk .h b { color: var(--accent); font-family: var(--f-mono); }
+.sk .body { font-family: var(--f-display); font-size: 17px; line-height: 1.9; margin-top: 6px; overflow-wrap: anywhere; }
+.sk .slot { background: var(--accent-soft); color: var(--accent); padding: 1px 5px; border-radius: 3px; font-family: var(--f-body); font-size: 14.5px; font-weight: 500; }
+.layers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin: 12px 0; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.layers > div { padding: 12px 14px; background: var(--paper); border-right: 1px solid var(--line); }
+.layers > div:last-child { border-right: 0; }
+.layers .n { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.layers .t { font-weight: 700; margin: 2px 0; }
+.layers .c { font-size: 13px; color: var(--muted); }
+@media (max-width: 560px) { .layers { grid-template-columns: minmax(0, 1fr); } .layers > div { border-right: 0; border-bottom: 1px solid var(--line); } }
+ul.plain { margin: 6px 0; padding-left: 1.2em; max-width: 50em; }
+ul.plain li { margin: 3px 0; }
+footer { margin-top: 48px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+code { font-family: var(--f-mono); font-size: .9em; background: var(--accent-soft); padding: 0 4px; border-radius: 3px; overflow-wrap: anywhere; }
+a { color: var(--accent); }
+@media (prefers-reduced-motion: no-preference) { .bar .t i { transition: width .4s ease-out; } }
+
+table.cat th[scope="row"] { white-space: nowrap; font-weight: 700; color: var(--ink); background: transparent; font-size: 13.5px; letter-spacing: 0; }
+table.cat th[scope="row"] .base { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+ul.tiers { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }
+ul.tiers li { display: grid; grid-template-columns: 4.6em 3.6em minmax(0, 1fr); gap: 8px; align-items: baseline; }
+ul.tiers b { font-family: var(--f-mono); font-variant-numeric: tabular-nums; text-align: right; }
+ul.tiers .cnt { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+ul.tiers .ex { font-size: 13px; overflow-wrap: anywhere; }
+ul.tiers .ex i { font-style: normal; font-size: 11px; color: var(--muted); margin-left: 2px; }
+td.small { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); min-width: 9em; }
+table.cat td { min-width: 0; }
+</style>
+
+<div class="wrap">
+<nav class="toc" aria-label="章節">
+  <div class="lbl">章節</div>
+  <ol>
+    <li><a href="#s1"><span>1</span>技能分五層</a></li>
+    <li><a href="#s2"><span>2</span>主動技能參數</a></li>
+    <li><a href="#s3"><span>3</span>觸發時機</a></li>
+    <li><a href="#s4"><span>4</span>強化 buff</a></li>
+    <li><a href="#s5"><span>5</span>弱化 debuff</a></li>
+    <li><a href="#s6"><span>6</span>驅散與免疫</a></li>
+    <li><a href="#s7"><span>7</span>光環與條件</a></li>
+    <li><a href="#s8"><span>8</span>強化弱化目錄</a></li>
+    <li><a href="#s9"><span>9</span>文字模板</a></li>
+    <li><a href="#s10"><span>10</span>對 BxB 的借鏡</a></li>
+    <li><a href="#sa"><span>附</span>方法與誤判率</a></li>
+  </ol>
+</nav>
+
+<main>
+<header class="hero">
+  <div class="eyebrow">BxB 技能設計前置調研 · 夢幻模擬戰</div>
+  <h1>夢戰技能規則歸納</h1>
+  <p class="lede">把夢幻模擬戰 1,555 段技能文字攤平統計，找出它用哪些規則讓幾百顆技能共存。目的是給 BxB 第一批 60 顆技能當骨架：借結構與比例，不抄數字。強化、弱化各有哪些種類、各開了哪些檔次，直接看 <a href="#s8">第八章的目錄</a>。</p>
+  <div class="meta">
+    <span>語料 <b>1,555</b> 段</span>
+    <span>主動 <b>760</b> · 被動 <b>156</b> · 天賦 <b>214</b> · 鑄紋 <b>107</b> · 專屬裝備 <b>164</b> · 士兵 <b>154</b></span>
+    <span>關鍵字誤判率 強化 <b>5%</b> · 弱化 <b>10%</b> · 時機 <b>0%</b></span>
+    <span>2026-10-14</span>
+  </div>
+  <div class="takeaways">
+    <div class="tk"><div class="n">3 回合</div><p>主動技能冷卻的眾數。2～5 回合合計 84.7%。</p></div>
+    <div class="tk"><div class="n">1.5 倍 / 0.3 倍</div><p>單體與範圍傷害的倍率中位數。兩端：物理單體最高 1.8（黯滅、光之審判），範圍最高只到 0.6（閃煌）。</p></div>
+    <div class="tk"><div class="n">行動結束時</div><p>最大的觸發時機，382 段。天賦有 63% 用它。回合開始只有 36 段。</p></div>
+    <div class="tk b"><div class="n">2 回合 · 20%</div><p>強化最常見的持續與檔位。百分比 90% 是 5 的倍數。</p></div>
+    <div class="tk d"><div class="n">最多 3 回合</div><p>弱化持續只有 1～3 回合，2 回合占 61.8%。弱化比強化少一半以上。</p></div>
+    <div class="tk"><div class="n">30 句型 · 86.5%</div><p>30 種固定句型蓋住 86.5% 的句子。照骨架填空就寫得出夢戰風格的技能。</p></div>
+  </div>
+</header>
+
+<!-- 1 -->
+<section id="s1">
+  <h2><span class="no">01</span>技能分五層</h2>
+  <p class="concl">主動技能是英雄的招式，幾乎都是專屬。被動是可換的通用零件。天賦一人一顆、近半不可驅散。鑄紋與專屬裝備大多是「一行屬性加一條改寫既有技能的規則」。</p>
+  <div class="tbl"><table>
+    <thead><tr><th>層</th><th>筆數</th><th>角色</th><th>佐證</th><th>實例</th></tr></thead>
+    <tbody>
+      <tr><td class="rule">主動技能</td><td class="num">760</td><td>英雄的招式，可裝卸，COST 1～3</td><td>只有一位英雄有的占 87.5%</td><td>暗影突擊、光之審判</td></tr>
+      <tr><td class="rule">被動技能</td><td class="num">156</td><td>從共用技能庫學的通用零件</td><td>兩位以上共用的占 42.9%；COST 1 占 73.1%</td><td>破甲（14 位共用）、壓制</td></tr>
+      <tr><td class="rule">天賦</td><td class="num">214</td><td>一英雄一顆、不能換的身份規則</td><td>不可驅散 47.7%；用「行動結束」63.1%；含強化 96.7%</td><td>黑衣的騎士、顎人的野心</td></tr>
+      <tr><td class="rule">鑄紋技能</td><td class="num">107</td><td>一行屬性，加一條改寫既有技能或天賦的規則</td><td>開頭先寫屬性 68.2%；提到具名效果 63.6%</td><td>光明誓約 <q>[堅忍的反擊]持續回合數+1，最大累積層數+1</q></td></tr>
+      <tr><td class="rule">專屬裝備</td><td class="num">164</td><td>同上</td><td>開頭先寫屬性 96.3%；提到具名效果 51.2%</td><td>輝光之憶 <q>英雄天賦可以累積的[威光]效果個數+1</q></td></tr>
+      <tr><td class="rule">士兵技能</td><td class="num">154</td><td>士兵本身的數值與條件</td><td>以士兵為主詞 55.2%</td><td>狂熱者、精銳騎兵</td></tr>
+    </tbody>
+  </table></div>
+  <h3>主動技能的主要效果（單選，760 顆）</h3>
+  <div class="bars">
+    <div class="bar hl"><span class="k">物理傷害</span><span class="t"><i style="--w:38.7"></i></span><span class="v">294 · 38.7%</span></div>
+    <div class="bar hl"><span class="k">魔法傷害</span><span class="t"><i style="--w:20.9"></i></span><span class="v">159 · 20.9%</span></div>
+    <div class="bar"><span class="k">純輔助（強化、弱化）</span><span class="t"><i style="--w:16.2"></i></span><span class="v">123 · 16.2%</span></div>
+    <div class="bar"><span class="k">純輔助（含回血）</span><span class="t"><i style="--w:7.0"></i></span><span class="v">53 · 7.0%</span></div>
+    <div class="bar"><span class="k">位移、傳送</span><span class="t"><i style="--w:6.3"></i></span><span class="v">48 · 6.3%</span></div>
+    <div class="bar"><span class="k">超絕強化</span><span class="t"><i style="--w:5.0"></i></span><span class="v">38 · 5.0%</span></div>
+    <div class="bar"><span class="k">治療</span><span class="t"><i style="--w:2.2"></i></span><span class="v">17 · 2.2%</span></div>
+    <div class="bar"><span class="k">召喚</span><span class="t"><i style="--w:2.0"></i></span><span class="v">15 · 2.0%</span></div>
+    <div class="bar"><span class="k">變身</span><span class="t"><i style="--w:1.7"></i></span><span class="v">13 · 1.7%</span></div>
+  </div>
+  <p>功能標籤可以多選：主動技能裡 25.8% 帶驅散、20.8% 帶回血、19.6% 能行動後再動、15.5% 帶位移。</p>
+</section>
+
+<!-- 2 -->
+<section id="s2">
+  <h2><span class="no">02</span>主動技能參數</h2>
+  <p class="concl">冷卻集中在 2～5 回合。射程以自身與 1～3 格為主，範圍六成是單體。單體倍率中位數 1.5 倍，範圍只有 0.3 倍左右。拉開強弱靠附加效果，不靠倍率。</p>
+  <div class="grid2">
+    <div>
+      <h3>冷卻回合（760 顆）</h3>
+      <div class="bars">
+        <div class="bar"><span class="k">無冷卻</span><span class="t"><i style="--w:2.9"></i></span><span class="v">22 · 2.9%</span></div>
+        <div class="bar"><span class="k">1 回合</span><span class="t"><i style="--w:6.1"></i></span><span class="v">46 · 6.1%</span></div>
+        <div class="bar"><span class="k">2 回合</span><span class="t"><i style="--w:23.6"></i></span><span class="v">179 · 23.6%</span></div>
+        <div class="bar hl"><span class="k">3 回合</span><span class="t"><i style="--w:30.7"></i></span><span class="v">233 · 30.7%</span></div>
+        <div class="bar"><span class="k">4 回合</span><span class="t"><i style="--w:13.4"></i></span><span class="v">102 · 13.4%</span></div>
+        <div class="bar"><span class="k">5 回合</span><span class="t"><i style="--w:17.0"></i></span><span class="v">129 · 17.0%</span></div>
+        <div class="bar"><span class="k">6 回合以上</span><span class="t"><i style="--w:2.9"></i></span><span class="v">22 · 2.9%</span></div>
+        <div class="bar"><span class="k">未載</span><span class="t"><i style="--w:3.6"></i></span><span class="v">27 · 3.6%</span></div>
+      </div>
+      <p>超絕強化 38 顆全部 3 回合。治療中位數 1 回合，17 顆裡 6 顆無冷卻。</p>
+      <p><b>7 回合以上的 6 顆</b>：豪賭的計略 15、守護之誓 15、神氣合一 10、進擊的頌歌 9、聖獸讚歌 8、阿魯哈薩特之影 7。</p>
+      <p><b>無冷卻的 22 顆</b>包括治療術、援救、腥風殺戮、聚元、魔劍之心、諧和一箭。</p>
+    </div>
+    <div>
+      <h3>範圍（760 顆）</h3>
+      <div class="bars">
+        <div class="bar hl"><span class="k">單體</span><span class="t"><i style="--w:60.9"></i></span><span class="v">463 · 60.9%</span></div>
+        <div class="bar"><span class="k">直線</span><span class="t"><i style="--w:9.3"></i></span><span class="v">71 · 9.3%</span></div>
+        <div class="bar"><span class="k">3 格</span><span class="t"><i style="--w:7.1"></i></span><span class="v">54 · 7.1%</span></div>
+        <div class="bar"><span class="k">全場</span><span class="t"><i style="--w:5.5"></i></span><span class="v">42 · 5.5%</span></div>
+        <div class="bar"><span class="k">4 格</span><span class="t"><i style="--w:3.8"></i></span><span class="v">29 · 3.8%</span></div>
+        <div class="bar"><span class="k">1～2 格</span><span class="t"><i style="--w:5.5"></i></span><span class="v">42 · 5.5%</span></div>
+        <div class="bar"><span class="k">N 圈</span><span class="t"><i style="--w:2.4"></i></span><span class="v">18 · 2.4%</span></div>
+        <div class="bar"><span class="k">5 格以上、未載</span><span class="t"><i style="--w:5.4"></i></span><span class="v">41 · 5.4%</span></div>
+      </div>
+      <p>射程：自身 30.1%、2 格 22.2%、3 格 15.4%、1 格 15.3%。</p>
+    </div>
+  </div>
+  <h3>傷害倍率（單體或範圍看資料的範圍欄位）</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>類型</th><th>筆數</th><th>最小</th><th>P25</th><th>中位數</th><th>P75</th><th>最大</th><th>最小是誰</th><th>最大是誰</th></tr></thead>
+    <tbody>
+      <tr><td>物理・單體</td><td class="num">185</td><td class="num">0.1</td><td class="num">1.3</td><td class="num"><b>1.5</b></td><td class="num">1.6</td><td class="num"><b>1.8</b></td><td>角力（wiki）</td><td>光之審判、劍骸鐵騎、劍魂、噬魂之凝視、黯滅等</td></tr>
+      <tr><td>物理・範圍</td><td class="num">108</td><td class="num">0.1</td><td class="num">0.25</td><td class="num"><b>0.3</b></td><td class="num">0.35</td><td class="num"><b>0.6</b></td><td>御陣、狂龍亂武、紅葉切等</td><td>閃煌</td></tr>
+      <tr><td>魔法・單體</td><td class="num">76</td><td class="num">1.1</td><td class="num">1.5</td><td class="num"><b>1.5</b></td><td class="num">1.6</td><td class="num"><b>1.7</b></td><td>破滅之矛、諧和一箭、騷亂一箭</td><td>光子類星體、終焉之夢海、鐵血交輝</td></tr>
+      <tr><td>魔法・範圍</td><td class="num">83</td><td class="num">0.1</td><td class="num">0.3</td><td class="num"><b>0.32</b></td><td class="num">0.36</td><td class="num"><b>0.45</b></td><td>魅惑、鮮血舞踏</td><td>瓦解（wiki）；遊戲畫面版最高 0.4</td></tr>
+    </tbody>
+  </table></div>
+  <p>單體倍率沒有一顆到 2.0。範圍倍率最高 0.6，約單體的三分之一，中位數約五分之一。四分位距只有 0.3。<span class="tag inf">推論</span> 夢戰拉開技能強弱主要靠附加效果。</p>
+  <div class="note warn">
+    <p><b>這張表在第一版算錯過，已更正。</b>第一版用文字判斷單體還是範圍，把青龍破陣這類「打單體再追加範圍」的技能算進範圍，物理範圍最大值寫成 1.7。現在改用資料的範圍欄位判斷，並補抓「造成1.4倍的戰鬥傷害」這類寫法，多抓到 41 顆。</p>
+    <p>邪王炎殺黑龍波、魅惑、角力三顆的範圍欄位跟文字矛盾，表格照欄位算。</p>
+  </div>
+  <div class="note key">
+    <p><b>行動後再動是一大類。</b>主動技能 149 顆（19.6%）能再動，多為 2 或 3 格。其中 91 顆附註 <q>使用此技能後，身上攜帶的強化效果回合數不會減少</q>。</p>
+    <p><span class="tag inf">推論</span> 強化回合在每次行動結束時扣 1，再動等於多一次行動結束，所以要特別註明不扣。</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="s3">
+  <h2><span class="no">03</span>觸發時機</h2>
+  <p class="concl">「行動結束時」是第一大時機。其次是一次交戰的戰前、戰中、戰後，乘上主動攻擊方與被攻擊方。夢戰的節奏單位是單位的行動，不是全場的回合。</p>
+  <div class="bars">
+    <div class="bar hl"><span class="k">行動結束時</span><span class="t"><i style="--w:24.6"></i></span><span class="v">382 · 24.6%</span></div>
+    <div class="bar"><span class="k">戰鬥後</span><span class="t"><i style="--w:17.2"></i></span><span class="v">268 · 17.2%</span></div>
+    <div class="bar"><span class="k">戰鬥前</span><span class="t"><i style="--w:15.3"></i></span><span class="v">238 · 15.3%</span></div>
+    <div class="bar"><span class="k">戰鬥中</span><span class="t"><i style="--w:14.6"></i></span><span class="v">227 · 14.6%</span></div>
+    <div class="bar"><span class="k">主動攻擊方</span><span class="t"><i style="--w:14.2"></i></span><span class="v">221 · 14.2%</span></div>
+    <div class="bar"><span class="k">使用技能時或後</span><span class="t"><i style="--w:13.2"></i></span><span class="v">205 · 13.2%</span></div>
+    <div class="bar"><span class="k">被攻擊方</span><span class="t"><i style="--w:8.3"></i></span><span class="v">129 · 8.3%</span></div>
+    <div class="bar"><span class="k">觸發冷卻（間隔 N 回合）</span><span class="t"><i style="--w:7.5"></i></span><span class="v">117 · 7.5%</span></div>
+    <div class="bar"><span class="k">機率觸發</span><span class="t"><i style="--w:5.2"></i></span><span class="v">81 · 5.2%</span></div>
+    <div class="bar"><span class="k">遭受致命傷害時</span><span class="t"><i style="--w:4.9"></i></span><span class="v">76 · 4.9%</span></div>
+    <div class="bar"><span class="k">每場次數限制</span><span class="t"><i style="--w:4.5"></i></span><span class="v">70 · 4.5%</span></div>
+    <div class="bar"><span class="k">死亡時</span><span class="t"><i style="--w:4.1"></i></span><span class="v">63 · 4.1%</span></div>
+    <div class="bar"><span class="k">生命門檻</span><span class="t"><i style="--w:3.8"></i></span><span class="v">59 · 3.8%</span></div>
+    <div class="bar"><span class="k">受到傷害後</span><span class="t"><i style="--w:3.7"></i></span><span class="v">57 · 3.7%</span></div>
+    <div class="bar"><span class="k">擊殺敵軍時</span><span class="t"><i style="--w:3.3"></i></span><span class="v">52 · 3.3%</span></div>
+    <div class="bar"><span class="k">回合開始時</span><span class="t"><i style="--w:2.3"></i></span><span class="v">36 · 2.3%</span></div>
+    <div class="bar"><span class="k">戰場開場</span><span class="t"><i style="--w:1.9"></i></span><span class="v">29 · 1.9%</span></div>
+    <div class="bar"><span class="k">回合結束時</span><span class="t"><i style="--w:0.3"></i></span><span class="v">5 · 0.3%</span></div>
+  </div>
+  <p>一段技能可以含多個時機，所以占比加總超過 100%。夢戰的「戰鬥」指兩支部隊一次交戰，整場關卡在文字裡叫「本場戰鬥」。<span class="tag inf">推論</span> 「戰前」「戰鬥前」「進入戰鬥前」三種寫法同義並存。</p>
+</section>
+
+<!-- 4 -->
+<section id="s4">
+  <h2><span class="no">04</span>強化 buff</h2>
+  <p class="concl">強化以屬性提升、增傷、回血、再動、減傷五類為主，一半持續 2 回合。技能文字裡沒有通用的疊加規則，寫出來的全是例外。</p>
+  <div class="grid2">
+    <div>
+      <h3>強化種類（一段可多類，占 1,555）</h3>
+      <div class="bars buff">
+        <div class="bar hl"><span class="k">屬性提升</span><span class="t"><i style="--w:27.8"></i></span><span class="v">432 · 27.8%</span></div>
+        <div class="bar"><span class="k">增傷</span><span class="t"><i style="--w:17.7"></i></span><span class="v">276 · 17.7%</span></div>
+        <div class="bar"><span class="k">回血</span><span class="t"><i style="--w:17.7"></i></span><span class="v">275 · 17.7%</span></div>
+        <div class="bar"><span class="k">行動後再動</span><span class="t"><i style="--w:13.3"></i></span><span class="v">207 · 13.3%</span></div>
+        <div class="bar"><span class="k">減傷</span><span class="t"><i style="--w:12.1"></i></span><span class="v">188 · 12.1%</span></div>
+        <div class="bar"><span class="k">移動力、射程提升</span><span class="t"><i style="--w:9.8"></i></span><span class="v">153 · 9.8%</span></div>
+        <div class="bar"><span class="k">冷卻縮短</span><span class="t"><i style="--w:8.1"></i></span><span class="v">126 · 8.1%</span></div>
+        <div class="bar"><span class="k">免疫</span><span class="t"><i style="--w:6.6"></i></span><span class="v">102 · 6.6%</span></div>
+        <div class="bar"><span class="k">暴擊提升</span><span class="t"><i style="--w:5.9"></i></span><span class="v">91 · 5.9%</span></div>
+        <div class="bar"><span class="k">無視防禦、護衛</span><span class="t"><i style="--w:5.3"></i></span><span class="v">82 · 5.3%</span></div>
+        <div class="bar"><span class="k">抵擋致命傷害</span><span class="t"><i style="--w:4.6"></i></span><span class="v">71 · 4.6%</span></div>
+        <div class="bar"><span class="k">超絕強化</span><span class="t"><i style="--w:4.5"></i></span><span class="v">70 · 4.5%</span></div>
+        <div class="bar"><span class="k">[指揮] 光環</span><span class="t"><i style="--w:3.7"></i></span><span class="v">57 · 3.7%</span></div>
+        <div class="bar"><span class="k">護衛</span><span class="t"><i style="--w:2.6"></i></span><span class="v">41 · 2.6%</span></div>
+        <div class="bar"><span class="k">吸血</span><span class="t"><i style="--w:2.3"></i></span><span class="v">35 · 2.3%</span></div>
+        <div class="bar"><span class="k">護盾</span><span class="t"><i style="--w:1.4"></i></span><span class="v">21 · 1.4%</span></div>
+      </div>
+    </div>
+    <div>
+      <h3>持續回合（有寫持續的 313 句）</h3>
+      <div class="bars buff">
+        <div class="bar"><span class="k">1 回合</span><span class="t"><i style="--w:24.9"></i></span><span class="v">78 · 24.9%</span></div>
+        <div class="bar hl"><span class="k">2 回合</span><span class="t"><i style="--w:48.9"></i></span><span class="v">153 · 48.9%</span></div>
+        <div class="bar"><span class="k">3 回合</span><span class="t"><i style="--w:10.9"></i></span><span class="v">34 · 10.9%</span></div>
+        <div class="bar"><span class="k">4 回合</span><span class="t"><i style="--w:14.4"></i></span><span class="v">45 · 14.4%</span></div>
+        <div class="bar"><span class="k">6 回合</span><span class="t"><i style="--w:1.0"></i></span><span class="v">3 · 1.0%</span></div>
+      </div>
+      <p>4 回合幾乎是超絕強化專用，38 顆裡有 37 顆。被動、天賦、士兵的強化多半是常駐，全文沒有「持續」兩字。</p>
+      <h3>含至少一種強化</h3>
+      <div class="bars buff">
+        <div class="bar"><span class="k">主動</span><span class="t"><i style="--w:70.7"></i></span><span class="v">70.7%</span></div>
+        <div class="bar"><span class="k">被動</span><span class="t"><i style="--w:78.2"></i></span><span class="v">78.2%</span></div>
+        <div class="bar"><span class="k">天賦</span><span class="t"><i style="--w:96.7"></i></span><span class="v">96.7%</span></div>
+        <div class="bar"><span class="k">鑄紋</span><span class="t"><i style="--w:96.3"></i></span><span class="v">96.3%</span></div>
+        <div class="bar"><span class="k">專屬裝備</span><span class="t"><i style="--w:72.6"></i></span><span class="v">72.6%</span></div>
+        <div class="bar"><span class="k">士兵</span><span class="t"><i style="--w:92.2"></i></span><span class="v">92.2%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3>疊加與計數規則</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>規則</th><th>筆數</th><th>原文</th></tr></thead>
+    <tbody>
+      <tr><td class="rule">超絕強化互斥</td><td class="num">52</td><td><q>該效果無法和其他的超絕強化技能疊加</q> <span class="src">不滅的輝光</span></td></tr>
+      <tr><td class="rule">同類指揮不同時生效</td><td class="num">6</td><td><q>指揮技能的屬性提升效果與同類指揮技能不能同時生效</q> <span class="src">侍王決心</span></td></tr>
+      <tr><td class="rule">寫明才疊</td><td class="num">71</td><td><q>自身獲得1個[野心]：攻擊、防禦提升5%，可累積，最多5個，持續3回合</q> <span class="src">顎人的野心</span></td></tr>
+      <tr><td class="rule">疊層上限多是 3 或 5</td><td class="num">69</td><td>3 層 30.4%、5 層 26.1%、2 層 11 筆、4 層 9 筆 <span class="src">聚元：最多累積4個</span></td></tr>
+      <tr><td class="rule">明寫不可疊加</td><td class="num">3</td><td><q>[劍刃魂力]不可免疫與驅散，不可疊加。</q> <span class="src">汲魂斷刃</span></td></tr>
+      <tr><td class="rule">疊加時刷新持續</td><td class="num">6</td><td><q>可疊加，最大為8，疊加時持續回合回復至最大</q> <span class="src">神樂弦鳴</span></td></tr>
+      <tr><td class="rule">上限可被別的來源提高</td><td class="num">5</td><td><q>[神樹鎧甲]疊加上限+2</q> <span class="src">聖王神甲</span></td></tr>
+      <tr><td class="rule">多種效果共用上限</td><td class="num">2</td><td><q>[感性]與[理性]不可驅散，無法免疫，共用4層累積上限</q> <span class="src">萬物共鳴</span></td></tr>
+      <tr><td class="rule">強化個數當資源</td><td class="num">10</td><td><q>自身每有1個強化效果，造成傷害提升2%（最多提升10%）</q> <span class="src">優勢打擊</span></td></tr>
+      <tr><td class="rule">改寫持續回合</td><td class="num">29</td><td><q>受到友方施加的強化效果回合數+1</q> <span class="src">流浪的軍師</span></td></tr>
+      <tr><td class="rule">再動時回合不扣</td><td class="num">102</td><td><q>使用此技能後，身上攜帶的強化效果回合數不會減少</q> <span class="src">二重影</span></td></tr>
+      <tr><td class="rule">地形覆蓋優先序</td><td class="num">17</td><td><q>[休憩之境]擁有較高的地形覆蓋優先順序</q> <span class="src">休憩之境</span></td></tr>
+    </tbody>
+  </table></div>
+  <div class="note warn">
+    <p><b>技能文字查不到的三件事</b></p>
+    <ul class="plain">
+      <li><b>同名效果重複施加：</b>沒有通則。<span class="tag inf">推論</span> 預設不疊層、重新施加只刷新，所以要疊才特別寫「可累積」。這是從例外的寫法反推的，沒在遊戲裡驗證。</li>
+      <li><b>同屬性、不同來源：</b>文字沒寫。2018 年反編譯的公式寫「最終 = 成長 × (1 + buff 倍數) + buff 加值」。<span class="tag inf">推論</span> 先加總再一次乘，現況未驗。</li>
+      <li><b>身上最多幾個強化：</b>查「最多擁有」「強化效果上限」都是 0 筆，找不到上限。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="s5">
+  <h2><span class="no">05</span>弱化 debuff</h2>
+  <p class="concl">弱化比強化少一半以上，主動技能含弱化的占 38.0%，含強化的占 70.7%。持續只有 1～3 回合。疊加跟強化同一套，而且常用「疊到 N 層就變成另一種效果」的設計。</p>
+  <div class="grid2">
+    <div>
+      <h3>弱化種類（占 1,555）</h3>
+      <div class="bars debuff">
+        <div class="bar hl"><span class="k">屬性降低</span><span class="t"><i style="--w:5.1"></i></span><span class="v">79 · 5.1%</span></div>
+        <div class="bar"><span class="k">隨機弱化</span><span class="t"><i style="--w:4.8"></i></span><span class="v">75 · 4.8%</span></div>
+        <div class="bar"><span class="k">移動力、射程降低</span><span class="t"><i style="--w:3.3"></i></span><span class="v">52 · 3.3%</span></div>
+        <div class="bar"><span class="k">易傷</span><span class="t"><i style="--w:3.3"></i></span><span class="v">51 · 3.3%</span></div>
+        <div class="bar"><span class="k">禁護衛</span><span class="t"><i style="--w:2.8"></i></span><span class="v">43 · 2.8%</span></div>
+        <div class="bar"><span class="k">眩暈、無法行動</span><span class="t"><i style="--w:2.6"></i></span><span class="v">41 · 2.6%</span></div>
+        <div class="bar"><span class="k">降傷</span><span class="t"><i style="--w:2.3"></i></span><span class="v">36 · 2.3%</span></div>
+        <div class="bar"><span class="k">偷取、轉移強化</span><span class="t"><i style="--w:2.1"></i></span><span class="v">32 · 2.1%</span></div>
+        <div class="bar"><span class="k">持續傷害</span><span class="t"><i style="--w:1.8"></i></span><span class="v">28 · 1.8%</span></div>
+        <div class="bar"><span class="k">禁療</span><span class="t"><i style="--w:1.7"></i></span><span class="v">27 · 1.7%</span></div>
+        <div class="bar"><span class="k">沉默</span><span class="t"><i style="--w:1.2"></i></span><span class="v">19 · 1.2%</span></div>
+        <div class="bar"><span class="k">強力弱化</span><span class="t"><i style="--w:1.0"></i></span><span class="v">15 · 1.0%</span></div>
+        <div class="bar"><span class="k">定身</span><span class="t"><i style="--w:0.9"></i></span><span class="v">14 · 0.9%</span></div>
+        <div class="bar"><span class="k">無法反擊</span><span class="t"><i style="--w:0.6"></i></span><span class="v">9 · 0.6%</span></div>
+        <div class="bar"><span class="k">嘲諷</span><span class="t"><i style="--w:0.1"></i></span><span class="v">1 · 0.1%</span></div>
+      </div>
+      <p>持續傷害幾乎都寫成「行動結束時受到 X 倍的[固定傷害]」。中毒 0 筆、流血 2 筆、灼燒 4 筆。</p>
+    </div>
+    <div>
+      <h3>持續回合（217 句）</h3>
+      <div class="bars debuff">
+        <div class="bar"><span class="k">1 回合</span><span class="t"><i style="--w:34.1"></i></span><span class="v">74 · 34.1%</span></div>
+        <div class="bar hl"><span class="k">2 回合</span><span class="t"><i style="--w:61.8"></i></span><span class="v">134 · 61.8%</span></div>
+        <div class="bar"><span class="k">3 回合</span><span class="t"><i style="--w:4.1"></i></span><span class="v">9 · 4.1%</span></div>
+        <div class="bar"><span class="k">4 回合以上</span><span class="t"><i style="--w:0"></i></span><span class="v">0</span></div>
+      </div>
+      <h3>含至少一種弱化</h3>
+      <div class="bars debuff">
+        <div class="bar"><span class="k">主動</span><span class="t"><i style="--w:38.0"></i></span><span class="v">38.0%</span></div>
+        <div class="bar"><span class="k">被動</span><span class="t"><i style="--w:18.6"></i></span><span class="v">18.6%</span></div>
+        <div class="bar"><span class="k">天賦</span><span class="t"><i style="--w:30.4"></i></span><span class="v">30.4%</span></div>
+        <div class="bar"><span class="k">鑄紋</span><span class="t"><i style="--w:5.6"></i></span><span class="v">5.6%</span></div>
+        <div class="bar"><span class="k">專屬裝備</span><span class="t"><i style="--w:12.2"></i></span><span class="v">12.2%</span></div>
+        <div class="bar"><span class="k">士兵</span><span class="t"><i style="--w:15.6"></i></span><span class="v">15.6%</span></div>
+      </div>
+    </div>
+  </div>
+  <h3>疊加規則</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>規則</th><th>原文</th></tr></thead>
+    <tbody>
+      <tr><td class="rule">寫明才疊、寫出上限</td><td><q>最多累積12層，無法免疫，不可驅散</q> <span class="src">寂滅福音</span></td></tr>
+      <tr><td class="rule">疊加時刷新全部層</td><td><q>可疊加，最多疊加3層，每次施加時刷新目標所有[黯翎]的持續回合</q> <span class="src">矢志的黯翼</span></td></tr>
+      <tr><td class="rule">疊到 N 層換效果</td><td><q>擁有4層及以上[罪孽]時，遭受傷害提升5%…擁有7層[罪孽]時，行動結束時獲得持續1回合的"無法使用主動技能"</q> <span class="src">光輝誡律</span></td></tr>
+      <tr><td class="rule">指揮型弱化不與其他指揮同時生效</td><td><q>該效果與其他指揮技能不能同時生效</q> <span class="src">光輝誡律</span></td></tr>
+      <tr><td class="rule">層數上限寫在效果內文</td><td><q>施加2回合可疊加2層的'遭受治療效果降低50%'</q> <span class="src">萬風歸息</span></td></tr>
+      <tr><td class="rule">弱化個數當資源</td><td><q>敵軍每有1個弱化效果，本次戰鬥造成傷害提升10%（最高提升30%）</q> <span class="src">裂空龍卷</span></td></tr>
+      <tr><td class="rule">分一般與強力兩階</td><td><q>同時施加1個隨機的強力弱化效果</q> <span class="src">凶毒壞蝕</span></td></tr>
+      <tr><td class="rule">受到的弱化可縮短</td><td><q>受到弱化效果持續回合數-1</q> <span class="src">虹之空</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 6 -->
+<section id="s6">
+  <h2><span class="no">06</span>驅散與免疫</h2>
+  <p class="concl">對抗分三層：施加，驅散或免疫，不可驅散或無法免疫。「不可驅散」是最常見的附註之一，290 段，天賦裡將近一半。</p>
+  <div class="layers">
+    <div><div class="n">第一層</div><div class="t">施加</div><div class="c">強化 70.7%、弱化 38.0% 的主動技能會施加效果</div></div>
+    <div><div class="n">第二層</div><div class="t">驅散、免疫</div><div class="c">驅散敵方強化 77、清己方弱化 65、免疫 73</div></div>
+    <div><div class="n">第三層</div><div class="t">不可驅散、無法免疫</div><div class="c">不可驅散 290、無法免疫 130</div></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>規則</th><th>筆數</th><th>原文</th></tr></thead>
+    <tbody>
+      <tr><td class="rule">不可驅散</td><td class="num">290</td><td><q>本技能施加的所有特殊效果均無法被驅散和免疫</q> <span class="src">120%</span></td></tr>
+      <tr><td class="rule">無法免疫</td><td class="num">130</td><td><q>施加無法免疫和驅散的[詭毒]</q> <span class="src">凶毒壞蝕</span></td></tr>
+      <tr><td class="rule">驅散敵方強化</td><td class="num">77</td><td><q>戰前驅散敵軍5個強化效果</q> <span class="src">光之審判</span></td></tr>
+      <tr><td class="rule">免疫特定效果</td><td class="num">73</td><td><q>免疫位移效果，免疫"無法使用主動技能"</q> <span class="src">守勢</span></td></tr>
+      <tr><td class="rule">清除己方弱化</td><td class="num">65</td><td><q>驅散範圍內所有友軍1個弱化效果</q> <span class="src">休憩之境</span></td></tr>
+      <tr><td class="rule">偷取強化</td><td class="num">24</td><td><q>戰前偷取敵軍2個強化效果</q> <span class="src">奪寶奇喵</span></td></tr>
+      <tr><td class="rule">免疫所有弱化</td><td class="num">11</td><td><span class="src">創生聖頌</span></td></tr>
+      <tr><td class="rule">免疫下 N 個弱化</td><td class="num">5</td><td><q>免疫下1個遭受的弱化效果，可累積，最高5層</q> <span class="src">公理之輝</span></td></tr>
+      <tr><td class="rule">只複製可驅散的</td><td class="num">5</td><td><q>將自身最多3個可驅散的強化效果複製到目標身上</q> <span class="src">戰術指導</span></td></tr>
+    </tbody>
+  </table></div>
+  <h3>一次驅散幾個（137 次）</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>對象</th><th>1 個</th><th>2 個</th><th>3 個</th><th>5 個</th><th>所有</th></tr></thead>
+    <tbody>
+      <tr><td>清己方弱化</td><td class="num">34</td><td class="num">17</td><td class="num">4</td><td class="num">0</td><td class="num">7</td></tr>
+      <tr><td>驅散敵方強化</td><td class="num">33</td><td class="num">19</td><td class="num">9</td><td class="num">14</td><td class="num">0</td></tr>
+    </tbody>
+  </table></div>
+  <p><span class="tag inf">推論</span> 破敵方強化從不寫「所有」，最多 5 個；清自己的弱化卻有 7 筆寫「所有」。淨化比破強化寬鬆。</p>
+</section>
+
+<!-- 7 -->
+<section id="s7">
+  <h2><span class="no">07</span>光環與條件</h2>
+  <p class="concl">空間條件以「周圍 N 格」為主，N＝2 最常見。[指揮] 光環有四分之三是半徑 2 格。生命門檻兩極，「高於 80%」最多。</p>
+  <div class="grid2">
+    <div>
+      <h3>條件種類（占 1,555）</h3>
+      <div class="bars">
+        <div class="bar hl"><span class="k">周圍 N 格</span><span class="t"><i style="--w:20.7"></i></span><span class="v">322 · 20.7%</span></div>
+        <div class="bar"><span class="k">地形</span><span class="t"><i style="--w:11.1"></i></span><span class="v">173 · 11.1%</span></div>
+        <div class="bar"><span class="k">近戰或遠程士兵</span><span class="t"><i style="--w:10.6"></i></span><span class="v">165 · 10.6%</span></div>
+        <div class="bar"><span class="k">兵種</span><span class="t"><i style="--w:6.8"></i></span><span class="v">106 · 6.8%</span></div>
+        <div class="bar"><span class="k">距離、移動格數</span><span class="t"><i style="--w:5.1"></i></span><span class="v">80 · 5.1%</span></div>
+        <div class="bar"><span class="k">全場</span><span class="t"><i style="--w:4.8"></i></span><span class="v">74 · 4.8%</span></div>
+        <div class="bar"><span class="k">相鄰</span><span class="t"><i style="--w:4.6"></i></span><span class="v">72 · 4.6%</span></div>
+        <div class="bar"><span class="k">身上有強化或弱化</span><span class="t"><i style="--w:4.1"></i></span><span class="v">63 · 4.1%</span></div>
+        <div class="bar"><span class="k">生命門檻</span><span class="t"><i style="--w:3.8"></i></span><span class="v">59 · 3.8%</span></div>
+        <div class="bar"><span class="k">陣營</span><span class="t"><i style="--w:3.7"></i></span><span class="v">58 · 3.7%</span></div>
+        <div class="bar"><span class="k">[指揮] 光環</span><span class="t"><i style="--w:3.7"></i></span><span class="v">57 · 3.7%</span></div>
+        <div class="bar"><span class="k">性別</span><span class="t"><i style="--w:0.8"></i></span><span class="v">13 · 0.8%</span></div>
+      </div>
+    </div>
+    <div>
+      <h3>[指揮] 半徑（43 次）</h3>
+      <div class="bars">
+        <div class="bar"><span class="k">1 格</span><span class="t"><i style="--w:4.7"></i></span><span class="v">2 · 4.7%</span></div>
+        <div class="bar hl"><span class="k">2 格</span><span class="t"><i style="--w:74.4"></i></span><span class="v">32 · 74.4%</span></div>
+        <div class="bar"><span class="k">3 格</span><span class="t"><i style="--w:20.9"></i></span><span class="v">9 · 20.9%</span></div>
+      </div>
+      <h3>生命門檻</h3>
+      <div class="bars">
+        <div class="bar hl"><span class="k">高於 80%</span><span class="t"><i style="--w:25.4"></i></span><span class="v">16</span></div>
+        <div class="bar"><span class="k">低於 100%</span><span class="t"><i style="--w:15.9"></i></span><span class="v">10</span></div>
+        <div class="bar"><span class="k">高於 50%</span><span class="t"><i style="--w:14.3"></i></span><span class="v">9</span></div>
+        <div class="bar"><span class="k">低於 70%</span><span class="t"><i style="--w:7.9"></i></span><span class="v">5</span></div>
+        <div class="bar"><span class="k">高於 90%</span><span class="t"><i style="--w:7.9"></i></span><span class="v">5</span></div>
+        <div class="bar"><span class="k">低於 50%</span><span class="t"><i style="--w:6.3"></i></span><span class="v">4</span></div>
+        <div class="bar"><span class="k">其他</span><span class="t"><i style="--w:22.2"></i></span><span class="v">14</span></div>
+      </div>
+    </div>
+  </div>
+  <p>[指揮] 的固定寫法：<q>[指揮]周圍2格以內的所有友軍部隊遭受暴擊率降低30%，遭受遠程傷害降低15%</q> <span class="src">止水</span>。光環持續生效，不寫持續回合。兵種特攻「對 X 有特效」65 段，全部在主動技能。</p>
+</section>
+
+<!-- 8 -->
+<section id="s8">
+  <h2><span class="no">08</span>強化與弱化目錄</h2>
+  <p class="concl">每一種強化、弱化開了哪些檔次。左欄是常態檔次，每檔附出現次數和兩個例子，例子後面的小字是它屬於主動、被動、天賦、專武、鑄紋還是士兵。右欄是「每移動一格、每有一個強化、每層」這種逐步累加的小單位。</p>
+  <ul class="plain">
+    <li>主幹檔次是 5、10、15、20、25、30%。攻擊、防禦、魔防這幾行另外有 40%、45%，例子都是士兵。</li>
+    <li>7、8、12、13、16% 這類零碎檔次，攻擊那一行的例子都是天賦或被動。</li>
+    <li>最高的 90%、100% 這幾檔，讀過原文的都綁著條件，例如遠端狙擊只對最遠的敵軍、蕾恩·殲滅只限這一擊。50% 那幾檔沒逐筆讀過。</li>
+  </ul>
+  <h3>強化</h3>
+  <div class="tbl"><table class="cat">
+    <thead><tr><th>效果</th><th>常態檔次（次數・例子）</th><th>每格／每層的小單位</th></tr></thead>
+    <tbody>
+<tr><th scope="row">屬性提升・攻擊</th><td><ul class="tiers"><li><b>2%</b><span class="cnt">×2</span><span class="ex">砂嵐的曼舞<i>天賦</i>、團結<i>專武</i></span></li><li><b>5%</b><span class="cnt">×40</span><span class="ex">光之少女<i>天賦</i>、不滅的紫晶<i>天賦</i></span></li><li><b>7%</b><span class="cnt">×1</span><span class="ex">進擊<i>被動</i></span></li><li><b>8%</b><span class="cnt">×1</span><span class="ex">同伴之憶<i>被動</i></span></li><li><b>10%</b><span class="cnt">×43</span><span class="ex">光之聖諭<i>主動</i>、天征霸域<i>主動</i></span></li><li><b>12%</b><span class="cnt">×4</span><span class="ex">反擊<i>被動</i>、壓制<i>被動</i></span></li><li><b>13%</b><span class="cnt">×3</span><span class="ex">戰鬥女神<i>天賦</i>、公義之冠冕<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×30</span><span class="ex">進擊的頌歌<i>主動</i>、騷亂一箭<i>主動</i></span></li><li><b>16%</b><span class="cnt">×4</span><span class="ex">崩解壓抑<i>天賦</i>、雪境之凜<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×68</span><span class="ex">二重影<i>主動</i>、強襲<i>主動</i></span></li><li><b>25%</b><span class="cnt">×20</span><span class="ex">聖刃奇襲<i>主動</i>、真龍的意志<i>天賦</i></span></li><li><b>30%</b><span class="cnt">×53</span><span class="ex">騎士精神<i>主動</i>、航線開拓<i>天賦</i></span></li><li><b>40%</b><span class="cnt">×6</span><span class="ex">冰川元素<i>士兵</i>、海洋祭師<i>士兵</i></span></li><li><b>45%</b><span class="cnt">×11</span><span class="ex">暗精靈射手<i>士兵</i>、近衛槍兵<i>士兵</i></span></li></ul></td><td class="small">1%、1.5%、2%、3%、4%、5%、6%、7%、8%、10%、15%、20%</td></tr>
+<tr><th scope="row">屬性提升・智力</th><td><ul class="tiers"><li><b>2%</b><span class="cnt">×1</span><span class="ex">砂嵐的曼舞<i>天賦</i></span></li><li><b>5%</b><span class="cnt">×33</span><span class="ex">萬物共鳴<i>天賦</i>、聖樹嘆息<i>天賦</i></span></li><li><b>10%</b><span class="cnt">×28</span><span class="ex">光之聖諭<i>主動</i>、天征霸域<i>主動</i></span></li><li><b>13%</b><span class="cnt">×3</span><span class="ex">旅世的冀望<i>天賦</i>、植物操縱<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×11</span><span class="ex">進擊的頌歌<i>主動</i>、騷亂一箭<i>主動</i></span></li><li><b>20%</b><span class="cnt">×30</span><span class="ex">二重影<i>主動</i>、爆發驅動<i>主動</i></span></li><li><b>25%</b><span class="cnt">×2</span><span class="ex">獵魂畫師<i>天賦</i>、命軌的預言<i>天賦</i></span></li><li><b>30%</b><span class="cnt">×1</span><span class="ex">野性之力<i>主動</i></span></li></ul></td><td class="small">2%、4%、5%、6%、8%、10%</td></tr>
+<tr><th scope="row">屬性提升・防禦</th><td><ul class="tiers"><li><b>2%</b><span class="cnt">×2</span><span class="ex">砂嵐的曼舞<i>天賦</i>、團結<i>專武</i></span></li><li><b>5%</b><span class="cnt">×20</span><span class="ex">寧夜守護者<i>天賦</i>、反重力引擎<i>天賦</i></span></li><li><b>7%</b><span class="cnt">×1</span><span class="ex">堅守<i>被動</i></span></li><li><b>8%</b><span class="cnt">×1</span><span class="ex">無畏戰姿<i>被動</i></span></li><li><b>10%</b><span class="cnt">×26</span><span class="ex">酷寒之盾<i>主動</i>、宇宙騎士<i>天賦</i></span></li><li><b>12%</b><span class="cnt">×1</span><span class="ex">警戒<i>被動</i></span></li><li><b>13%</b><span class="cnt">×1</span><span class="ex">守衡之願景<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×12</span><span class="ex">諧和一箭<i>主動</i>、夥伴的力量<i>天賦</i></span></li><li><b>16%</b><span class="cnt">×3</span><span class="ex">崩解壓抑<i>天賦</i>、雪境之凜<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×23</span><span class="ex">創生聖頌<i>主動</i>、孔雀之舞<i>主動</i></span></li><li><b>25%</b><span class="cnt">×15</span><span class="ex">真龍的意志<i>天賦</i>、強殖進化<i>天賦</i></span></li><li><b>30%</b><span class="cnt">×23</span><span class="ex">審判<i>主動</i>、疾突<i>主動</i></span></li><li><b>45%</b><span class="cnt">×5</span><span class="ex">暗精靈射手<i>士兵</i>、樹人守衛<i>士兵</i></span></li></ul></td><td class="small">1%、2%、3%、4%、5%、7%、8%、10%、15%、20%、25%</td></tr>
+<tr><th scope="row">屬性提升・魔防</th><td><ul class="tiers"><li><b>2%</b><span class="cnt">×2</span><span class="ex">砂嵐的曼舞<i>天賦</i>、團結<i>專武</i></span></li><li><b>5%</b><span class="cnt">×5</span><span class="ex">殲滅天使<i>天賦</i>、敗血之擁<i>鑄紋</i></span></li><li><b>8%</b><span class="cnt">×1</span><span class="ex">無畏戰姿<i>被動</i></span></li><li><b>10%</b><span class="cnt">×8</span><span class="ex">酷寒之盾<i>主動</i>、冥想<i>被動</i></span></li><li><b>13%</b><span class="cnt">×1</span><span class="ex">植物操縱<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×8</span><span class="ex">諧和一箭<i>主動</i>、鐵血的陣謀<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×6</span><span class="ex">劍刃領域<i>天賦</i>、魔防應援<i>被動</i></span></li><li><b>25%</b><span class="cnt">×3</span><span class="ex">皎月佑護<i>天賦</i>、幽冥之觸<i>士兵</i></span></li><li><b>30%</b><span class="cnt">×8</span><span class="ex">審判<i>主動</i>、疾突<i>主動</i></span></li><li><b>40%</b><span class="cnt">×1</span><span class="ex">海洋祭師<i>士兵</i></span></li><li><b>45%</b><span class="cnt">×4</span><span class="ex">樹人守衛<i>士兵</i>、假面女僕<i>士兵</i></span></li></ul></td><td class="small">4%、5%、7%、10%、15%、20%</td></tr>
+<tr><th scope="row">屬性提升・技巧</th><td><ul class="tiers"><li><b>5%</b><span class="cnt">×2</span><span class="ex">破隱迅刃<i>鑄紋</i>、自由聖印<i>鑄紋</i></span></li><li><b>10%</b><span class="cnt">×3</span><span class="ex">狂沙之獵<i>天賦</i>、幻影飛星<i>鑄紋</i></span></li><li><b>10.66%</b><span class="cnt">×1</span><span class="ex">助威<i>主動</i></span></li><li><b>12%</b><span class="cnt">×1</span><span class="ex">死鬥<i>被動</i></span></li><li><b>15%</b><span class="cnt">×1</span><span class="ex">獵殺之影<i>被動</i></span></li><li><b>20%</b><span class="cnt">×3</span><span class="ex">技巧應援<i>被動</i>、技巧指揮<i>被動</i></span></li><li><b>30%</b><span class="cnt">×3</span><span class="ex">全村的希望<i>主動</i>、迅步<i>主動</i></span></li></ul></td><td class="small">1%、1.5%、3%、4%、10%</td></tr>
+<tr><th scope="row">屬性提升・生命</th><td><ul class="tiers"><li><b>5%</b><span class="cnt">×3</span><span class="ex">絢爛聖詩<i>鑄紋</i>、詠誓威戟<i>鑄紋</i></span></li><li><b>10%</b><span class="cnt">×1</span><span class="ex">黑暗的意志<i>天賦</i></span></li><li><b>30%</b><span class="cnt">×2</span><span class="ex">聚元<i>主動</i>、獠牙衛隊<i>士兵</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">屬性提升・全屬性</th><td><ul class="tiers"><li><b>2%</b><span class="cnt">×1</span><span class="ex">得勝之謀<i>被動</i></span></li><li><b>5%</b><span class="cnt">×5</span><span class="ex">砂嵐的曼舞<i>天賦</i>、直死之啼眼<i>天賦</i></span></li><li><b>8%</b><span class="cnt">×1</span><span class="ex">血脈的王冕<i>天賦</i></span></li><li><b>10%</b><span class="cnt">×7</span><span class="ex">庇護之劍<i>主動</i>、最終審判<i>主動</i></span></li><li><b>12%</b><span class="cnt">×1</span><span class="ex">星海的雙月<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×5</span><span class="ex">侍王決心<i>天賦</i>、賢威元帥<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×3</span><span class="ex">120%<i>主動</i>、天才軍師<i>天賦</i></span></li><li><b>25%</b><span class="cnt">×1</span><span class="ex">帝國遠略<i>天賦</i></span></li></ul></td><td class="small">2%、4%、5%、6%、20%</td></tr>
+<tr><th scope="row">暴擊率提升</th><td><ul class="tiers"><li><b>5%</b><span class="cnt">×2</span><span class="ex">勇者的操守<i>鑄紋</i>、森之羈絆<i>鑄紋</i></span></li><li><b>10%</b><span class="cnt">×10</span><span class="ex">騷亂一箭<i>主動</i>、魔眼<i>主動</i></span></li><li><b>13%</b><span class="cnt">×1</span><span class="ex">紺惡暗爪<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×13</span><span class="ex">冷血<i>主動</i>、孤影疾襲<i>主動</i></span></li><li><b>16%</b><span class="cnt">×1</span><span class="ex">覓血旋刃<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×24</span><span class="ex">一閃<i>主動</i>、代碼重構<i>主動</i></span></li><li><b>25%</b><span class="cnt">×6</span><span class="ex">鑰力轉換<i>主動</i>、絕罰烙印<i>天賦</i></span></li><li><b>30%</b><span class="cnt">×16</span><span class="ex">幻影奇襲<i>主動</i>、快速裝填<i>主動</i></span></li><li><b>35%</b><span class="cnt">×1</span><span class="ex">巨型靈俑<i>士兵</i></span></li><li><b>50%</b><span class="cnt">×2</span><span class="ex">天罰<i>主動</i>、玉蟾演算法<i>主動</i></span></li><li><b>60%</b><span class="cnt">×1</span><span class="ex">神罰<i>主動</i></span></li><li><b>100%</b><span class="cnt">×2</span><span class="ex">崩解壓抑<i>天賦</i>、烈影風華<i>鑄紋</i></span></li></ul></td><td class="small">1%、2%、3%、5%、8%</td></tr>
+<tr><th scope="row">暴擊傷害提升</th><td><ul class="tiers"><li><b>10%</b><span class="cnt">×4</span><span class="ex">騷亂一箭<i>主動</i>、狩魔心流<i>鑄紋</i></span></li><li><b>15%</b><span class="cnt">×10</span><span class="ex">冷血<i>主動</i>、孤影疾襲<i>主動</i></span></li><li><b>16%</b><span class="cnt">×1</span><span class="ex">覓血旋刃<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×7</span><span class="ex">邪王炎殺黑龍波<i>主動</i>、舞躍幻姿<i>主動</i></span></li><li><b>25%</b><span class="cnt">×1</span><span class="ex">誠情的意志<i>天賦</i></span></li><li><b>30%</b><span class="cnt">×2</span><span class="ex">忍術·替身術<i>天賦</i>、捉迷藏<i>天賦</i></span></li></ul></td><td class="small">5%、8%</td></tr>
+<tr><th scope="row">增傷（造成傷害提升）</th><td><ul class="tiers"><li><b>4%</b><span class="cnt">×1</span><span class="ex">純潔聖祈<i>主動</i></span></li><li><b>5%</b><span class="cnt">×9</span><span class="ex">平民的擁戴<i>主動</i>、方舟之誓<i>主動</i></span></li><li><b>8%</b><span class="cnt">×8</span><span class="ex">暗輪迴<i>主動</i>、純潔聖祈<i>主動</i></span></li><li><b>10%</b><span class="cnt">×45</span><span class="ex">一擊絕塵<i>主動</i>、夜幕之筵<i>主動</i></span></li><li><b>12%</b><span class="cnt">×12</span><span class="ex">天煌聖女<i>主動</i>、帝國晶燦<i>主動</i></span></li><li><b>15%</b><span class="cnt">×55</span><span class="ex">不滅的輝光<i>主動</i>、傳說的終焉<i>主動</i></span></li><li><b>16%</b><span class="cnt">×1</span><span class="ex">孤芳永生<i>天賦</i></span></li><li><b>18%</b><span class="cnt">×1</span><span class="ex">鐵血的野望<i>主動</i></span></li><li><b>20%</b><span class="cnt">×44</span><span class="ex">END模式<i>主動</i>、先制刃襲<i>主動</i></span></li><li><b>25%</b><span class="cnt">×7</span><span class="ex">寂滅新星<i>主動</i>、真龍的意志<i>天賦</i></span></li><li><b>30%</b><span class="cnt">×37</span><span class="ex">嗜血魔劍<i>主動</i>、山嵐之界<i>主動</i></span></li><li><b>50%</b><span class="cnt">×5</span><span class="ex">弒影對決<i>主動</i>、遠端狙擊<i>主動</i></span></li><li><b>75%</b><span class="cnt">×1</span><span class="ex">護衛之主<i>天賦</i></span></li><li><b>100%</b><span class="cnt">×1</span><span class="ex">遠端狙擊<i>主動</i></span></li></ul></td><td class="small">2%、3%、4%、5%、6%、7%、8%、10%、15%、20%</td></tr>
+<tr><th scope="row">減傷（遭受傷害降低）</th><td><ul class="tiers"><li><b>5%</b><span class="cnt">×3</span><span class="ex">鋼之聖女<i>天賦</i>、守護<i>被動</i></span></li><li><b>10%</b><span class="cnt">×18</span><span class="ex">曲時幻滅<i>主動</i>、榮耀的護衛<i>主動</i></span></li><li><b>12%</b><span class="cnt">×1</span><span class="ex">歷戰之憶<i>被動</i></span></li><li><b>13%</b><span class="cnt">×2</span><span class="ex">夏湖之花<i>天賦</i>、戰鬥女神<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×35</span><span class="ex">命定裁決<i>主動</i>、奔雷<i>主動</i></span></li><li><b>16%</b><span class="cnt">×1</span><span class="ex">孤芳永生<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×45</span><span class="ex">天征霸域<i>主動</i>、守勢<i>主動</i></span></li><li><b>25%</b><span class="cnt">×15</span><span class="ex">終戰的隕劍<i>主動</i>、聖光之擁<i>主動</i></span></li><li><b>30%</b><span class="cnt">×33</span><span class="ex">生息律調<i>主動</i>、瞬身<i>主動</i></span></li><li><b>35%</b><span class="cnt">×3</span><span class="ex">花境<i>主動</i>、抉擇的雙刃<i>天賦</i></span></li><li><b>40%</b><span class="cnt">×1</span><span class="ex">覓血旋刃<i>天賦</i></span></li><li><b>45%</b><span class="cnt">×4</span><span class="ex">潮汐精靈<i>士兵</i>、天使<i>士兵</i></span></li><li><b>50%</b><span class="cnt">×11</span><span class="ex">神鎧·赫爾梅斯<i>主動</i>、朱紅新星<i>天賦</i></span></li><li><b>75%</b><span class="cnt">×2</span><span class="ex">相位移動<i>主動</i>、巫女<i>士兵</i></span></li><li><b>80%</b><span class="cnt">×3</span><span class="ex">暗域行者<i>主動</i>、輝黯相依<i>主動</i></span></li><li><b>90%</b><span class="cnt">×2</span><span class="ex">聖技·大十字<i>主動</i></span></li><li><b>100%</b><span class="cnt">×2</span><span class="ex">光流護體<i>主動</i>、狼王意志<i>天賦</i></span></li></ul></td><td class="small">2%、3%、5%、6%、10%、15%、25%</td></tr>
+<tr><th scope="row">受暴擊率降低</th><td><ul class="tiers"><li><b>20%</b><span class="cnt">×8</span><span class="ex">御陣<i>主動</i>、神衛<i>主動</i></span></li><li><b>30%</b><span class="cnt">×7</span><span class="ex">神鎧·赫爾梅斯<i>主動</i>、盛綻的薔薇<i>天賦</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">回血<span class="base">以施放者攻擊計</span></th><td><ul class="tiers"><li><b>1 倍</b><span class="cnt">×3</span><span class="ex">爆肉剛體<i>主動</i>、馭潮之刃<i>天賦</i></span></li><li><b>1.5 倍</b><span class="cnt">×3</span><span class="ex">英勇打擊<i>主動</i>、前線救援<i>主動</i></span></li><li><b>2 倍</b><span class="cnt">×1</span><span class="ex">光之審判<i>主動</i></span></li><li><b>2.5 倍</b><span class="cnt">×4</span><span class="ex">決意強化<i>主動</i>、熾焰爪<i>主動</i></span></li><li><b>3 倍</b><span class="cnt">×2</span><span class="ex">光之聖諭<i>主動</i>、前線救援<i>主動</i></span></li><li><b>3.5 倍</b><span class="cnt">×1</span><span class="ex">援救<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row"><span class="base">以施放者智力計</span></th><td><ul class="tiers"><li><b>0.5 倍</b><span class="cnt">×1</span><span class="ex">流水之滌淨<i>主動</i></span></li><li><b>1.5 倍</b><span class="cnt">×12</span><span class="ex">代行神力<i>主動</i>、晶愈術<i>主動</i></span></li><li><b>2 倍</b><span class="cnt">×28</span><span class="ex">再行動<i>主動</i>、創生聖頌<i>主動</i></span></li><li><b>2.5 倍</b><span class="cnt">×4</span><span class="ex">創生煉金<i>主動</i>、水晶女王<i>天賦</i></span></li><li><b>3 倍</b><span class="cnt">×32</span><span class="ex">休憩之境<i>主動</i>、吐槽大會<i>主動</i></span></li><li><b>4 倍</b><span class="cnt">×3</span><span class="ex">滿倉梭哈<i>主動</i>、聖療<i>主動</i></span></li><li><b>5 倍</b><span class="cnt">×12</span><span class="ex">夢之庇佑<i>主動</i>、治療術<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row"><span class="base">以最大生命計</span></th><td><ul class="tiers"><li><b>5%</b><span class="cnt">×1</span><span class="ex">妙想法帽<i>專武</i></span></li><li><b>10%</b><span class="cnt">×7</span><span class="ex">孔雀之舞<i>主動</i>、再生<i>主動</i></span></li><li><b>13%</b><span class="cnt">×1</span><span class="ex">夏湖之花<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×8</span><span class="ex">時來運轉<i>主動</i>、航線開拓<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×45</span><span class="ex">120%<i>主動</i>、一擊絕塵<i>主動</i></span></li><li><b>25%</b><span class="cnt">×1</span><span class="ex">誠情的意志<i>天賦</i></span></li><li><b>30%</b><span class="cnt">×38</span><span class="ex">光之聖諭<i>主動</i>、妖刀紅櫻·本我<i>主動</i></span></li><li><b>35%</b><span class="cnt">×2</span><span class="ex">抉擇的雙刃<i>天賦</i>、骷髏勇士<i>士兵</i></span></li><li><b>40%</b><span class="cnt">×2</span><span class="ex">孤芳永生<i>天賦</i>、巨型靈俑<i>士兵</i></span></li><li><b>45%</b><span class="cnt">×4</span><span class="ex">重灌骷髏<i>士兵</i>、死靈騎士<i>士兵</i></span></li><li><b>50%</b><span class="cnt">×20</span><span class="ex">信仰的榮光<i>主動</i>、弒影對決<i>主動</i></span></li><li><b>60%</b><span class="cnt">×1</span><span class="ex">緣起之誓<i>主動</i></span></li><li><b>70%</b><span class="cnt">×2</span><span class="ex">救我，戰神丸！<i>主動</i>、鐵血的陣謀<i>天賦</i></span></li><li><b>80%</b><span class="cnt">×1</span><span class="ex">狼吞虎嚥<i>主動</i></span></li><li><b>90%</b><span class="cnt">×1</span><span class="ex">孤芳永生<i>天賦</i></span></li><li><b>100%</b><span class="cnt">×10</span><span class="ex">急救<i>主動</i>、爆發驅動<i>主動</i></span></li></ul></td><td class="small">5%、8%、10%、15%、20%、30%</td></tr>
+<tr><th scope="row">吸血<span class="base">以本次傷害計</span></th><td><ul class="tiers"><li><b>10%</b><span class="cnt">×1</span><span class="ex">朱紅新星<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×1</span><span class="ex">狼王意志<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×15</span><span class="ex">咒滅神諭<i>主動</i>、庇護之劍<i>主動</i></span></li><li><b>25%</b><span class="cnt">×1</span><span class="ex">聚元<i>主動</i></span></li><li><b>30%</b><span class="cnt">×10</span><span class="ex">幸運一擊<i>主動</i>、靈力爆發<i>主動</i></span></li><li><b>45%</b><span class="cnt">×1</span><span class="ex">吸血蝙蝠<i>士兵</i></span></li><li><b>50%</b><span class="cnt">×6</span><span class="ex">嗜血魔劍<i>主動</i>、暗鐮<i>主動</i></span></li></ul></td><td class="small">10%、15%、30%</td></tr>
+<tr><th scope="row">護盾<span class="base">以施放者攻擊計</span></th><td><ul class="tiers"><li><b>1.5 倍</b><span class="cnt">×1</span><span class="ex">疾風光流<i>天賦</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row"><span class="base">以施放者智力計</span></th><td><ul class="tiers"><li><b>3 倍</b><span class="cnt">×3</span><span class="ex">自然汲取<i>主動</i>、魔力環繞<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row"><span class="base">以最大生命計</span></th><td><ul class="tiers"><li><b>10%</b><span class="cnt">×1</span><span class="ex">野性迸發<i>被動</i></span></li><li><b>16%</b><span class="cnt">×1</span><span class="ex">雪境之凜<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×2</span><span class="ex">暗之壁障<i>主動</i>、防護罩<i>被動</i></span></li><li><b>25%</b><span class="cnt">×6</span><span class="ex">光流護體<i>主動</i>、原初之魂<i>主動</i></span></li><li><b>30%</b><span class="cnt">×1</span><span class="ex">寂滅之蝶<i>天賦</i></span></li><li><b>50%</b><span class="cnt">×1</span><span class="ex">爆發驅動<i>主動</i></span></li></ul></td><td class="small">5%、10%</td></tr>
+<tr><th scope="row">反彈傷害</th><td><ul class="tiers"><li><b>10%</b><span class="cnt">×2</span><span class="ex">榮耀的護衛<i>主動</i>、魔導聖壁<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×1</span><span class="ex">鮮血逆流<i>被動</i></span></li><li><b>20%</b><span class="cnt">×4</span><span class="ex">生存之道<i>主動</i>、逆鱗<i>被動</i></span></li><li><b>30%</b><span class="cnt">×8</span><span class="ex">生息律調<i>主動</i>、進擊的頌歌<i>主動</i></span></li><li><b>50%</b><span class="cnt">×2</span><span class="ex">鮮血逆流<i>被動</i>、仙靈預言者<i>士兵</i></span></li><li><b>60%</b><span class="cnt">×1</span><span class="ex">構造軀體αEX<i>專武</i></span></li><li><b>100%</b><span class="cnt">×1</span><span class="ex">狼王意志<i>天賦</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">治療效果提升（施放方）</th><td><ul class="tiers"><li><b>10%</b><span class="cnt">×2</span><span class="ex">勳耀封賜<i>鑄紋</i>、靈潔痕印<i>鑄紋</i></span></li><li><b>15%</b><span class="cnt">×4</span><span class="ex">風花頌唱者<i>士兵</i>、神官<i>士兵</i></span></li><li><b>20%</b><span class="cnt">×1</span><span class="ex">虔輝禮祝<i>專武</i></span></li><li><b>25%</b><span class="cnt">×1</span><span class="ex">輝耀的聖契<i>天賦</i></span></li><li><b>100%</b><span class="cnt">×1</span><span class="ex">閃電決心<i>主動</i></span></li></ul></td><td class="small">2%、3%</td></tr>
+<tr><th scope="row">受治療提升（受治療方）</th><td><ul class="tiers"><li><b>8%</b><span class="cnt">×1</span><span class="ex">拂曉之冠<i>專武</i></span></li><li><b>15%</b><span class="cnt">×3</span><span class="ex">明鏡<i>被動</i>、明鏡止水<i>被動</i></span></li><li><b>20%</b><span class="cnt">×2</span><span class="ex">聖火的頌者<i>天賦</i>、月蝕鬥衣<i>專武</i></span></li><li><b>30%</b><span class="cnt">×3</span><span class="ex">伏擊<i>被動</i>、樹人守衛<i>士兵</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">移動力提升</th><td><ul class="tiers"><li><b>1 格</b><span class="cnt">×35</span><span class="ex">滿倉梭哈<i>主動</i>、疾行<i>主動</i></span></li><li><b>2 格</b><span class="cnt">×31</span><span class="ex">塞布里克的頌佑<i>主動</i>、孤影疾襲<i>主動</i></span></li><li><b>3 格</b><span class="cnt">×5</span><span class="ex">弒影對決<i>主動</i>、月影滑翔<i>主動</i></span></li><li><b>4 格</b><span class="cnt">×2</span><span class="ex">無畏颶風<i>主動</i>、捉迷藏<i>天賦</i></span></li></ul></td><td class="small">1 格、3 格、5 格</td></tr>
+<tr><th scope="row">射程提升</th><td><ul class="tiers"><li><b>1 格</b><span class="cnt">×46</span><span class="ex">元素毀滅<i>主動</i>、孤影疾襲<i>主動</i></span></li><li><b>2 格</b><span class="cnt">×23</span><span class="ex">天殛<i>主動</i>、聚元<i>主動</i></span></li><li><b>3 格</b><span class="cnt">×1</span><span class="ex">代行神力<i>主動</i></span></li></ul></td><td class="small">1 格</td></tr>
+<tr><th scope="row">冷卻縮短</th><td><ul class="tiers"><li><b>1 回合</b><span class="cnt">×49</span><span class="ex">光輝神劍<i>主動</i>、千面幽瞳<i>主動</i></span></li><li><b>2 回合</b><span class="cnt">×23</span><span class="ex">奪寶奇喵<i>主動</i>、弱點狙擊<i>主動</i></span></li><li><b>3 回合</b><span class="cnt">×27</span><span class="ex">代行神力<i>主動</i>、夢之庇佑<i>主動</i></span></li><li><b>4 回合</b><span class="cnt">×7</span><span class="ex">快速裝填<i>主動</i>、爆肉剛體<i>主動</i></span></li><li><b>5 回合</b><span class="cnt">×6</span><span class="ex">命定之榮歸<i>主動</i>、逆命侵襲<i>主動</i></span></li><li><b>6 回合</b><span class="cnt">×1</span><span class="ex">無雙鏖戰<i>主動</i></span></li></ul></td><td class="small">1 回合、2 回合、3 回合、5 回合</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>沒有數值的強化：</b>再動 254、免疫 112、強化回合不減 108、無視 85、護衛 71、驅散 68、兵種特效 58、超絕強化 57、不死 48、先攻 46、隨機強化 29、反彈傷害 7、護盾 6。數字是出現次數。</p>
+  <h3>弱化</h3>
+  <div class="tbl"><table class="cat">
+    <thead><tr><th>效果</th><th>常態檔次（次數・例子）</th><th>每格／每層的小單位</th></tr></thead>
+    <tbody>
+<tr><th scope="row">屬性降低・攻擊</th><td><ul class="tiers"><li><b>5%</b><span class="cnt">×1</span><span class="ex">光輝誡律<i>天賦</i></span></li><li><b>10%</b><span class="cnt">×3</span><span class="ex">破空墜擊<i>主動</i>、硬幣子彈<i>主動</i></span></li><li><b>15%</b><span class="cnt">×6</span><span class="ex">淵獄的霸者<i>天賦</i>、攻擊威嚇<i>被動</i></span></li><li><b>20%</b><span class="cnt">×10</span><span class="ex">大喝<i>主動</i>、大地震<i>主動</i></span></li><li><b>25%</b><span class="cnt">×5</span><span class="ex">天輪·繚亂之劍<i>主動</i>、小綿羊撞擊<i>主動</i></span></li><li><b>30%</b><span class="cnt">×1</span><span class="ex">不潔衝擊<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">屬性降低・智力</th><td><ul class="tiers"><li><b>5%</b><span class="cnt">×1</span><span class="ex">光輝誡律<i>天賦</i></span></li><li><b>10%</b><span class="cnt">×2</span><span class="ex">破空墜擊<i>主動</i>、硬幣子彈<i>主動</i></span></li><li><b>15%</b><span class="cnt">×3</span><span class="ex">攻擊威嚇<i>被動</i>、王之威嚴<i>被動</i></span></li><li><b>20%</b><span class="cnt">×11</span><span class="ex">大喝<i>主動</i>、大地震<i>主動</i></span></li><li><b>25%</b><span class="cnt">×5</span><span class="ex">天輪·繚亂之劍<i>主動</i>、小綿羊撞擊<i>主動</i></span></li><li><b>30%</b><span class="cnt">×2</span><span class="ex">不潔衝擊<i>主動</i>、詭狙<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">屬性降低・防禦</th><td><ul class="tiers"><li><b>10%</b><span class="cnt">×3</span><span class="ex">戰地旌旗<i>主動</i>、絕戮<i>主動</i></span></li><li><b>15%</b><span class="cnt">×3</span><span class="ex">淵獄的霸者<i>天賦</i>、防禦威嚇<i>被動</i></span></li><li><b>20%</b><span class="cnt">×18</span><span class="ex">大地震<i>主動</i>、暗滅震盪<i>主動</i></span></li><li><b>25%</b><span class="cnt">×5</span><span class="ex">強襲衝鋒<i>主動</i>、破暗之刃·閃<i>主動</i></span></li><li><b>30%</b><span class="cnt">×4</span><span class="ex">不潔衝擊<i>主動</i>、天神掌<i>主動</i></span></li></ul></td><td class="small">10%</td></tr>
+<tr><th scope="row">屬性降低・魔防</th><td><ul class="tiers"><li><b>10%</b><span class="cnt">×2</span><span class="ex">破厄的光渦<i>主動</i>、旅世的冀望<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×1</span><span class="ex">幽冥之觸<i>士兵</i></span></li><li><b>20%</b><span class="cnt">×6</span><span class="ex">光神應答劍<i>主動</i>、喚靈擊<i>主動</i></span></li><li><b>25%</b><span class="cnt">×2</span><span class="ex">破滅衝雷斬<i>主動</i>、破魔<i>被動</i></span></li><li><b>30%</b><span class="cnt">×3</span><span class="ex">不潔衝擊<i>主動</i>、破夜之罰<i>主動</i></span></li><li><b>50%</b><span class="cnt">×1</span><span class="ex">魔界植物<i>主動</i></span></li><li><b>100%</b><span class="cnt">×1</span><span class="ex">蕾恩·殲滅<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">屬性降低・技巧</th><td><ul class="tiers"><li><b>20%</b><span class="cnt">×2</span><span class="ex">彈指<i>主動</i>、技巧威嚇<i>被動</i></span></li><li><b>30%</b><span class="cnt">×2</span><span class="ex">不潔衝擊<i>主動</i>、百花繚亂<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">屬性降低・生命</th><td><ul class="tiers"><li><b>25%</b><span class="cnt">×1</span><span class="ex">苦痛尖笑<i>天賦</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">屬性降低・全屬性</th><td><ul class="tiers"><li><b>15%</b><span class="cnt">×1</span><span class="ex">星靈魔法<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×2</span><span class="ex">冰淵女王<i>天賦</i>、罪罰烙印<i>被動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">易傷（遭受傷害提升）</th><td><ul class="tiers"><li><b>4%</b><span class="cnt">×1</span><span class="ex">魔裝機鎧<i>天賦</i></span></li><li><b>5%</b><span class="cnt">×2</span><span class="ex">全能女僕<i>天賦</i>、光輝誡律<i>天賦</i></span></li><li><b>10%</b><span class="cnt">×5</span><span class="ex">懸賞<i>主動</i>、超彈動雙炎斬<i>被動</i></span></li><li><b>15%</b><span class="cnt">×3</span><span class="ex">遊俠之眼<i>主動</i>、獨行復仇者<i>天賦</i></span></li><li><b>20%</b><span class="cnt">×20</span><span class="ex">天神掌<i>主動</i>、心錐<i>主動</i></span></li><li><b>25%</b><span class="cnt">×2</span><span class="ex">復仇龍印<i>天賦</i>、龍火守則<i>天賦</i></span></li><li><b>30%</b><span class="cnt">×6</span><span class="ex">晶耀突襲<i>主動</i>、百花繚亂<i>主動</i></span></li><li><b>40%</b><span class="cnt">×1</span><span class="ex">強化龍印<i>主動</i></span></li></ul></td><td class="small">5%、10%、15%</td></tr>
+<tr><th scope="row">降傷（造成傷害降低）</th><td><ul class="tiers"><li><b>10%</b><span class="cnt">×1</span><span class="ex">威壓魔光<i>主動</i></span></li><li><b>15%</b><span class="cnt">×6</span><span class="ex">衝著我來！<i>主動</i>、糖分攝入<i>主動</i></span></li><li><b>20%</b><span class="cnt">×8</span><span class="ex">光之審判<i>主動</i>、大地轟雷錘<i>主動</i></span></li><li><b>30%</b><span class="cnt">×4</span><span class="ex">光之庇佑<i>主動</i>、璨晶綻放<i>主動</i></span></li><li><b>50%</b><span class="cnt">×4</span><span class="ex">雷閃<i>主動</i>、翠晶轟爆<i>主動</i></span></li><li><b>90%</b><span class="cnt">×2</span><span class="ex">龍之轉生<i>天賦</i>、光輝翠綠體<i>被動</i></span></li></ul></td><td class="small">1%</td></tr>
+<tr><th scope="row">受暴擊率提升</th><td><ul class="tiers"><li><b>10%</b><span class="cnt">×1</span><span class="ex">絕戮<i>主動</i></span></li><li><b>12%</b><span class="cnt">×1</span><span class="ex">寂滅新星<i>主動</i></span></li><li><b>15%</b><span class="cnt">×1</span><span class="ex">無面者<i>士兵</i></span></li><li><b>20%</b><span class="cnt">×5</span><span class="ex">光刃突進<i>主動</i>、破滅的炎紋<i>天賦</i></span></li><li><b>25%</b><span class="cnt">×2</span><span class="ex">風暴羽刃<i>主動</i></span></li><li><b>50%</b><span class="cnt">×1</span><span class="ex">影術魅法<i>天賦</i></span></li></ul></td><td class="small">10%</td></tr>
+<tr><th scope="row">受治療降低</th><td><ul class="tiers"><li><b>30%</b><span class="cnt">×3</span><span class="ex">恩赦之劍<i>天賦</i>、混沌咒力<i>天賦</i></span></li><li><b>50%</b><span class="cnt">×2</span><span class="ex">拳打腳踢<i>主動</i>、萬風歸息<i>天賦</i></span></li><li><b>80%</b><span class="cnt">×1</span><span class="ex">鐵血交輝<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">治療效果降低</th><td><ul class="tiers"><li><b>100%</b><span class="cnt">×1</span><span class="ex">暗物質<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">移動力降低</th><td><ul class="tiers"><li><b>1 格</b><span class="cnt">×9</span><span class="ex">冰錐<i>主動</i>、寒冰飛彈<i>主動</i></span></li><li><b>2 格</b><span class="cnt">×30</span><span class="ex">光流護體<i>主動</i>、冰槍<i>主動</i></span></li><li><b>3 格</b><span class="cnt">×3</span><span class="ex">正義對決<i>主動</i>、神威<i>主動</i></span></li></ul></td><td class="small">1 格</td></tr>
+<tr><th scope="row">射程降低</th><td><ul class="tiers"><li><b>1 格</b><span class="cnt">×7</span><span class="ex">最終審判<i>主動</i>、月輝奔襲<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">冷卻增加</th><td><ul class="tiers"><li><b>1 回合</b><span class="cnt">×5</span><span class="ex">創生煉金<i>主動</i>、曲時幻滅<i>主動</i></span></li></ul></td><td class="small">1 回合</td></tr>
+<tr><th scope="row">持續傷害<span class="base">以施放者攻擊計</span></th><td><ul class="tiers"><li><b>0.5 倍</b><span class="cnt">×1</span><span class="ex">荊棘影<i>主動</i></span></li><li><b>1 倍</b><span class="cnt">×7</span><span class="ex">日輪<i>主動</i>、聖魂之怒<i>主動</i></span></li><li><b>2 倍</b><span class="cnt">×3</span><span class="ex">舞時雨<i>主動</i>、櫻花放神<i>主動</i></span></li><li><b>3 倍</b><span class="cnt">×1</span><span class="ex">挑撥<i>被動</i></span></li></ul></td><td class="small">0.5 倍、1 倍</td></tr>
+<tr><th scope="row"><span class="base">以施放者智力計</span></th><td><ul class="tiers"><li><b>0.5 倍</b><span class="cnt">×1</span><span class="ex">超魔導空間<i>主動</i></span></li><li><b>1 倍</b><span class="cnt">×1</span><span class="ex">秘法魔典<i>主動</i></span></li><li><b>1.2 倍</b><span class="cnt">×1</span><span class="ex">魔神降臨<i>主動</i></span></li><li><b>1.5 倍</b><span class="cnt">×2</span><span class="ex">冰淵宰制<i>主動</i>、極冬之裁<i>主動</i></span></li><li><b>2 倍</b><span class="cnt">×4</span><span class="ex">世界之魂的閃耀<i>主動</i>、灼熱空間<i>主動</i></span></li></ul></td><td class="small">0.7 倍</td></tr>
+<tr><th scope="row"><span class="base">以最大生命計</span></th><td><ul class="tiers"><li><b>15%</b><span class="cnt">×2</span><span class="ex">忍術·燙燙燙!之術<i>主動</i>、火柱<i>主動</i></span></li><li><b>20%</b><span class="cnt">×2</span><span class="ex">冥疆征伐<i>主動</i>、隕石<i>主動</i></span></li><li><b>30%</b><span class="cnt">×1</span><span class="ex">熔岩巨人<i>士兵</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row">一次性固定傷害</th><td><ul class="tiers"><li><b>25%</b><span class="cnt">×1</span><span class="ex">斷魄厲嗥<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row"><span class="base">以剩餘生命計</span></th><td><ul class="tiers"><li><b>5%</b><span class="cnt">×1</span><span class="ex">光翼掠襲<i>主動</i></span></li><li><b>6%</b><span class="cnt">×1</span><span class="ex">孤挺之心<i>天賦</i></span></li><li><b>15%</b><span class="cnt">×1</span><span class="ex">王女降臨<i>主動</i></span></li><li><b>25%</b><span class="cnt">×1</span><span class="ex">魅惑<i>主動</i></span></li><li><b>30%</b><span class="cnt">×1</span><span class="ex">魔裝機鎧<i>天賦</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row"><span class="base">以施放者攻擊計</span></th><td><ul class="tiers"><li><b>0.5 倍</b><span class="cnt">×4</span><span class="ex">天輪·繚亂之劍<i>主動</i>、次元殺陣<i>主動</i></span></li><li><b>1 倍</b><span class="cnt">×11</span><span class="ex">侵蝕斬擊<i>主動</i>、劍刃亂舞<i>主動</i></span></li><li><b>1.5 倍</b><span class="cnt">×1</span><span class="ex">疾風破空<i>鑄紋</i></span></li><li><b>2 倍</b><span class="cnt">×11</span><span class="ex">合劍破斬<i>主動</i>、熾焰爪<i>主動</i></span></li><li><b>4 倍</b><span class="cnt">×1</span><span class="ex">獨行復仇者<i>天賦</i></span></li><li><b>5 倍</b><span class="cnt">×1</span><span class="ex">絕罰烙印<i>天賦</i></span></li></ul></td><td class="small">2 倍、5 倍</td></tr>
+<tr><th scope="row"><span class="base">以施放者智力計</span></th><td><ul class="tiers"><li><b>0.5 倍</b><span class="cnt">×1</span><span class="ex">萬物共鳴<i>天賦</i></span></li><li><b>1 倍</b><span class="cnt">×11</span><span class="ex">殘光的覺醒<i>主動</i>、凝輝燁刃<i>主動</i></span></li><li><b>2 倍</b><span class="cnt">×7</span><span class="ex">潮漩之舞<i>主動</i>、神威<i>主動</i></span></li></ul></td><td class="small">0.3 倍</td></tr>
+<tr><th scope="row"><span class="base">以施放者防禦計</span></th><td><ul class="tiers"><li><b>1.5 倍</b><span class="cnt">×1</span><span class="ex">黑鳶之盾<i>被動</i></span></li><li><b>2.5 倍</b><span class="cnt">×1</span><span class="ex">倒刺<i>被動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row"><span class="base">以施放者魔防計</span></th><td><ul class="tiers"><li><b>2 倍</b><span class="cnt">×1</span><span class="ex">荊棘皇冠<i>專武</i></span></li><li><b>2.5 倍</b><span class="cnt">×1</span><span class="ex">鐵薔薇<i>主動</i></span></li></ul></td><td class="small">—</td></tr>
+<tr><th scope="row"><span class="base">以最大生命計</span></th><td><ul class="tiers"><li><b>15%</b><span class="cnt">×2</span><span class="ex">遺世群島的潮湧<i>天賦</i>、月輝奔襲<i>被動</i></span></li></ul></td><td class="small">—</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>沒有數值的弱化：</b>隨機弱化 78、驅散 75、禁護衛 43、眩暈 38、偷取強化 30、禁療 20、強力弱化 16、沉默 14、定身 11、被動失效 11、無法反擊 8、禁強化 5、持續傷害 3。</p>
+  <div class="note warn">
+    <p><b>這份目錄怎麼來的。</b>從資料庫的效果欄位整理，一句寫了好幾種屬性的拆開各記一次，例如「攻擊、智力提升20%」算攻擊 20% 一次、智力 20% 一次。</p>
+    <p>排除了這些：人工確認過的自身代價與解析錯誤 4 筆、「攻擊射程+1」被當成攻擊 1% 的 5 筆、單位解析成「點」的 12 筆、分不出是強化還是弱化的 41 筆。</p>
+    <p>效果欄位抽查的準確度是「數值大致可靠、對象與條件常錯」，所以次數可能有少量誤差；檔次本身的每個例子都能回原文查。</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section id="s9">
+  <h2><span class="no">09</span>文字模板</h2>
+  <p class="concl">夢戰的技能描述高度模板化：30 種句型命中 86.5% 的句子，傷害技能有 80.6% 用同一副骨架。照下面三副骨架填空，60 顆技能就會跟夢戰一樣好讀。</p>
+  <div class="skel">
+    <div class="sk">
+      <div class="h"><span>傷害技</span><b>傷害技能 80.6% 符合</b></div>
+      <div class="body">[物理傷害]攻擊單個敵軍，造成<span class="slot">1.3～1.7</span>倍傷害。<span class="slot">戰前／戰後</span>，使敵軍<span class="slot">屬性</span>降低<span class="slot">20</span>%，持續<span class="slot">2</span>回合。</div>
+    </div>
+    <div class="sk">
+      <div class="h"><span>輔助技</span><b>群體強化、冷血</b></div>
+      <div class="body">[支援]主動使用，使得<span class="slot">範圍內多個部隊</span><span class="slot">屬性</span>提升<span class="slot">20</span>%，且免疫<span class="slot">XX</span>，持續<span class="slot">2</span>回合。<span class="slot">使用後可以額外行動2格，可再次攻擊。</span></div>
+    </div>
+    <div class="sk">
+      <div class="h"><span>被動或天賦</span><b>增援、逆境、警戒</b></div>
+      <div class="body">[被動]<span class="slot">行動結束時／主動攻擊進入戰鬥時／部隊生命高於80%時</span>，<span class="slot">效果</span><span class="slot">N</span>%。（[觸發冷卻]該效果需要間隔<span class="slot">N</span>回合才可以再次觸發）</div>
+    </div>
+  </div>
+  <p>附註一律放在句尾括號裡：「（最多提升 N%）」「（該效果每場戰鬥最多觸發1次）」「不可驅散」。</p>
+  <h3>前 15 種句型</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>句型</th><th>段數</th><th>占 1,555</th></tr></thead>
+    <tbody>
+      <tr><td>屬性增減「(屬性)提升／降低 N%」</td><td class="num">996</td><td class="num">64.1%</td></tr>
+      <tr><td>類型標籤開頭「[物理傷害]／[支援]／[被動]」</td><td class="num">912</td><td class="num">58.6%</td></tr>
+      <tr><td>持續「，持續 N 回合」</td><td class="num">675</td><td class="num">43.4%</td></tr>
+      <tr><td>施加具名效果「獲得／施加[XX]：…」</td><td class="num">459</td><td class="num">29.5%</td></tr>
+      <tr><td>倍率「造成 X 倍(範圍)傷害」</td><td class="num">447</td><td class="num">28.7%</td></tr>
+      <tr><td>攻擊對象「攻擊單個敵軍／範圍內多個敵軍」</td><td class="num">422</td><td class="num">27.1%</td></tr>
+      <tr><td>行動結束「行動結束時，…」</td><td class="num">368</td><td class="num">23.7%</td></tr>
+      <tr><td>範圍對象「周圍 N 格範圍內的所有友軍」</td><td class="num">316</td><td class="num">20.3%</td></tr>
+      <tr><td>附註「不可驅散／無法免疫」</td><td class="num">306</td><td class="num">19.7%</td></tr>
+      <tr><td>上限附註「（最多提升 N%）」</td><td class="num">278</td><td class="num">17.9%</td></tr>
+      <tr><td>回血「恢復 N% 生命／智力 N 倍的生命」</td><td class="num">277</td><td class="num">17.8%</td></tr>
+      <tr><td>戰後「戰鬥後，…」</td><td class="num">260</td><td class="num">16.7%</td></tr>
+      <tr><td>戰前「戰鬥前，…」</td><td class="num">238</td><td class="num">15.3%</td></tr>
+      <tr><td>再動「使用後可以額外行動 N 格，可再次攻擊」</td><td class="num">176</td><td class="num">11.3%</td></tr>
+      <tr><td>觸發冷卻「需要間隔 N 回合才可以再次觸發」</td><td class="num">117</td><td class="num">7.5%</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 10 -->
+<section id="s10">
+  <h2><span class="no">10</span>對 BxB 的借鏡</h2>
+  <p class="concl">夢戰的規則裡，12 條 BxB 程式已經就緒、填表就能用，21 條要寫新程式，8 條不適合放置自動戰。最值得先補的是「造成／遭受傷害 %」屬性鍵和「行動結束」觸發點。</p>
+  <p>BxB 的前提：5×3 陣型不走格、自動戰、每個單位每回合行動一次、已經拿掉反擊。</p>
+  <h3><span class="tag ok">程式已就緒</span> 填表即可</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>夢戰規則</th><th>BxB 對應</th><th>注意</th></tr></thead>
+    <tbody>
+      <tr><td>屬性提升、降低</td><td>屬性修改 Buff</td><td>降攻降防程式就緒，串表 0 筆</td></tr>
+      <tr><td>持續 N 回合、常駐</td><td>持續回合欄；255 是永久</td><td>1～2 回合的比例可以直接借</td></tr>
+      <tr><td>具名效果疊層</td><td>疊加傷害、疊加兩者加層數上限</td><td>夢戰預設不疊，跟 BxB 預設「新覆舊」同方向</td></tr>
+      <tr><td>疊加時刷新持續</td><td>新覆舊、疊加兩者</td><td>—</td></tr>
+      <tr><td>不可驅散</td><td>可驅散欄設否</td><td>—</td></tr>
+      <tr><td>眩暈、沉默、嘲諷</td><td>狀態效果</td><td>嘲諷、繳械、凍結就緒，串表未配</td></tr>
+      <tr><td>持續傷害</td><td>持續傷害 Buff</td><td>夢戰掛行動結束，BxB 掛回合開始或結束，效果等價</td></tr>
+      <tr><td>回血（最大生命 %、智力 N 倍）</td><td>治療加縮放屬性</td><td>—</td></tr>
+      <tr><td>護盾（最大生命 25%）</td><td>護盾效果</td><td>—</td></tr>
+      <tr><td>機率觸發</td><td>機率欄</td><td>—</td></tr>
+      <tr><td>戰前、戰後、受傷後、擊殺時</td><td>攻擊前、攻擊後、受傷時、擊殺時</td><td>夢戰的被攻擊方對到受傷時</td></tr>
+      <tr><td>範圍傷害（約單體 1/5）</td><td>範圍遮罩（就緒、還沒用過）</td><td>0.3 對 1.5 的比例可借來定範圍技威力</td></tr>
+    </tbody>
+  </table></div>
+  <h3><span class="tag new">需要新程式</span></h3>
+  <div class="tbl"><table>
+    <thead><tr><th>夢戰規則</th><th>夢戰數量</th><th>缺什麼</th></tr></thead>
+    <tbody>
+      <tr><td><b>增傷、減傷、易傷</b></td><td class="num">276 · 188 · 51</td><td>沒有通用的傷害倍率屬性鍵，只有物理抗性與元素抗性</td></tr>
+      <tr><td><b>行動結束時觸發</b></td><td class="num">382</td><td>沒有這個觸發點；回合開始、結束有列舉但沒接線</td></tr>
+      <tr><td>免疫、無法免疫</td><td class="num">102 · 130</td><td>BxB 沒有免疫機制</td></tr>
+      <tr><td>只驅強化或只清弱化、一次 N 個</td><td class="num">137 次</td><td>BxB 的淨化是全清、不分敵我</td></tr>
+      <tr><td>抵擋致命傷害</td><td class="num">71</td><td>需要「受到致命傷害」觸發點</td></tr>
+      <tr><td>行動後再動</td><td class="num">149 顆</td><td>要改回合引擎</td></tr>
+      <tr><td>冷卻縮短或增加</td><td class="num">126 · 8</td><td>沒有改冷卻的效果型</td></tr>
+      <tr><td>禁療、禁強化</td><td class="num">27 · 7</td><td>新狀態效果</td></tr>
+      <tr><td>偷取、轉移、複製強化</td><td class="num">32</td><td>新效果型</td></tr>
+      <tr><td>吸血</td><td class="num">58 次</td><td>治療基準不能是本次傷害</td></tr>
+      <tr><td>生命門檻條件</td><td class="num">59</td><td>Buff 沒有條件欄</td></tr>
+      <tr><td>依強化或弱化個數加成</td><td class="num">16</td><td>需要能數 Buff 個數的條件</td></tr>
+      <tr><td>超絕互斥、同類指揮不同時生效</td><td class="num">52 · 6</td><td>覆蓋規則只管同編號，沒有互斥群組</td></tr>
+      <tr><td>隨機強化、隨機弱化</td><td class="num">29 · 75</td><td>要定隨機池；種子亂數能保住確定性</td></tr>
+      <tr><td>[指揮] 光環</td><td class="num">57</td><td>可改成陣型相鄰判定</td></tr>
+      <tr><td>護衛</td><td class="num">41</td><td>要改目標轉移；嘲諷能部分代替</td></tr>
+      <tr><td>陣營條件</td><td class="num">58</td><td>沒有陣營標籤，可用兵種或定位標籤代替</td></tr>
+      <tr><td>技能替換、多選一</td><td class="num">46 · 28</td><td>戰鬥中不能換槽位</td></tr>
+      <tr><td>召喚</td><td class="num">27 顆</td><td>要處理陣型格與生成單位</td></tr>
+      <tr><td>疊到 N 層換效果</td><td>—</td><td>觸發條件要能讀層數</td></tr>
+    </tbody>
+  </table></div>
+  <h3><span class="tag inf">不適合放置自動戰</span></h3>
+  <div class="tbl"><table>
+    <thead><tr><th>夢戰規則</th><th>夢戰數量</th><th>理由</th></tr></thead>
+    <tbody>
+      <tr><td>位移、傳送</td><td class="num">118 顆</td><td>陣型固定、不走格，位置不是資源</td></tr>
+      <tr><td>每移動 1 格加成</td><td class="num">49</td><td>沒有移動</td></tr>
+      <tr><td>地形條件與效果</td><td class="num">173 · 17</td><td>沒有地形格</td></tr>
+      <tr><td>先攻、無法反擊、反擊強化</td><td class="num">44 · 9 · 30</td><td>BxB 已移除反擊</td></tr>
+      <tr><td>主動攻擊方、被攻擊方</td><td class="num">221 · 129</td><td>沒有交戰回合，只能折成攻擊前、受傷時</td></tr>
+      <tr><td>多選一、指定格子施放</td><td class="num">28 顆以上</td><td>自動戰沒有玩家選擇的時機</td></tr>
+      <tr><td>士兵層效果</td><td class="num">205</td><td>沒有英雄加士兵兩層</td></tr>
+      <tr><td>再動時回合不扣的附註</td><td class="num">102</td><td>只是為了補再動的回合扣減</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note key">
+    <p><span class="tag inf">推論</span> <b>最值得先補的兩件事。</b>「造成／遭受傷害 %」屬性鍵：增傷與減傷是夢戰第 2、5 大的強化類型，易傷是第 4 大的弱化。「行動結束」觸發點：夢戰第一大時機，天賦有六成用它。60 顆技能會大量用到這兩樣。這是給學長拍板的參考，不是結論。</p>
+  </div>
+</section>
+
+<!-- 附 -->
+<section id="sa">
+  <h2><span class="no">附</span>方法與誤判率</h2>
+  <p class="concl">五種來源攤平成 1,555 段，用關鍵字與正規表示式分類統計。分類會誤判，所以抽查三輪、每輪每類 20 筆，逐筆人工判斷。</p>
+  <div class="tbl"><table>
+    <thead><tr><th>來源</th><th>段數</th><th>遊戲畫面版</th><th>wiki 補</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>英雄技能</td><td class="num">916</td><td class="num">739</td><td class="num">177</td><td>分類欄「被動」的 156 顆算被動</td></tr>
+      <tr><td>天賦</td><td class="num">214</td><td class="num">214</td><td class="num">0</td><td>沒有遊戲畫面版的 51 隻英雄未納入</td></tr>
+      <tr><td>鑄紋技能</td><td class="num">107</td><td class="num">52</td><td class="num">55</td><td>—</td></tr>
+      <tr><td>專屬裝備</td><td class="num">164</td><td class="num">164</td><td class="num">0</td><td>開頭的強化等級屬性統計時剝掉</td></tr>
+      <tr><td>士兵技能</td><td class="num">154</td><td class="num">0</td><td class="num">154</td><td>wiki 士兵表</td></tr>
+    </tbody>
+  </table></div>
+  <h3>誤判率抽查</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>輪次</th><th>強化</th><th>弱化</th><th>時機</th></tr></thead>
+    <tbody>
+      <tr><td>第 1 輪</td><td class="num">3/20 · 15%</td><td class="num">4/20 · 20%</td><td class="num">3/20 · 15%</td></tr>
+      <tr><td>第 2 輪</td><td class="num">1/20 · 5%</td><td class="num">2/20 · 10%</td><td class="num">3/20 · 15%</td></tr>
+      <tr><td><b>第 3 輪（最終）</b></td><td class="num"><b>1/20 · 5%</b></td><td class="num"><b>2/20 · 10%</b></td><td class="num"><b>0/20 · 0%</b></td></tr>
+    </tbody>
+  </table></div>
+  <p>每輪修掉的誤判源包括：[被動] 的「被」被算成被攻擊、「無法免疫」被算成免疫、「本場戰鬥中」被算成交戰中。最終版還在的誤判是條件句被當成效果、自身代價被當成弱化。時機 0/20 的樣本太小，真實誤判率上界約 14%。</p>
+  <div class="note warn">
+    <p><b>這份報告沒把握的三件事</b></p>
+    <ul class="plain">
+      <li>同名、同屬性效果怎麼疊，技能文字裡沒寫，是從例外寫法和 2018 年的公式反推的，沒在遊戲裡驗證。</li>
+      <li>強化與弱化的筆數是關鍵字判定，大約 5～10% 有誤。</li>
+      <li>177 顆英雄技能、55 顆鑄紋、全部士兵技能來自四個月前的 wiki；「N 格範圍是菱形」「強化回合在行動結束時扣」是推論。</li>
+    </ul>
+  </div>
+  <p><b>怎麼來的：</b>全部是腳本做的機械統計，加上研究喵逐筆人工抽查 60 筆分類、讀過每一類上下限的原文。CanL 沒有自己通讀技能文字。</p>
+  <p><b>CanL 獨立抽查：</b>主動技能 3 回合冷卻 233 顆、「行動結束」382 段、弱化 2 回合 61.8%、冷卻 7 回合以上 6 顆、倍率表四格的兩端，重跑都一致。顎人的野心、萬物共鳴、遠端狙擊、光流護體、暗精靈射手五段原文回原始資料查得到。</p>
+  <p><b>更正紀錄：</b>第一版的倍率表用文字判斷單體與範圍，物理範圍最大值錯寫成 1.7，魔法單體最小值錯寫成 0.3，已改用範圍欄位重算。第二版的屬性降低最大值寫成 50%，漏抓「降低敵方100%的魔防」這種倒裝寫法，第三版已更正。第四版把第八章的檔次占比、中位數、四分位數拿掉，換成強化與弱化目錄：每種屬性開了哪些檔次，每檔附例子。</p>
+  <p><b>下一步：</b>正在把資料庫的效果層拆成欄位。完成之後，倍率、數值、持續、層數、封頂都能直接查，不用再從文字撈。</p>
+</section>
+
+<footer>
+  資料：夢幻模擬戰結構化資料庫（遊戲畫面 2026-10、Biligame Wiki 2026-06），唯讀未連網。統計腳本與完整數字在本機 scratchpad 的 mz_skill 目錄。原則：借結構與比例，不抄數字。
+</footer>
+</main>
+</div>
+<script>
+// 每一組長條以該組最大值當滿格（沒跑到時退回原始百分比，一樣看得懂）
+document.querySelectorAll(".bars").forEach(function (g) {
+  var items = Array.prototype.slice.call(g.querySelectorAll(".t i"));
+  var vals = items.map(function (i) { return parseFloat(i.style.getPropertyValue("--w")) || 0; });
+  var max = Math.max.apply(null, vals);
+  if (max > 0) items.forEach(function (i, n) { i.style.setProperty("--w", (vals[n] / max * 100).toFixed(1)); });
+});
+</script>

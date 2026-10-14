@@ -16,6 +16,7 @@
 | `merged/` | 合併檢視：`heroes/` 一隻一份 265 份、`index.json` 英雄總表、`skills.json` 技能一顆一筆 916 筆（誰有這顆、兩邊的內容）、`exclusive_gear.json` 專屬裝備 164 件、`diff-report.md` 兩邊內容哪裡不一樣 | **不要手改**，跑 `python 夢幻模擬戰/tools/build_merged.py` 重產 |
 | `merged/effects.json` | 技能文字拆成的效果欄位：一段文字一筆 1,587 筆（技能 918、天賦 214、鑄紋技能 137、專屬裝備 164、士兵 154），每筆有傷害倍率 `damage`、強化弱化 `effects`、沒解析到的句子 `unparsed`；覆蓋率在 `_meta.coverage`。欄位定義見 `docs/ADR-002-effect-fields.md` | **不要手改**，`build_merged.py` 跑完會接著跑 `tools/parse_effects.py`；只改了解析規則時可以單獨跑它，改完跑 `tools/test_parse_effects.py`（人工對照組 `tools/effects_golden.json`）|
 | `docs/` | `heroes-llr-sp.md`、`heroes-ssr.md`（從英雄檔整理的總覽）、`heroes.md`（10/11 的帳號英雄筆記 251 隻，派人抄的、沒逐隻驗過）、ADR、戰鬥公式 | |
+| `analysis/` | 拿資料庫做的分析，一次一個目錄。`2026-10-14-技能規則/`：強化弱化目錄（每種屬性開了哪些檔次）、十章統計版報告、腳本與人工判讀紀錄，給 BxB 技能設計用；先看裡面的 `README.md` | 分析產出，可以手改；重跑方式寫在各目錄的 README |
 
 **兩邊誰準**：遊戲畫面是 2026-10 的現況，天賦、技能、鑄紋技能、專屬裝備以它為準；wiki 是四個月前的、簡轉繁有雜訊，拿來補遊戲畫面沒讀的（陣營、職業、士兵、羈絆、生平、SR 與 R），兩邊都有的欄位 wiki 版留在合併檢視的 `wiki_check` 供對照。每個欄位的來源寫在 `_from`。
 
