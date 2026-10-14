@@ -14,6 +14,7 @@
 | `sources/wiki/` | 2026-06-20 爬的 Biligame Wiki：`data/` 英雄 263、技能 786、裝備 490、士兵 165、鑄紋 161、戰鬥公式；`data/skills-transformed-2026-10-12.json` 是 10/12 補爬的 9 顆替換技能；`raw/` 原始網頁（不進版控）；`cache-manifest.json` | 由 `_shared/scraper/` 的解析器產生 |
 | `aliases.json` | 兩邊名字不同的對照，以遊戲畫面的名字為準：英雄 19 對（每一對附對過的證據）、技能 22 對（全文相似度 0.8 以上） | 英雄手改；技能跑 `tools/suggest_skill_aliases.py --write`。改完重跑合併 |
 | `merged/` | 合併檢視：`heroes/` 一隻一份 265 份、`index.json` 英雄總表、`skills.json` 技能一顆一筆 916 筆（誰有這顆、兩邊的內容）、`exclusive_gear.json` 專屬裝備 164 件、`diff-report.md` 兩邊內容哪裡不一樣 | **不要手改**，跑 `python 夢幻模擬戰/tools/build_merged.py` 重產 |
+| `merged/effects.json` | 技能文字拆成的效果欄位：一段文字一筆 1,587 筆（技能 918、天賦 214、鑄紋技能 137、專屬裝備 164、士兵 154），每筆有傷害倍率 `damage`、強化弱化 `effects`、沒解析到的句子 `unparsed`；覆蓋率在 `_meta.coverage`。欄位定義見 `docs/ADR-002-effect-fields.md` | **不要手改**，`build_merged.py` 跑完會接著跑 `tools/parse_effects.py`；只改了解析規則時可以單獨跑它，改完跑 `tools/test_parse_effects.py`（人工對照組 `tools/effects_golden.json`）|
 | `docs/` | `heroes-llr-sp.md`、`heroes-ssr.md`（從英雄檔整理的總覽）、`heroes.md`（10/11 的帳號英雄筆記 251 隻，派人抄的、沒逐隻驗過）、ADR、戰鬥公式 | |
 
 **兩邊誰準**：遊戲畫面是 2026-10 的現況，天賦、技能、鑄紋技能、專屬裝備以它為準；wiki 是四個月前的、簡轉繁有雜訊，拿來補遊戲畫面沒讀的（陣營、職業、士兵、羈絆、生平、SR 與 R），兩邊都有的欄位 wiki 版留在合併檢視的 `wiki_check` 供對照。每個欄位的來源寫在 `_from`。
@@ -38,6 +39,24 @@
 **原始截圖**（約 6 GB）在 qa-automation 的 `runtime/logs/langrisser/`，只在家機，不進版控；英雄檔 `_meta.screenshots` 的路徑是相對於 qa-automation repo 根目錄。
 
 **不要再連 wiki.biligame.com**：2026-10-12 補爬害學長被站方擋，學長同意前不連。
+
+## 效果欄位怎麼查（2026-10-14）
+
+問倍率、強化弱化的數值、冷卻，直接查 `merged/effects.json` 的欄位，不要再對文字下正規表示式（10/14 用文字判單體範圍，把物理範圍最大倍率算成 1.7，查 `area` 其實是 0.6）。在 repo 根目錄跑，`-X utf8` 是讓 Windows 終端機印得出中文：
+
+```bash
+# 強化「屬性提升」的最小、最大（單位 %），附技能名與原文；per 不是 None 的是「每 X」的單位增量
+python -X utf8 -c "import json;R=json.load(open('夢幻模擬戰/merged/effects.json',encoding='utf-8'))['records'];E=sorted((e['value'],r['name'],e['raw'],e['per']) for r in R for e in r['effects'] if e['type']=='屬性提升' and e['polarity']=='buff' and e['unit']=='%');print(E[0],E[-1])"
+# 冷卻 7 回合以上的技能（cooldown_from 是 wiki 的表示遊戲畫面沒讀到冷卻、由 wiki 補）
+python -X utf8 -c "import json;R=json.load(open('夢幻模擬戰/merged/effects.json',encoding='utf-8'))['records'];print(sorted((r['cooldown'],r['name']) for r in R if r['kind']=='技能' and (r['cooldown'] or 0)>=7))"
+# 物理範圍倍率最高的技能（scope 照技能的 area 欄判，不看文字）
+python -X utf8 -c "import json;R=json.load(open('夢幻模擬戰/merged/effects.json',encoding='utf-8'))['records'];print(max((d['multiplier'],r['name'],d['raw']) for r in R for d in r['damage'] if d['dtype']=='物理' and d['scope']=='範圍'))"
+```
+
+- 一筆 = 一段技能文字：`id` 是「來源種類:名字」（同名技能在不同英雄身上寫的不一樣時加 `#2`），`kind` 是 技能／天賦／鑄紋技能／專屬裝備／士兵。
+- `effects` 的 `type` 與 `polarity`（buff／debuff／neutral）沿用 10/14 研究喵的分類名；neutral 是施放者自己吃的代價或召喚物的屬性定義。
+- 沒解析到的句子在每筆的 `unparsed`，全庫句子覆蓋率約 78%（數字在 `_meta.coverage`）。查不到的不代表沒有，要回原文看。
+- 解析是規則判的：人工對照組 43 筆逐欄全對，但那是調規則時對著看的；對照組以外抽查，一筆效果每一欄都對的約七到八成，`target`、`condition`、`timing` 最常錯。重要的數字回 `raw` 看原文。
 
 ## 資料來源
 

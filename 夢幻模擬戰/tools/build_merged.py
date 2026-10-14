@@ -7,6 +7,7 @@
           兩邊名字不同的英雄與技能記在 aliases.json。
 預期結果: merged/heroes/<名字>.json 每隻一份、merged/index.json 英雄總表、merged/skills.json 技能一顆一筆、
           merged/exclusive_gear.json 專屬裝備一件一筆、merged/diff-report.md 兩邊內容哪裡不一樣；印出各來源的筆數。
+          最後接著跑 parse_effects.py 產出 merged/effects.json（技能文字拆成效果欄位，見 docs/ADR-002-effect-fields.md）。
           merged/ 整個是產物，重跑會整個重寫，不要手改——要改去改來源。
 
 合併規則:
@@ -24,8 +25,12 @@ import json
 import os
 import re
 import shutil
+import sys
 
-BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+sys.dont_write_bytecode = True          # 下一行 import 同資料夾的模組，不要在 tools/ 留 __pycache__
+import parse_effects  # noqa: E402
+
+BASE =os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 INGAME = os.path.join(BASE, "sources", "ingame")
 WIKI = os.path.join(BASE, "sources", "wiki", "data")
 OUT = os.path.join(BASE, "merged")
@@ -360,6 +365,7 @@ def main():
     skills = build_skills(games, aliases)
     gear_items = build_gear(gear_file, to_wiki, wikis)
     write_report(hero_diffs(merged), skills, gear_items)
+    parse_effects.main()                # merged/ 上面整個重寫過，效果欄位要跟著重產
 
 
 if __name__ == "__main__":
